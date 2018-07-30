@@ -1,0 +1,127 @@
+*** NOTE: no connection pattern specified.
+*** NOTE: no scenario file specified.
+Starting Simulation...
+NS EXITING...
+num_nodes is set 2
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+recv_olsr[1]
+
+[0.001904]mprset
+process_hello[1]
+sender[0]->receiver[1] : HELLO[1]
+recv_olsr[2]
+
+[0.045875]mprset
+process_hello[2]
+sender[1]->receiver[0] : HELLO[1]
+recv_olsr[3]
+
+[1.863345]mprset
+process_hello[3]
+sender[1]->receiver[0] : HELLO[2]
+recv_olsr[4]
+
+[1.878538]mprset
+process_hello[4]
+sender[0]->receiver[1] : HELLO[2]
+recv_olsr[5]
+
+[3.652150]mprset
+process_hello[5]
+sender[0]->receiver[1] : HELLO[3]
+recv_olsr[6]
+
+[3.880628]mprset
+process_hello[6]
+sender[1]->receiver[0] : HELLO[3]
+recv_olsr[7]
+
+[5.083967]mprset
+process_hello[7]
+sender[0]->receiver[1] : HELLO[4]
+recv_olsr[8]
+
+[5.340434]mprset
+process_hello[8]
+sender[1]->receiver[0] : HELLO[4]
+recv_olsr[9]
+
+[6.823367]mprset
+process_hello[9]
+sender[0]->receiver[1] : HELLO[5]
+recv_olsr[10]
+
+[7.643254]mprset
+process_hello[10]
+sender[1]->receiver[0] : HELLO[5]
+recv_olsr[11]
+
+[8.623197]mprset
+process_hello[11]
+sender[0]->receiver[1] : HELLO[6]
+recv_olsr[12]
+
+[9.147494]mprset
+process_hello[12]
+sender[1]->receiver[0] : HELLO[6]
+recv_olsr[13]
+
+[10.253677]mprset
+process_hello[13]
+sender[0]->receiver[1] : HELLO[7]
+recv_olsr[14]
+
+[11.402276]mprset
+process_hello[14]
+sender[1]->receiver[0] : HELLO[7]
+recv_olsr[15]
+
+[11.514292]mprset
+process_hello[15]
+sender[0]->receiver[1] : HELLO[8]
+recv_olsr[16]
+
+[12.910340]mprset
+process_hello[16]
+sender[1]->receiver[0] : HELLO[8]
+recv_olsr[17]
+
+[13.803649]mprset
+process_hello[17]
+sender[0]->receiver[1] : HELLO[9]
+recv_olsr[18]
+
+[14.569848]mprset
+process_hello[18]
+sender[1]->receiver[0] : HELLO[9]
+recv_olsr[19]
+
+[15.253449]mprset
+process_hello[19]
+sender[0]->receiver[1] : HELLO[10]
+recv_olsr[20]
+
+[16.262562]mprset
+process_hello[20]
+sender[1]->receiver[0] : HELLO[10]
+recv_olsr[21]
+
+[17.254111]mprset
+process_hello[21]
+sender[0]->receiver[1] : HELLO[11]
+recv_olsr[22]
+
+[17.599205]mprset
+process_hello[22]
+sender[1]->receiver[0] : HELLO[11]
+recv_olsr[23]
+
+[18.832992]mprset
+process_hello[23]
+sender[0]->receiver[1] : HELLO[12]
+recv_olsr[24]
+
+[19.578138]mprset
+process_hello[24]
+sender[1]->receiver[0] : HELLO[12]

@@ -1,0 +1,1692 @@
+*** NOTE: no connection pattern specified.
+*** NOTE: no scenario file specified.
+Starting Simulation...
+num_nodes is set 2
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+recv_olsr[1]
+
+[0.001278]mprset
+process_hello[1]
+sender[0]->receiver[1] : HELLO[1]
+recv_olsr[2]
+
+[0.045250]mprset
+process_hello[2]
+sender[1]->receiver[0] : HELLO[1]
+recv_olsr[3]
+
+[1.862659]mprset
+process_hello[3]
+sender[1]->receiver[0] : HELLO[2]
+recv_olsr[4]
+
+[1.877852]mprset
+process_hello[4]
+sender[0]->receiver[1] : HELLO[2]
+recv_olsr[5]
+
+[3.651464]mprset
+process_hello[5]
+sender[0]->receiver[1] : HELLO[3]
+recv_olsr[6]
+
+[3.879942]mprset
+process_hello[6]
+sender[1]->receiver[0] : HELLO[3]
+recv_olsr[7]
+
+[5.239915]mprset
+process_hello[7]
+sender[0]->receiver[1] : HELLO[4]
+recv_olsr[8]
+
+[5.827916]mprset
+process_hello[8]
+sender[1]->receiver[0] : HELLO[4]
+recv_olsr[9]
+
+[6.758303]mprset
+process_hello[9]
+sender[0]->receiver[1] : HELLO[5]
+recv_olsr[10]
+
+[7.604542]mprset
+process_hello[10]
+sender[1]->receiver[0] : HELLO[5]
+recv_olsr[11]
+
+[8.959778]mprset
+process_hello[11]
+sender[0]->receiver[1] : HELLO[6]
+recv_olsr[12]
+
+[8.985201]mprset
+process_hello[12]
+sender[1]->receiver[0] : HELLO[6]
+recv_olsr[13]
+
+[10.863412]mprset
+process_hello[13]
+sender[1]->receiver[0] : HELLO[7]
+recv_olsr[14]
+
+[10.866035]mprset
+process_hello[14]
+sender[0]->receiver[1] : HELLO[7]
+recv_olsr[15]
+
+[12.413923]mprset
+process_hello[15]
+sender[0]->receiver[1] : HELLO[8]
+recv_olsr[16]
+
+[12.702444]mprset
+process_hello[16]
+sender[1]->receiver[0] : HELLO[8]
+recv_olsr[17]
+
+[13.997876]mprset
+process_hello[17]
+sender[0]->receiver[1] : HELLO[9]
+recv_olsr[18]
+
+[14.494211]mprset
+process_hello[18]
+sender[1]->receiver[0] : HELLO[9]
+recv_olsr[19]
+
+[15.888730]mprset
+process_hello[19]
+sender[0]->receiver[1] : HELLO[10]
+recv_olsr[20]
+
+[16.413447]mprset
+process_hello[20]
+sender[1]->receiver[0] : HELLO[10]
+recv_olsr[21]
+
+[17.921379]mprset
+process_hello[21]
+sender[0]->receiver[1] : HELLO[11]
+recv_olsr[22]
+
+[19.397862]mprset
+process_hello[22]
+sender[0]->receiver[1] : HELLO[12]
+recv_olsr[23]
+
+[20.638394]mprset
+process_hello[23]
+sender[0]->receiver[1] : HELLO[13]
+recv_olsr[24]
+
+[21.740551]mprset
+process_hello[24]
+sender[1]->receiver[0] : HELLO[11]
+recv_olsr[25]
+
+[22.257029]mprset
+process_hello[25]
+sender[0]->receiver[1] : HELLO[14]
+recv_olsr[26]
+
+[23.458833]mprset
+process_hello[26]
+sender[1]->receiver[0] : HELLO[12]
+recv_olsr[27]
+
+[24.093359]mprset
+process_hello[27]
+sender[0]->receiver[1] : HELLO[15]
+recv_olsr[28]
+
+[25.035625]mprset
+process_hello[28]
+sender[1]->receiver[0] : HELLO[13]
+recv_olsr[29]
+
+[25.672791]mprset
+process_hello[29]
+sender[0]->receiver[1] : HELLO[16]
+recv_olsr[30]
+
+[26.911977]mprset
+process_hello[30]
+sender[1]->receiver[0] : HELLO[14]
+recv_olsr[31]
+
+[27.767259]mprset
+process_hello[31]
+sender[0]->receiver[1] : HELLO[17]
+recv_olsr[32]
+
+[29.065109]mprset
+process_hello[32]
+sender[1]->receiver[0] : HELLO[15]
+recv_olsr[33]
+
+[29.391414]mprset
+process_hello[33]
+sender[0]->receiver[1] : HELLO[18]
+recv_olsr[34]
+
+[30.498831]mprset
+process_hello[34]
+sender[1]->receiver[0] : HELLO[16]
+recv_olsr[35]
+
+[31.061113]mprset
+process_hello[35]
+sender[0]->receiver[1] : HELLO[19]
+recv_olsr[36]
+
+[32.075003]mprset
+process_hello[36]
+sender[1]->receiver[0] : HELLO[17]
+recv_olsr[37]
+
+[33.356333]mprset
+process_hello[37]
+sender[0]->receiver[1] : HELLO[20]
+recv_olsr[38]
+
+[33.835328]mprset
+process_hello[38]
+sender[1]->receiver[0] : HELLO[18]
+recv_olsr[39]
+
+[34.861741]mprset
+process_hello[39]
+sender[0]->receiver[1] : HELLO[21]
+recv_olsr[40]
+
+[35.662637]mprset
+process_hello[40]
+sender[1]->receiver[0] : HELLO[19]
+recv_olsr[41]
+
+[36.600924]mprset
+process_hello[41]
+sender[0]->receiver[1] : HELLO[22]
+recv_olsr[42]
+
+[37.668498]mprset
+process_hello[42]
+sender[1]->receiver[0] : HELLO[20]
+recv_olsr[43]
+
+[38.609225]mprset
+process_hello[43]
+sender[0]->receiver[1] : HELLO[23]
+recv_olsr[44]
+
+[39.352057]mprset
+process_hello[44]
+sender[1]->receiver[0] : HELLO[21]
+recv_olsr[45]
+
+[40.356549]mprset
+process_hello[45]
+sender[0]->receiver[1] : HELLO[24]
+recv_olsr[46]
+
+[41.140104]mprset
+process_hello[46]
+sender[1]->receiver[0] : HELLO[22]
+recv_olsr[47]
+
+[41.965403]mprset
+process_hello[47]
+sender[0]->receiver[1] : HELLO[25]
+recv_olsr[48]
+
+[42.460638]mprset
+process_hello[48]
+sender[1]->receiver[0] : HELLO[23]
+recv_olsr[49]
+
+[43.248874]mprset
+process_hello[49]
+sender[0]->receiver[1] : HELLO[26]
+recv_olsr[50]
+
+[44.243043]mprset
+process_hello[50]
+sender[1]->receiver[0] : HELLO[24]
+recv_olsr[51]
+
+[45.175570]mprset
+process_hello[51]
+sender[0]->receiver[1] : HELLO[27]
+recv_olsr[52]
+
+[46.407656]mprset
+process_hello[52]
+sender[1]->receiver[0] : HELLO[25]
+recv_olsr[53]
+
+[46.693018]mprset
+process_hello[53]
+sender[0]->receiver[1] : HELLO[28]
+recv_olsr[54]
+
+[48.282988]mprset
+process_hello[54]
+sender[1]->receiver[0] : HELLO[26]
+recv_olsr[55]
+
+[48.795966]mprset
+process_hello[55]
+sender[0]->receiver[1] : HELLO[29]
+recv_olsr[56]
+
+[50.044533]mprset
+process_hello[56]
+sender[1]->receiver[0] : HELLO[27]
+recv_olsr[57]
+
+[50.768485]mprset
+process_hello[57]
+sender[0]->receiver[1] : HELLO[30]
+recv_olsr[58]
+
+[51.762654]mprset
+process_hello[58]
+sender[1]->receiver[0] : HELLO[28]
+recv_olsr[59]
+
+[52.328656]mprset
+process_hello[59]
+sender[0]->receiver[1] : HELLO[31]
+recv_olsr[60]
+
+[53.142113]mprset
+process_hello[60]
+sender[1]->receiver[0] : HELLO[29]
+recv_olsr[61]
+
+[54.104582]mprset
+process_hello[61]
+sender[0]->receiver[1] : HELLO[32]
+recv_olsr[62]
+
+[55.160516]mprset
+process_hello[62]
+sender[1]->receiver[0] : HELLO[30]
+recv_olsr[63]
+
+[55.988475]mprset
+process_hello[63]
+sender[0]->receiver[1] : HELLO[33]
+recv_olsr[64]
+
+[56.672023]mprset
+process_hello[64]
+sender[1]->receiver[0] : HELLO[31]
+recv_olsr[65]
+
+[57.477441]mprset
+process_hello[65]
+sender[0]->receiver[1] : HELLO[34]
+recv_olsr[66]
+
+[58.556526]mprset
+process_hello[66]
+sender[1]->receiver[0] : HELLO[32]
+recv_olsr[67]
+
+[59.306920]mprset
+process_hello[67]
+sender[0]->receiver[1] : HELLO[35]
+recv_olsr[68]
+
+[60.363673]mprset
+process_hello[68]
+sender[1]->receiver[0] : HELLO[33]
+recv_olsr[69]
+
+[60.803006]mprset
+process_hello[69]
+sender[0]->receiver[1] : HELLO[36]
+recv_olsr[70]
+
+[61.666267]mprset
+process_hello[70]
+sender[1]->receiver[0] : HELLO[34]
+recv_olsr[71]
+
+[62.647277]mprset
+process_hello[71]
+sender[0]->receiver[1] : HELLO[37]
+recv_olsr[72]
+
+[63.372529]mprset
+process_hello[72]
+sender[1]->receiver[0] : HELLO[35]
+recv_olsr[73]
+
+[64.073400]mprset
+process_hello[73]
+sender[0]->receiver[1] : HELLO[38]
+recv_olsr[74]
+
+[64.640020]mprset
+process_hello[74]
+sender[1]->receiver[0] : HELLO[36]
+recv_olsr[75]
+
+[66.091282]mprset
+process_hello[75]
+sender[0]->receiver[1] : HELLO[39]
+recv_olsr[76]
+
+[66.421946]mprset
+process_hello[76]
+sender[1]->receiver[0] : HELLO[37]
+recv_olsr[77]
+
+[67.753500]mprset
+process_hello[77]
+sender[0]->receiver[1] : HELLO[40]
+recv_olsr[78]
+
+[68.182590]mprset
+process_hello[78]
+sender[1]->receiver[0] : HELLO[38]
+recv_olsr[79]
+
+[69.729359]mprset
+process_hello[79]
+sender[0]->receiver[1] : HELLO[41]
+recv_olsr[80]
+
+[70.233595]mprset
+process_hello[80]
+sender[1]->receiver[0] : HELLO[39]
+recv_olsr[81]
+
+[71.116319]mprset
+process_hello[81]
+sender[0]->receiver[1] : HELLO[42]
+recv_olsr[82]
+
+[71.768664]mprset
+process_hello[82]
+sender[1]->receiver[0] : HELLO[40]
+recv_olsr[83]
+
+[72.737274]mprset
+process_hello[83]
+sender[0]->receiver[1] : HELLO[43]
+recv_olsr[84]
+
+[73.343297]mprset
+process_hello[84]
+sender[1]->receiver[0] : HELLO[41]
+recv_olsr[85]
+
+[74.961550]mprset
+process_hello[85]
+sender[1]->receiver[0] : HELLO[42]
+recv_olsr[86]
+
+[75.001315]mprset
+process_hello[86]
+sender[0]->receiver[1] : HELLO[44]
+recv_olsr[87]
+
+[76.515941]mprset
+process_hello[87]
+sender[0]->receiver[1] : HELLO[45]
+recv_olsr[88]
+
+[77.045779]mprset
+process_hello[88]
+sender[1]->receiver[0] : HELLO[43]
+recv_olsr[89]
+
+[78.232083]mprset
+process_hello[89]
+sender[0]->receiver[1] : HELLO[46]
+recv_olsr[90]
+
+[78.476530]mprset
+process_hello[90]
+sender[1]->receiver[0] : HELLO[44]
+recv_olsr[91]
+
+[80.181569]mprset
+process_hello[91]
+sender[1]->receiver[0] : HELLO[45]
+recv_olsr[92]
+
+[80.206353]mprset
+process_hello[92]
+sender[0]->receiver[1] : HELLO[47]
+recv_olsr[93]
+
+[81.658595]mprset
+process_hello[93]
+sender[0]->receiver[1] : HELLO[48]
+recv_olsr[94]
+
+[81.677217]mprset
+process_hello[94]
+sender[1]->receiver[0] : HELLO[46]
+recv_olsr[95]
+
+[83.218165]mprset
+process_hello[95]
+sender[1]->receiver[0] : HELLO[47]
+recv_olsr[96]
+
+[83.432742]mprset
+process_hello[96]
+sender[0]->receiver[1] : HELLO[49]
+recv_olsr[97]
+
+[85.152681]mprset
+process_hello[97]
+sender[1]->receiver[0] : HELLO[48]
+recv_olsr[98]
+
+[85.170465]mprset
+process_hello[98]
+sender[0]->receiver[1] : HELLO[50]
+recv_olsr[99]
+
+[86.643703]mprset
+process_hello[99]
+sender[1]->receiver[0] : HELLO[49]
+recv_olsr[100]
+
+[86.889822]mprset
+process_hello[100]
+sender[0]->receiver[1] : HELLO[51]
+recv_olsr[101]
+
+[88.525896]mprset
+process_hello[101]
+sender[0]->receiver[1] : HELLO[52]
+recv_olsr[102]
+
+[88.574621]mprset
+process_hello[102]
+sender[1]->receiver[0] : HELLO[50]
+recv_olsr[103]
+
+[90.563499]mprset
+process_hello[103]
+sender[1]->receiver[0] : HELLO[51]
+recv_olsr[104]
+
+[90.588624]mprset
+process_hello[104]
+sender[0]->receiver[1] : HELLO[53]
+recv_olsr[105]
+
+[92.125551]mprset
+process_hello[105]
+sender[0]->receiver[1] : HELLO[54]
+recv_olsr[106]
+
+[92.392270]mprset
+process_hello[106]
+sender[1]->receiver[0] : HELLO[52]
+recv_olsr[107]
+
+[93.810909]mprset
+process_hello[107]
+sender[1]->receiver[0] : HELLO[53]
+recv_olsr[108]
+
+[94.104152]mprset
+process_hello[108]
+sender[0]->receiver[1] : HELLO[55]
+recv_olsr[109]
+
+[95.441706]mprset
+process_hello[109]
+sender[1]->receiver[0] : HELLO[54]
+recv_olsr[110]
+
+[95.920502]mprset
+process_hello[110]
+sender[0]->receiver[1] : HELLO[56]
+recv_olsr[111]
+
+[96.692316]mprset
+process_hello[111]
+sender[1]->receiver[0] : HELLO[55]
+recv_olsr[112]
+
+[98.151278]mprset
+process_hello[112]
+sender[0]->receiver[1] : HELLO[57]
+recv_olsr[113]
+
+[98.387996]mprset
+process_hello[113]
+sender[1]->receiver[0] : HELLO[56]
+recv_olsr[114]
+
+[99.743291]mprset
+process_hello[114]
+sender[0]->receiver[1] : HELLO[58]
+recv_olsr[115]
+
+[100.237906]mprset
+process_hello[115]
+sender[1]->receiver[0] : HELLO[57]
+recv_olsr[116]
+
+[101.378127]mprset
+process_hello[116]
+sender[0]->receiver[1] : HELLO[59]
+recv_olsr[117]
+
+[102.026252]mprset
+process_hello[117]
+sender[1]->receiver[0] : HELLO[58]
+recv_olsr[118]
+
+[103.473274]mprset
+process_hello[118]
+sender[0]->receiver[1] : HELLO[60]
+recv_olsr[119]
+
+[104.106759]mprset
+process_hello[119]
+sender[1]->receiver[0] : HELLO[59]
+recv_olsr[120]
+
+[104.981922]mprset
+process_hello[120]
+sender[0]->receiver[1] : HELLO[61]
+recv_olsr[121]
+
+[105.906967]mprset
+process_hello[121]
+sender[1]->receiver[0] : HELLO[60]
+recv_olsr[122]
+
+[106.902638]mprset
+process_hello[122]
+sender[0]->receiver[1] : HELLO[62]
+recv_olsr[123]
+
+[107.468818]mprset
+process_hello[123]
+sender[1]->receiver[0] : HELLO[61]
+recv_olsr[124]
+
+[108.471529]mprset
+process_hello[124]
+sender[0]->receiver[1] : HELLO[63]
+recv_olsr[125]
+
+[109.053430]mprset
+process_hello[125]
+sender[1]->receiver[0] : HELLO[62]
+recv_olsr[126]
+
+[110.276836]mprset
+process_hello[126]
+sender[0]->receiver[1] : HELLO[64]
+recv_olsr[127]
+
+[111.067532]mprset
+process_hello[127]
+sender[1]->receiver[0] : HELLO[63]
+recv_olsr[128]
+
+[112.019320]mprset
+process_hello[128]
+sender[0]->receiver[1] : HELLO[65]
+recv_olsr[129]
+
+[112.619340]mprset
+process_hello[129]
+sender[1]->receiver[0] : HELLO[64]
+recv_olsr[130]
+
+[113.947474]mprset
+process_hello[130]
+sender[0]->receiver[1] : HELLO[66]
+recv_olsr[131]
+
+[114.566977]mprset
+process_hello[131]
+sender[1]->receiver[0] : HELLO[65]
+recv_olsr[132]
+
+[115.452921]mprset
+process_hello[132]
+sender[0]->receiver[1] : HELLO[67]
+recv_olsr[133]
+
+[116.262277]mprset
+process_hello[133]
+sender[1]->receiver[0] : HELLO[66]
+recv_olsr[134]
+
+[117.225486]mprset
+process_hello[134]
+sender[0]->receiver[1] : HELLO[68]
+recv_olsr[135]
+
+[117.919576]mprset
+process_hello[135]
+sender[1]->receiver[0] : HELLO[67]
+recv_olsr[136]
+
+[119.074457]mprset
+process_hello[136]
+sender[0]->receiver[1] : HELLO[69]
+recv_olsr[137]
+
+[119.495248]mprset
+process_hello[137]
+sender[1]->receiver[0] : HELLO[68]
+recv_olsr[138]
+
+[120.310326]mprset
+process_hello[138]
+sender[0]->receiver[1] : HELLO[70]
+recv_olsr[139]
+
+[121.346459]mprset
+process_hello[139]
+sender[1]->receiver[0] : HELLO[69]
+recv_olsr[140]
+
+[122.366511]mprset
+process_hello[140]
+sender[0]->receiver[1] : HELLO[71]
+recv_olsr[141]
+
+[122.782581]mprset
+process_hello[141]
+sender[1]->receiver[0] : HELLO[70]
+recv_olsr[142]
+
+[124.229263]mprset
+process_hello[142]
+sender[0]->receiver[1] : HELLO[72]
+recv_olsr[143]
+
+[126.069957]mprset
+process_hello[143]
+sender[0]->receiver[1] : HELLO[73]
+recv_olsr[144]
+
+[126.461846]mprset
+process_hello[144]
+sender[1]->receiver[0] : HELLO[71]
+recv_olsr[145]
+
+[128.036596]mprset
+process_hello[145]
+sender[0]->receiver[1] : HELLO[74]
+recv_olsr[146]
+
+[128.596617]mprset
+process_hello[146]
+sender[1]->receiver[0] : HELLO[72]
+recv_olsr[147]
+
+[129.714816]mprset
+process_hello[147]
+sender[0]->receiver[1] : HELLO[75]
+recv_olsr[148]
+
+[130.377463]mprset
+process_hello[148]
+sender[1]->receiver[0] : HELLO[73]
+recv_olsr[149]
+
+[131.368734]mprset
+process_hello[149]
+sender[0]->receiver[1] : HELLO[76]
+recv_olsr[150]
+
+[131.716099]mprset
+process_hello[150]
+sender[1]->receiver[0] : HELLO[74]
+recv_olsr[151]
+
+[133.230346]mprset
+process_hello[151]
+sender[0]->receiver[1] : HELLO[77]
+recv_olsr[152]
+
+[133.824191]mprset
+process_hello[152]
+sender[1]->receiver[0] : HELLO[75]
+recv_olsr[153]
+
+[135.174426]mprset
+process_hello[153]
+sender[0]->receiver[1] : HELLO[78]
+recv_olsr[154]
+
+[135.408883]mprset
+process_hello[154]
+sender[1]->receiver[0] : HELLO[76]
+recv_olsr[155]
+
+[136.719755]mprset
+process_hello[155]
+sender[0]->receiver[1] : HELLO[79]
+recv_olsr[156]
+
+[137.223028]mprset
+process_hello[156]
+sender[1]->receiver[0] : HELLO[77]
+recv_olsr[157]
+
+[138.541241]mprset
+process_hello[157]
+sender[0]->receiver[1] : HELLO[80]
+recv_olsr[158]
+
+[139.162445]mprset
+process_hello[158]
+sender[1]->receiver[0] : HELLO[78]
+recv_olsr[159]
+
+[139.860995]mprset
+process_hello[159]
+sender[0]->receiver[1] : HELLO[81]
+recv_olsr[160]
+
+[140.521062]mprset
+process_hello[160]
+sender[1]->receiver[0] : HELLO[79]
+recv_olsr[161]
+
+[141.598779]mprset
+process_hello[161]
+sender[0]->receiver[1] : HELLO[82]
+recv_olsr[162]
+
+[142.433957]mprset
+process_hello[162]
+sender[1]->receiver[0] : HELLO[80]
+recv_olsr[163]
+
+[143.504373]mprset
+process_hello[163]
+sender[0]->receiver[1] : HELLO[83]
+recv_olsr[164]
+
+[144.181701]mprset
+process_hello[164]
+sender[1]->receiver[0] : HELLO[81]
+recv_olsr[165]
+
+[145.141070]mprset
+process_hello[165]
+sender[0]->receiver[1] : HELLO[84]
+recv_olsr[166]
+
+[145.739652]mprset
+process_hello[166]
+sender[1]->receiver[0] : HELLO[82]
+recv_olsr[167]
+
+[147.309062]mprset
+process_hello[167]
+sender[0]->receiver[1] : HELLO[85]
+recv_olsr[168]
+
+[147.512358]mprset
+process_hello[168]
+sender[1]->receiver[0] : HELLO[83]
+recv_olsr[169]
+
+[149.158392]mprset
+process_hello[169]
+sender[1]->receiver[0] : HELLO[84]
+recv_olsr[170]
+
+[149.159515]mprset
+process_hello[170]
+sender[0]->receiver[1] : HELLO[86]
+recv_olsr[171]
+
+[150.547791]mprset
+process_hello[171]
+sender[1]->receiver[0] : HELLO[85]
+recv_olsr[172]
+
+[150.745728]mprset
+process_hello[172]
+sender[0]->receiver[1] : HELLO[87]
+recv_olsr[173]
+
+[152.086401]mprset
+process_hello[173]
+sender[0]->receiver[1] : HELLO[88]
+recv_olsr[174]
+
+[152.402004]mprset
+process_hello[174]
+sender[1]->receiver[0] : HELLO[86]
+recv_olsr[175]
+
+[154.132925]mprset
+process_hello[175]
+sender[0]->receiver[1] : HELLO[89]
+recv_olsr[176]
+
+[155.672557]mprset
+process_hello[176]
+sender[1]->receiver[0] : HELLO[87]
+recv_olsr[177]
+
+[156.044986]mprset
+process_hello[177]
+sender[0]->receiver[1] : HELLO[90]
+recv_olsr[178]
+
+[157.052236]mprset
+process_hello[178]
+sender[1]->receiver[0] : HELLO[88]
+recv_olsr[179]
+
+[157.835832]mprset
+process_hello[179]
+sender[0]->receiver[1] : HELLO[91]
+recv_olsr[180]
+
+[159.158658]mprset
+process_hello[180]
+sender[1]->receiver[0] : HELLO[89]
+recv_olsr[181]
+
+[159.490443]mprset
+process_hello[181]
+sender[0]->receiver[1] : HELLO[92]
+recv_olsr[182]
+
+[160.894821]mprset
+process_hello[182]
+sender[1]->receiver[0] : HELLO[90]
+recv_olsr[183]
+
+[161.402098]mprset
+process_hello[183]
+sender[0]->receiver[1] : HELLO[93]
+recv_olsr[184]
+
+[162.456231]mprset
+process_hello[184]
+sender[1]->receiver[0] : HELLO[91]
+recv_olsr[185]
+
+[163.254849]mprset
+process_hello[185]
+sender[0]->receiver[1] : HELLO[94]
+recv_olsr[186]
+
+[164.627624]mprset
+process_hello[186]
+sender[1]->receiver[0] : HELLO[92]
+recv_olsr[187]
+
+[164.843862]mprset
+process_hello[187]
+sender[0]->receiver[1] : HELLO[95]
+recv_olsr[188]
+
+[166.077108]mprset
+process_hello[188]
+sender[1]->receiver[0] : HELLO[93]
+recv_olsr[189]
+
+[166.284124]mprset
+process_hello[189]
+sender[0]->receiver[1] : HELLO[96]
+recv_olsr[190]
+
+[168.009784]mprset
+process_hello[190]
+sender[0]->receiver[1] : HELLO[97]
+recv_olsr[191]
+
+[168.261539]mprset
+process_hello[191]
+sender[1]->receiver[0] : HELLO[94]
+recv_olsr[192]
+
+[169.850730]mprset
+process_hello[192]
+sender[0]->receiver[1] : HELLO[98]
+recv_olsr[193]
+
+[170.023243]mprset
+process_hello[193]
+sender[1]->receiver[0] : HELLO[95]
+recv_olsr[194]
+
+[171.305433]mprset
+process_hello[194]
+sender[0]->receiver[1] : HELLO[99]
+recv_olsr[195]
+
+[171.817469]mprset
+process_hello[195]
+sender[1]->receiver[0] : HELLO[96]
+recv_olsr[196]
+
+[173.540690]mprset
+process_hello[196]
+sender[0]->receiver[1] : HELLO[100]
+recv_olsr[197]
+
+[173.541933]mprset
+process_hello[197]
+sender[1]->receiver[0] : HELLO[97]
+recv_olsr[198]
+
+[174.999235]mprset
+process_hello[198]
+sender[0]->receiver[1] : HELLO[101]
+recv_olsr[199]
+
+[175.413545]mprset
+process_hello[199]
+sender[1]->receiver[0] : HELLO[98]
+recv_olsr[200]
+
+[176.814044]mprset
+process_hello[200]
+sender[0]->receiver[1] : HELLO[102]
+recv_olsr[201]
+
+[176.952935]mprset
+process_hello[201]
+sender[1]->receiver[0] : HELLO[99]
+recv_olsr[202]
+
+[178.672836]mprset
+process_hello[202]
+sender[0]->receiver[1] : HELLO[103]
+recv_olsr[203]
+
+[178.763283]mprset
+process_hello[203]
+sender[1]->receiver[0] : HELLO[100]
+recv_olsr[204]
+
+[180.545928]mprset
+process_hello[204]
+sender[0]->receiver[1] : HELLO[104]
+recv_olsr[205]
+
+[180.894493]mprset
+process_hello[205]
+sender[1]->receiver[0] : HELLO[101]
+recv_olsr[206]
+
+[182.034833]mprset
+process_hello[206]
+sender[1]->receiver[0] : HELLO[102]
+recv_olsr[207]
+
+[182.313515]mprset
+process_hello[207]
+sender[0]->receiver[1] : HELLO[105]
+recv_olsr[208]
+
+[183.689471]mprset
+process_hello[208]
+sender[1]->receiver[0] : HELLO[103]
+recv_olsr[209]
+
+[184.005175]mprset
+process_hello[209]
+sender[0]->receiver[1] : HELLO[106]
+recv_olsr[210]
+
+[185.466997]mprset
+process_hello[210]
+sender[1]->receiver[0] : HELLO[104]
+recv_olsr[211]
+
+[185.808043]mprset
+process_hello[211]
+sender[0]->receiver[1] : HELLO[107]
+recv_olsr[212]
+
+[186.843975]mprset
+process_hello[212]
+sender[1]->receiver[0] : HELLO[105]
+recv_olsr[213]
+
+[187.862627]mprset
+process_hello[213]
+sender[0]->receiver[1] : HELLO[108]
+recv_olsr[214]
+
+[188.458129]mprset
+process_hello[214]
+sender[1]->receiver[0] : HELLO[106]
+recv_olsr[215]
+
+[189.759641]mprset
+process_hello[215]
+sender[0]->receiver[1] : HELLO[109]
+recv_olsr[216]
+
+[190.237535]mprset
+process_hello[216]
+sender[1]->receiver[0] : HELLO[107]
+recv_olsr[217]
+
+[191.028952]mprset
+process_hello[217]
+sender[0]->receiver[1] : HELLO[110]
+recv_olsr[218]
+
+[191.829608]mprset
+process_hello[218]
+sender[1]->receiver[0] : HELLO[108]
+recv_olsr[219]
+
+[193.146781]mprset
+process_hello[219]
+sender[0]->receiver[1] : HELLO[111]
+recv_olsr[220]
+
+[193.910394]mprset
+process_hello[220]
+sender[1]->receiver[0] : HELLO[109]
+recv_olsr[221]
+
+[194.614405]mprset
+process_hello[221]
+sender[0]->receiver[1] : HELLO[112]
+recv_olsr[222]
+
+[195.063437]mprset
+process_hello[222]
+sender[1]->receiver[0] : HELLO[110]
+recv_olsr[223]
+
+[196.755416]mprset
+process_hello[223]
+sender[0]->receiver[1] : HELLO[113]
+recv_olsr[224]
+
+[197.216929]mprset
+process_hello[224]
+sender[1]->receiver[0] : HELLO[111]
+recv_olsr[225]
+
+[198.307986]mprset
+process_hello[225]
+sender[0]->receiver[1] : HELLO[114]
+recv_olsr[226]
+
+[199.118023]mprset
+process_hello[226]
+sender[1]->receiver[0] : HELLO[112]
+recv_olsr[227]
+
+[199.870318]mprset
+process_hello[227]
+sender[0]->receiver[1] : HELLO[115]
+recv_olsr[228]
+
+[200.925371]mprset
+process_hello[228]
+sender[1]->receiver[0] : HELLO[113]
+recv_olsr[229]
+
+[201.849677]mprset
+process_hello[229]
+sender[0]->receiver[1] : HELLO[116]
+recv_olsr[230]
+
+[202.760481]mprset
+process_hello[230]
+sender[1]->receiver[0] : HELLO[114]
+recv_olsr[231]
+
+[203.258738]mprset
+process_hello[231]
+sender[0]->receiver[1] : HELLO[117]
+recv_olsr[232]
+
+[204.413619]mprset
+process_hello[232]
+sender[1]->receiver[0] : HELLO[115]
+recv_olsr[233]
+
+[205.238718]mprset
+process_hello[233]
+sender[0]->receiver[1] : HELLO[118]
+recv_olsr[234]
+
+[205.948248]mprset
+process_hello[234]
+sender[1]->receiver[0] : HELLO[116]
+recv_olsr[235]
+
+[207.250099]mprset
+process_hello[235]
+sender[0]->receiver[1] : HELLO[119]
+recv_olsr[236]
+
+[207.778277]mprset
+process_hello[236]
+sender[1]->receiver[0] : HELLO[117]
+recv_olsr[237]
+
+[209.146434]mprset
+process_hello[237]
+sender[0]->receiver[1] : HELLO[120]
+recv_olsr[238]
+
+[209.481338]mprset
+process_hello[238]
+sender[1]->receiver[0] : HELLO[118]
+recv_olsr[239]
+
+[210.470129]mprset
+process_hello[239]
+sender[0]->receiver[1] : HELLO[121]
+recv_olsr[240]
+
+[212.255619]mprset
+process_hello[240]
+sender[0]->receiver[1] : HELLO[122]
+recv_olsr[241]
+
+[212.878163]mprset
+process_hello[241]
+sender[1]->receiver[0] : HELLO[119]
+recv_olsr[242]
+
+[214.039165]mprset
+process_hello[242]
+sender[0]->receiver[1] : HELLO[123]
+recv_olsr[243]
+
+[215.279018]mprset
+process_hello[243]
+sender[0]->receiver[1] : HELLO[124]
+recv_olsr[244]
+
+[216.588669]mprset
+process_hello[244]
+sender[1]->receiver[0] : HELLO[120]
+recv_olsr[245]
+
+[216.933075]mprset
+process_hello[245]
+sender[0]->receiver[1] : HELLO[125]
+recv_olsr[246]
+
+[218.295929]mprset
+process_hello[246]
+sender[1]->receiver[0] : HELLO[121]
+recv_olsr[247]
+
+[219.011181]mprset
+process_hello[247]
+sender[0]->receiver[1] : HELLO[126]
+recv_olsr[248]
+
+[220.289331]mprset
+process_hello[248]
+sender[1]->receiver[0] : HELLO[122]
+recv_olsr[249]
+
+[220.696381]mprset
+process_hello[249]
+sender[0]->receiver[1] : HELLO[127]
+recv_olsr[250]
+
+[221.804958]mprset
+process_hello[250]
+sender[1]->receiver[0] : HELLO[123]
+recv_olsr[251]
+
+[222.487967]mprset
+process_hello[251]
+sender[0]->receiver[1] : HELLO[128]
+recv_olsr[252]
+
+[223.586544]mprset
+process_hello[252]
+sender[1]->receiver[0] : HELLO[124]
+recv_olsr[253]
+
+[224.126243]mprset
+process_hello[253]
+sender[0]->receiver[1] : HELLO[129]
+recv_olsr[254]
+
+[225.482418]mprset
+process_hello[254]
+sender[1]->receiver[0] : HELLO[125]
+recv_olsr[255]
+
+[225.815323]mprset
+process_hello[255]
+sender[0]->receiver[1] : HELLO[130]
+recv_olsr[256]
+
+[227.727982]mprset
+process_hello[256]
+sender[0]->receiver[1] : HELLO[131]
+recv_olsr[257]
+
+[229.046295]mprset
+process_hello[257]
+sender[0]->receiver[1] : HELLO[132]
+recv_olsr[258]
+
+[229.083819]mprset
+process_hello[258]
+sender[1]->receiver[0] : HELLO[126]
+recv_olsr[259]
+
+[230.755572]mprset
+process_hello[259]
+sender[1]->receiver[0] : HELLO[127]
+recv_olsr[260]
+
+[230.782056]mprset
+process_hello[260]
+sender[0]->receiver[1] : HELLO[133]
+recv_olsr[261]
+
+[232.525358]mprset
+process_hello[261]
+sender[1]->receiver[0] : HELLO[128]
+recv_olsr[262]
+
+[232.700772]mprset
+process_hello[262]
+sender[0]->receiver[1] : HELLO[134]
+recv_olsr[263]
+
+[233.885395]mprset
+process_hello[263]
+sender[1]->receiver[0] : HELLO[129]
+recv_olsr[264]
+
+[233.958743]mprset
+process_hello[264]
+sender[0]->receiver[1] : HELLO[135]
+recv_olsr[265]
+
+[235.510510]mprset
+process_hello[265]
+sender[1]->receiver[0] : HELLO[130]
+recv_olsr[266]
+
+[235.948363]mprset
+process_hello[266]
+sender[0]->receiver[1] : HELLO[136]
+recv_olsr[267]
+
+[237.565785]mprset
+process_hello[267]
+sender[1]->receiver[0] : HELLO[131]
+recv_olsr[268]
+
+[237.613211]mprset
+process_hello[268]
+sender[0]->receiver[1] : HELLO[137]
+recv_olsr[269]
+
+[239.096195]mprset
+process_hello[269]
+sender[1]->receiver[0] : HELLO[132]
+recv_olsr[270]
+
+[239.193904]mprset
+process_hello[270]
+sender[0]->receiver[1] : HELLO[138]
+recv_olsr[271]
+
+[240.826338]mprset
+process_hello[271]
+sender[0]->receiver[1] : HELLO[139]
+recv_olsr[272]
+
+[241.202466]mprset
+process_hello[272]
+sender[1]->receiver[0] : HELLO[133]
+recv_olsr[273]
+
+[242.960010]mprset
+process_hello[273]
+sender[0]->receiver[1] : HELLO[140]
+recv_olsr[274]
+
+[243.283473]mprset
+process_hello[274]
+sender[1]->receiver[0] : HELLO[134]
+recv_olsr[275]
+
+[244.572944]mprset
+process_hello[275]
+sender[1]->receiver[0] : HELLO[135]
+recv_olsr[276]
+
+[244.994736]mprset
+process_hello[276]
+sender[0]->receiver[1] : HELLO[141]
+recv_olsr[277]
+
+[246.130456]mprset
+process_hello[277]
+sender[0]->receiver[1] : HELLO[142]
+recv_olsr[278]
+
+[246.534305]mprset
+process_hello[278]
+sender[1]->receiver[0] : HELLO[136]
+recv_olsr[279]
+
+[248.288547]mprset
+process_hello[279]
+sender[1]->receiver[0] : HELLO[137]
+recv_olsr[280]
+
+[248.468802]mprset
+process_hello[280]
+sender[0]->receiver[1] : HELLO[143]
+recv_olsr[281]
+
+[250.315957]mprset
+process_hello[281]
+sender[0]->receiver[1] : HELLO[144]
+recv_olsr[282]
+
+[251.786859]mprset
+process_hello[282]
+sender[1]->receiver[0] : HELLO[138]
+recv_olsr[283]
+
+[251.855827]mprset
+process_hello[283]
+sender[0]->receiver[1] : HELLO[145]
+recv_olsr[284]
+
+[253.456877]mprset
+process_hello[284]
+sender[1]->receiver[0] : HELLO[139]
+recv_olsr[285]
+
+[253.809103]mprset
+process_hello[285]
+sender[0]->receiver[1] : HELLO[146]
+recv_olsr[286]
+
+[255.427976]mprset
+process_hello[286]
+sender[0]->receiver[1] : HELLO[147]
+recv_olsr[287]
+
+[255.502903]mprset
+process_hello[287]
+sender[1]->receiver[0] : HELLO[140]
+recv_olsr[288]
+
+[256.648864]mprset
+process_hello[288]
+sender[0]->receiver[1] : HELLO[148]
+recv_olsr[289]
+
+[256.822517]mprset
+process_hello[289]
+sender[1]->receiver[0] : HELLO[141]
+recv_olsr[290]
+
+[258.462932]mprset
+process_hello[290]
+sender[0]->receiver[1] : HELLO[149]
+recv_olsr[291]
+
+[258.612104]mprset
+process_hello[291]
+sender[1]->receiver[0] : HELLO[142]
+recv_olsr[292]
+
+[260.517417]mprset
+process_hello[292]
+sender[1]->receiver[0] : HELLO[143]
+recv_olsr[293]
+
+[260.594304]mprset
+process_hello[293]
+sender[0]->receiver[1] : HELLO[150]
+recv_olsr[294]
+
+[261.968920]mprset
+process_hello[294]
+sender[1]->receiver[0] : HELLO[144]
+recv_olsr[295]
+
+[262.104512]mprset
+process_hello[295]
+sender[0]->receiver[1] : HELLO[151]
+recv_olsr[296]
+
+[263.520410]mprset
+process_hello[296]
+sender[1]->receiver[0] : HELLO[145]
+recv_olsr[297]
+
+[263.741428]mprset
+process_hello[297]
+sender[0]->receiver[1] : HELLO[152]
+recv_olsr[298]
+
+[265.313878]mprset
+process_hello[298]
+sender[0]->receiver[1] : HELLO[153]
+recv_olsr[299]
+
+[265.574898]mprset
+process_hello[299]
+sender[1]->receiver[0] : HELLO[146]
+recv_olsr[300]
+
+[267.152848]mprset
+process_hello[300]
+sender[1]->receiver[0] : HELLO[147]
+recv_olsr[301]
+
+[267.171972]mprset
+process_hello[301]
+sender[0]->receiver[1] : HELLO[154]
+recv_olsr[302]
+
+[268.671777]mprset
+process_hello[302]
+sender[0]->receiver[1] : HELLO[155]
+recv_olsr[303]
+
+[268.805708]mprset
+process_hello[303]
+sender[1]->receiver[0] : HELLO[148]
+recv_olsr[304]
+
+[270.550030]mprset
+process_hello[304]
+sender[0]->receiver[1] : HELLO[156]
+recv_olsr[305]
+
+[270.673920]mprset
+process_hello[305]
+sender[1]->receiver[0] : HELLO[149]
+recv_olsr[306]
+
+[272.206828]mprset
+process_hello[306]
+sender[0]->receiver[1] : HELLO[157]
+recv_olsr[307]
+
+[272.847593]mprset
+process_hello[307]
+sender[1]->receiver[0] : HELLO[150]
+recv_olsr[308]
+
+[274.099221]mprset
+process_hello[308]
+sender[0]->receiver[1] : HELLO[158]
+recv_olsr[309]
+
+[274.323298]mprset
+process_hello[309]
+sender[1]->receiver[0] : HELLO[151]
+recv_olsr[310]
+
+[275.888727]mprset
+process_hello[310]
+sender[1]->receiver[0] : HELLO[152]
+recv_olsr[311]
+
+[275.988516]mprset
+process_hello[311]
+sender[0]->receiver[1] : HELLO[159]
+recv_olsr[312]
+
+[277.424756]mprset
+process_hello[312]
+sender[1]->receiver[0] : HELLO[153]
+recv_olsr[313]
+
+[277.447120]mprset
+process_hello[313]
+sender[0]->receiver[1] : HELLO[160]
+recv_olsr[314]
+
+[279.150239]mprset
+process_hello[314]
+sender[0]->receiver[1] : HELLO[161]
+recv_olsr[315]
+
+[279.852596]mprset
+process_hello[315]
+sender[1]->receiver[0] : HELLO[154]
+recv_olsr[316]
+
+[280.591690]mprset
+process_hello[316]
+sender[0]->receiver[1] : HELLO[162]
+recv_olsr[317]
+
+[281.457891]mprset
+process_hello[317]
+sender[1]->receiver[0] : HELLO[155]
+recv_olsr[318]
+
+[282.335813]mprset
+process_hello[318]
+sender[0]->receiver[1] : HELLO[163]
+recv_olsr[319]
+
+[283.049624]mprset
+process_hello[319]
+sender[1]->receiver[0] : HELLO[156]
+recv_olsr[320]
+
+[284.274570]mprset
+process_hello[320]
+sender[0]->receiver[1] : HELLO[164]
+recv_olsr[321]
+
+[284.684719]mprset
+process_hello[321]
+sender[1]->receiver[0] : HELLO[157]
+recv_olsr[322]
+
+[285.756596]mprset
+process_hello[322]
+sender[0]->receiver[1] : HELLO[165]
+recv_olsr[323]
+
+[286.566533]mprset
+process_hello[323]
+sender[1]->receiver[0] : HELLO[158]
+recv_olsr[324]
+
+[287.908828]mprset
+process_hNS EXITING...
+ello[324]
+sender[0]->receiver[1] : HELLO[166]
+recv_olsr[325]
+
+[288.326698]mprset
+process_hello[325]
+sender[1]->receiver[0] : HELLO[159]
+recv_olsr[326]
+
+[289.898069]mprset
+process_hello[326]
+sender[0]->receiver[1] : HELLO[167]
+recv_olsr[327]
+
+[289.915351]mprset
+process_hello[327]
+sender[1]->receiver[0] : HELLO[160]
+recv_olsr[328]
+
+[291.458320]mprset
+process_hello[328]
+sender[0]->receiver[1] : HELLO[168]
+recv_olsr[329]
+
+[292.071303]mprset
+process_hello[329]
+sender[1]->receiver[0] : HELLO[161]
+recv_olsr[330]
+
+[293.148199]mprset
+process_hello[330]
+sender[0]->receiver[1] : HELLO[169]
+recv_olsr[331]
+
+[293.638574]mprset
+process_hello[331]
+sender[1]->receiver[0] : HELLO[162]
+recv_olsr[332]
+
+[294.768434]mprset
+process_hello[332]
+sender[0]->receiver[1] : HELLO[170]
+recv_olsr[333]
+
+[295.438761]mprset
+process_hello[333]
+sender[1]->receiver[0] : HELLO[163]
+recv_olsr[334]
+
+[296.492076]mprset
+process_hello[334]
+sender[0]->receiver[1] : HELLO[171]
+recv_olsr[335]
+
+[297.505506]mprset
+process_hello[335]
+sender[1]->receiver[0] : HELLO[164]
+recv_olsr[336]
+
+[298.885704]mprset
+process_hello[336]
+sender[0]->receiver[1] : HELLO[172]
+recv_olsr[337]
+
+[299.349097]mprset
+process_hello[337]
+sender[1]->receiver[0] : HELLO[165]

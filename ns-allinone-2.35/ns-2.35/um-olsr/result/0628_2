@@ -1,0 +1,252 @@
+*** NOTE: no connection pattern specified.
+*** NOTE: no scenario file specified.
+Starting Simulation...
+num_nodes is set 2
+send_hello[1]
+delayhello[0.000170]
+enques_hello[1]
+send_hello[2]
+delayhello[0.044061]
+enques_hello[2]
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+[0.001278]mprset
+recv_hello[1]
+sender[0]->receiver[1] : HELLO[1]
+
+[0.045250]mprset
+recv_hello[2]
+sender[1]->receiver[0] : HELLO[1]
+
+send_hello[3]
+delayhello[0.154540]
+enques_hello[3]
+send_hello[4]
+delayhello[0.082073]
+enques_hello[4]
+[1.862658]mprset
+recv_hello[3]
+sender[1]->receiver[0] : HELLO[2]
+
+[1.879286]mprset
+recv_hello[4]
+sender[0]->receiver[1] : HELLO[2]
+
+send_hello[5]
+delayhello[0.225467]
+enques_hello[5]
+[3.530657]mprset
+recv_hello[5]
+sender[0]->receiver[1] : HELLO[3]
+
+send_hello[6]
+delayhello[0.265943]
+enques_hello[6]
+[4.025970]mprset
+recv_hello[6]
+sender[1]->receiver[0] : HELLO[3]
+
+send_hello[7]
+delayhello[0.140106]
+enques_hello[7]
+[5.357110]mprset
+recv_hello[7]
+sender[0]->receiver[1] : HELLO[4]
+
+send_hello[8]
+delayhello[0.149160]
+enques_hello[8]
+[5.677878]mprset
+recv_hello[8]
+sender[1]->receiver[0] : HELLO[4]
+
+send_hello[9]
+delayhello[0.312355]
+enques_hello[9]
+send_hello[10]
+delayhello[0.032701]
+enques_hello[10]
+[7.258801]mprset
+recv_hello[9]
+sender[1]->receiver[0] : HELLO[5]
+
+[7.390235]mprset
+recv_hello[10]
+sender[0]->receiver[1] : HELLO[5]
+
+send_hello[11]
+delayhello[0.280500]
+enques_hello[11]
+send_hello[12]
+delayhello[0.458240]
+enques_hello[12]
+[9.085484]mprset
+recv_hello[11]
+sender[1]->receiver[0] : HELLO[6]
+
+[9.438577]mprset
+recv_hello[12]
+sender[0]->receiver[1] : HELLO[6]
+
+send_hello[13]
+delayhello[0.063785]
+enques_hello[13]
+[10.440246]mprset
+recv_hello[13]
+sender[1]->receiver[0] : HELLO[7]
+
+send_hello[14]
+delayhello[0.003947]
+enques_hello[14]
+[10.755078]mprset
+recv_hello[14]
+sender[0]->receiver[1] : HELLO[7]
+
+send_hello[15]
+delayhello[0.034862]
+enques_hello[15]
+[12.284081]mprset
+recv_hello[15]
+sender[1]->receiver[0] : HELLO[8]
+
+send_hello[16]
+delayhello[0.242603]
+enques_hello[16]
+[12.881595]mprset
+recv_hello[16]
+sender[0]->receiver[1] : HELLO[8]
+
+send_hello[17]
+delayhello[0.299688]
+enques_hello[17]
+[14.246538]mprset
+recv_hello[17]
+sender[1]->receiver[0] : HELLO[9]
+
+send_hello[18]
+delayhello[0.476125]
+enques_hello[18]
+[14.843626]mprset
+recv_hello[18]
+sender[0]->receiver[1] : HELLO[9]
+
+send_hello[19]
+delayhello[0.186610]
+enques_hello[19]
+send_hello[20]
+delayhello[0.345439]
+enques_hello[20]
+[16.064723]mprset
+recv_hello[19]
+sender[1]->receiver[0] : HELLO[10]
+
+[16.383602]mprset
+recv_hello[20]
+sender[0]->receiver[1] : HELLO[10]
+
+send_hello[21]
+delayhello[0.211116]
+enques_hello[21]
+[17.773538]mprset
+recv_hello[21]
+sender[1]->receiver[0] : HELLO[11]
+
+send_hello[22]
+delayhello[0.429916]
+enques_hello[22]
+[18.329082]mprset
+recv_hello[22]
+sender[0]->receiver[1] : HELLO[11]
+
+send_hello[23]
+delayhello[0.484338]
+enques_hello[23]
+[19.742002]mprset
+recv_hello[23]
+sender[1]->receiver[0] : HELLO[12]
+
+send_hello[24]
+delayhello[0.395616]
+enques_hello[24]
+[20.282154]mprset
+recv_hello[24]
+sender[0]->receiver[1] : HELLO[12]
+
+send_hello[25]
+delayhello[0.378250]
+enques_hello[25]
+[21.200078]mprset
+recv_hello[25]
+sender[1]->receiver[0] : HELLO[13]
+
+send_hello[26]
+delayhello[0.416912]
+enques_hello[26]
+[22.033267]mprset
+recv_hello[26]
+sender[0]->receiver[1] : HELLO[13]
+
+send_hello[27]
+delayhello[0.300093]
+enques_hello[27]
+[22.920618]mprset
+recv_hello[27]
+sender[1]->receiver[0] : HELLO[14]
+
+send_hello[28]
+delayhello[0.248127]
+enques_hello[28]
+[23.731326]mprset
+recv_hello[28]
+sender[0]->receiver[1] : HELLO[14]
+
+send_hello[29]
+delayhello[0.314779]
+enques_hello[29]
+[24.493576]mprset
+recv_hello[29]
+sender[1]->receiver[0] : HELLO[15]
+
+send_hello[30]
+delayhello[0.057724]
+enques_hello[30]
+[25.349386]mprset
+recv_hello[30]
+sender[0]->receiver[1] : HELLO[15]
+
+send_hello[31]
+delayhello[0.280464]
+enques_hello[31]
+[25.976034]mprset
+recv_hello[31]
+sender[1]->receiver[0] : HELLO[16]
+
+send_hello[32]
+delayhello[0.045551]
+enques_hello[32]
+[26.939472]mprset
+recv_hello[32]
+sender[0]->receiver[1] : HELLO[16]
+
+send_hello[33]
+delayhello[0.157410]
+enques_hello[33]
+[27.755426]mprset
+recv_hello[33]
+sender[1]->receiver[0] : HELLO[17]
+
+send_hello[NS EXITING...
+34]
+delayhello[0.195416]
+enques_hello[34]
+[28.996617]mprset
+recv_hello[34]
+sender[0]->receiver[1] : HELLO[17]
+
+send_hello[35]
+delayhello[0.059726]
+enques_hello[35]
+[29.533212]mprset
+recv_hello[35]
+sender[1]->receiver[0] : HELLO[18]
+

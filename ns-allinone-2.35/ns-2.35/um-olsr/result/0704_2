@@ -1,0 +1,1595 @@
+*** NOTE: no connection pattern specified.
+*** NOTE: no scenario file specified.
+Starting Simulation...
+num_nodes is set 4
+
+---------------HELLO-----------------
+[0.000000]TIME
+| Sendernode = 【0】 
+| delayhello[0.000170]
+| enques_hello[1]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[0.000000]TIME
+| Sendernode = 【1】 
+| delayhello[0.044061]
+| enques_hello[2]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[0.000000]TIME
+| Sendernode = 【2】 
+| delayhello[0.156481]
+| enques_hello[3]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[0.000000]TIME
+| Sendernode = 【3】 
+| delayhello[0.319433]
+| enques_hello[4]
+-------------------------------------
+
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[0.001158]TIME
+| Receivernode = 【1】
+| recv_hello[1]
+| sender[0]->receiver[1] : HELLO[1]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[0.045170]TIME
+| Receivernode = 【0】
+| recv_hello[2]
+| sender[1]->receiver[0] : HELLO[1]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[0.045170]TIME
+| Receivernode = 【2】
+| recv_hello[3]
+| sender[1]->receiver[2] : HELLO[1]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[0.157669]TIME
+| Receivernode = 【1】
+| recv_hello[4]
+| sender[2]->receiver[1] : HELLO[1]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[0.157669]TIME
+| Receivernode = 【3】
+| recv_hello[5]
+| sender[2]->receiver[3] : HELLO[1]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[0.320861]TIME
+| Receivernode = 【2】
+| recv_hello[6]
+| sender[3]->receiver[2] : HELLO[1]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[1.591762]TIME
+| Sendernode = 【2】 
+| delayhello[0.403514]
+| enques_hello[5]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[1.722060]TIME
+| Sendernode = 【0】 
+| delayhello[0.129044]
+| enques_hello[6]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[1.779413]TIME
+| Sendernode = 【1】 
+| delayhello[0.259324]
+| enques_hello[7]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[1.845460]TIME
+| Sendernode = 【3】 
+| delayhello[0.346153]
+| enques_hello[8]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[1.852516]TIME
+| Receivernode = 【1】
+| recv_hello[7]
+| sender[0]->receiver[1] : HELLO[2]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[1.996681]TIME
+| Receivernode = 【1】
+| recv_hello[8]
+| sender[2]->receiver[1] : HELLO[2]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[1.996681]TIME
+| Receivernode = 【3】
+| recv_hello[9]
+| sender[2]->receiver[3] : HELLO[2]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[2.040082]TIME
+| Receivernode = 【0】
+| recv_hello[10]
+| sender[1]->receiver[0] : HELLO[2]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[2.040082]TIME
+| Receivernode = 【2】
+| recv_hello[11]
+| sender[1]->receiver[2] : HELLO[2]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[2.192766]TIME
+| Receivernode = 【2】
+| recv_hello[12]
+| sender[3]->receiver[2] : HELLO[2]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[3.414427]TIME
+| Sendernode = 【3】 
+| delayhello[0.054599]
+| enques_hello[9]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[3.417391]TIME
+| Sendernode = 【2】 
+| delayhello[0.093683]
+| enques_hello[10]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[3.470259]TIME
+| Receivernode = 【2】
+| recv_hello[13]
+| sender[3]->receiver[2] : HELLO[3]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[3.512699]TIME
+| Receivernode = 【1】
+| recv_hello[14]
+| sender[2]->receiver[1] : HELLO[3]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[3.512699]TIME
+| Receivernode = 【3】
+| recv_hello[15]
+| sender[2]->receiver[3] : HELLO[3]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[3.517717]TIME
+| Sendernode = 【0】 
+| delayhello[0.005404]
+| enques_hello[11]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[3.524633]TIME
+| Receivernode = 【1】
+| recv_hello[16]
+| sender[0]->receiver[1] : HELLO[3]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[3.546355]TIME
+| Sendernode = 【1】 
+| delayhello[0.334312]
+| enques_hello[12]
+-------------------------------------
+
+MYID[0]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[3.882224]TIME
+| Receivernode = 【0】
+| recv_hello[17]
+| sender[1]->receiver[0] : HELLO[3]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[3.882224]TIME
+| Receivernode = 【2】
+| recv_hello[18]
+| sender[1]->receiver[2] : HELLO[3]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+delaytc[0.277420]
+enques_tc[1]
+
+---------------HELLO-----------------
+[4.973670]TIME
+| Sendernode = 【2】 
+| delayhello[0.013779]
+| enques_hello[13]
+-------------------------------------
+
+| sender[2]->receiver[1] : HELLO[4]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[4.988685]TIME
+| Receivernode = 【1】
+| recv_hello[19]
+| sender[2]->receiver[1] : HELLO[5]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[2]->receiver[3] : HELLO[4]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[4.988685]TIME
+| Receivernode = 【3】
+| recv_hello[20]
+| sender[2]->receiver[3] : HELLO[5]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[5.212323]TIME
+| Sendernode = 【3】 
+| delayhello[0.386348]
+| enques_hello[14]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[5.220203]TIME
+| Sendernode = 【0】 
+| delayhello[0.347469]
+| enques_hello[15]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[5.417858]TIME
+| Sendernode = 【1】 
+| delayhello[0.488003]
+| enques_hello[16]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[5.568724]TIME
+| Receivernode = 【1】
+| recv_hello[21]
+| sender[0]->receiver[1] : HELLO[4]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[5.599803]TIME
+| Receivernode = 【2】
+| recv_hello[22]
+| sender[3]->receiver[2] : HELLO[4]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[0]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[5.907038]TIME
+| Receivernode = 【0】
+| recv_hello[23]
+| sender[1]->receiver[0] : HELLO[4]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[5.907038]TIME
+| Receivernode = 【2】
+| recv_hello[24]
+| sender[1]->receiver[2] : HELLO[4]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[6.810011]TIME
+| Sendernode = 【2】 
+| delayhello[0.044100]
+| enques_hello[17]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[6.855248]TIME
+| Receivernode = 【1】
+| recv_hello[25]
+| sender[2]->receiver[1] : HELLO[6]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[6.855248]TIME
+| Receivernode = 【3】
+| recv_hello[26]
+| sender[2]->receiver[3] : HELLO[6]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[7.108956]TIME
+| Sendernode = 【3】 
+| delayhello[0.437323]
+| enques_hello[18]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[7.130839]TIME
+| Sendernode = 【0】 
+| delayhello[0.367920]
+| enques_hello[19]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[7.372180]TIME
+| Sendernode = 【1】 
+| delayhello[0.178029]
+| enques_hello[20]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[7.500212]TIME
+| Receivernode = 【1】
+| recv_hello[27]
+| sender[0]->receiver[1] : HELLO[5]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[7.547592]TIME
+| Receivernode = 【2】
+| recv_hello[28]
+| sender[3]->receiver[2] : HELLO[5]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[0]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[7.551586]TIME
+| Receivernode = 【0】
+| recv_hello[29]
+| sender[1]->receiver[0] : HELLO[5]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[7.551586]TIME
+| Receivernode = 【2】
+| recv_hello[30]
+| sender[1]->receiver[2] : HELLO[5]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[8.402811]TIME
+| Sendernode = 【2】 
+| delayhello[0.186802]
+| enques_hello[21]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[8.590910]TIME
+| Receivernode = 【1】
+| recv_hello[31]
+| sender[2]->receiver[1] : HELLO[7]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[8.590910]TIME
+| Receivernode = 【3】
+| recv_hello[32]
+| sender[2]->receiver[3] : HELLO[7]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[8.729833]TIME
+| Sendernode = 【0】 
+| delayhello[0.347845]
+| enques_hello[22]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[8.815900]TIME
+| Sendernode = 【3】 
+| delayhello[0.016396]
+| enques_hello[23]
+-------------------------------------
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[8.833468]TIME
+| Receivernode = 【2】
+| recv_hello[33]
+| sender[3]->receiver[2] : HELLO[6]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[9.078691]TIME
+| Receivernode = 【1】
+| recv_hello[34]
+| sender[0]->receiver[1] : HELLO[6]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[9.092976]TIME
+| Sendernode = 【1】 
+| delayhello[0.439998]
+| enques_hello[24]
+-------------------------------------
+
+delaytc[0.015971]
+enques_tc[2]
+MYID[0]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[9.486909]TIME
+| Receivernode = 【0】
+| recv_hello[35]
+| sender[1]->receiver[0] : HELLO[6]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[1]->receiver[0] : HELLO[7]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[9.486909]TIME
+| Receivernode = 【2】
+| recv_hello[36]
+| sender[1]->receiver[2] : HELLO[6]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+delaytc[0.260373]
+enques_tc[3]
+| sender[1]->receiver[2] : HELLO[7]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+delaytc[0.103808]
+enques_tc[4]
+delaytc[0.165606]
+enques_tc[5]
+| sender[2]->receiver[1] : HELLO[8]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[2]->receiver[3] : HELLO[8]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[2]->receiver[3] : HELLO[9]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[1]->receiver[0] : HELLO[8]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[10.273864]TIME
+| Sendernode = 【0】 
+| delayhello[0.131879]
+| enques_hello[25]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[10.402724]TIME
+| Sendernode = 【2】 
+| delayhello[0.230638]
+| enques_hello[26]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[10.449490]TIME
+| Receivernode = 【1】
+| recv_hello[37]
+| sender[0]->receiver[1] : HELLO[7]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[10.633276]TIME
+| Sendernode = 【3】 
+| delayhello[0.037701]
+| enques_hello[27]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[10.638775]TIME
+| Receivernode = 【1】
+| recv_hello[38]
+| sender[2]->receiver[1] : HELLO[9]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[10.638775]TIME
+| Receivernode = 【3】
+| recv_hello[39]
+| sender[2]->receiver[3] : HELLO[10]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[10.690060]TIME
+| Sendernode = 【1】 
+| delayhello[0.230256]
+| enques_hello[28]
+-------------------------------------
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[10.693543]TIME
+| Receivernode = 【2】
+| recv_hello[40]
+| sender[3]->receiver[2] : HELLO[7]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[0]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[10.936136]TIME
+| Receivernode = 【0】
+| recv_hello[41]
+| sender[1]->receiver[0] : HELLO[9]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[10.936136]TIME
+| Receivernode = 【2】
+| recv_hello[42]
+| sender[1]->receiver[2] : HELLO[8]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[12.039294]TIME
+| Sendernode = 【0】 
+| delayhello[0.143839]
+| enques_hello[29]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[12.142673]TIME
+| Sendernode = 【2】 
+| delayhello[0.039206]
+| enques_hello[30]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[12.171945]TIME
+| Sendernode = 【3】 
+| delayhello[0.485053]
+| enques_hello[31]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[12.184782]TIME
+| Receivernode = 【1】
+| recv_hello[43]
+| sender[2]->receiver[1] : HELLO[10]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[12.184782]TIME
+| Receivernode = 【3】
+| recv_hello[44]
+| sender[2]->receiver[3] : HELLO[11]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[12.192151]TIME
+| Receivernode = 【1】
+| recv_hello[45]
+| sender[0]->receiver[1] : HELLO[8]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[12.647342]TIME
+| Sendernode = 【1】 
+| delayhello[0.077668]
+| enques_hello[32]
+-------------------------------------
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[12.671190]TIME
+| Receivernode = 【2】
+| recv_hello[46]
+| sender[3]->receiver[2] : HELLO[8]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[0]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[12.739191]TIME
+| Receivernode = 【0】
+| recv_hello[47]
+| sender[1]->receiver[0] : HELLO[10]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[12.739191]TIME
+| Receivernode = 【2】
+| recv_hello[48]
+| sender[1]->receiver[2] : HELLO[9]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[13.744922]TIME
+| Sendernode = 【0】 
+| delayhello[0.186848]
+| enques_hello[33]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[13.971249]TIME
+| Receivernode = 【1】
+| recv_hello[49]
+| sender[0]->receiver[1] : HELLO[9]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[13.980916]TIME
+| Sendernode = 【2】 
+| delayhello[0.038061]
+| enques_hello[34]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[14.021600]TIME
+| Receivernode = 【1】
+| recv_hello[50]
+| sender[2]->receiver[1] : HELLO[11]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[14.021600]TIME
+| Receivernode = 【3】
+| recv_hello[51]
+| sender[2]->receiver[3] : HELLO[12]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[14.044756]TIME
+| Sendernode = 【3】 
+| delayhello[0.177660]
+| enques_hello[35]
+-------------------------------------
+
+delaytc[0.122642]
+enques_tc[6]
+| sender[1]->receiver[0] : HELLO[11]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+delaytc[0.332436]
+enques_tc[7]
+| sender[1]->receiver[2] : HELLO[10]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[14.237204]TIME
+| Receivernode = 【2】
+| recv_hello[52]
+| sender[3]->receiver[2] : HELLO[9]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[14.497259]TIME
+| Sendernode = 【1】 
+| delayhello[0.081889]
+| enques_hello[36]
+-------------------------------------
+
+| sender[2]->receiver[3] : HELLO[13]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[14.614924]TIME
+| Receivernode = 【2】
+| recv_hello[53]
+| sender[1]->receiver[2] : HELLO[11]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+delaytc[0.271679]
+enques_tc[8]
+delaytc[0.324336]
+enques_tc[9]
+| sender[2]->receiver[1] : HELLO[12]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[2]->receiver[3] : HELLO[14]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[1]->receiver[0] : HELLO[12]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[15.370723]TIME
+| Sendernode = 【0】 
+| delayhello[0.200010]
+| enques_hello[37]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[15.607831]TIME
+| Receivernode = 【1】
+| recv_hello[54]
+| sender[0]->receiver[1] : HELLO[10]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[15.844838]TIME
+| Sendernode = 【2】 
+| delayhello[0.354428]
+| enques_hello[38]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[16.026409]TIME
+| Sendernode = 【3】 
+| delayhello[0.191527]
+| enques_hello[39]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[16.207540]TIME
+| Receivernode = 【1】
+| recv_hello[55]
+| sender[2]->receiver[1] : HELLO[13]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[16.207540]TIME
+| Receivernode = 【3】
+| recv_hello[56]
+| sender[2]->receiver[3] : HELLO[15]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[16.220486]TIME
+| Receivernode = 【2】
+| recv_hello[57]
+| sender[3]->receiver[2] : HELLO[10]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[16.419885]TIME
+| Sendernode = 【1】 
+| delayhello[0.478406]
+| enques_hello[40]
+-------------------------------------
+
+MYID[0]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[16.906446]TIME
+| Receivernode = 【0】
+| recv_hello[58]
+| sender[1]->receiver[0] : HELLO[13]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[16.906446]TIME
+| Receivernode = 【2】
+| recv_hello[59]
+| sender[1]->receiver[2] : HELLO[12]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[17.236444]TIME
+| Sendernode = 【0】 
+| delayhello[0.356538]
+| enques_hello[41]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[17.400417]TIME
+| Sendernode = 【2】 
+| delayhello[0.483742]
+| enques_hello[42]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[17.603358]TIME
+| Receivernode = 【1】
+| recv_hello[60]
+| sender[0]->receiver[1] : HELLO[11]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[17.641170]TIME
+| Sendernode = 【3】 
+| delayhello[0.312488]
+| enques_hello[43]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[17.888046]TIME
+| Receivernode = 【1】
+| recv_hello[61]
+| sender[2]->receiver[1] : HELLO[14]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[17.888046]TIME
+| Receivernode = 【3】
+| recv_hello[62]
+| sender[2]->receiver[3] : HELLO[16]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[17.980205]TIME
+| Receivernode = 【2】
+| recv_hello[63]
+| sender[3]->receiver[2] : HELLO[11]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[18.328945]TIME
+| Sendernode = 【1】 
+| delayhello[0.073322]
+| enques_hello[44]
+-------------------------------------
+
+MYID[0]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[18.411198]TIME
+| Receivernode = 【0】
+| recv_hello[64]
+| sender[1]->receiver[0] : HELLO[14]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[18.411198]TIME
+| Receivernode = 【2】
+| recv_hello[65]
+| sender[1]->receiver[2] : HELLO[13]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+delaytc[0.304657]
+enques_tc[10]
+
+---------------HELLO-----------------
+[18.913983]TIME
+| Sendernode = 【2】 
+| delayhello[0.407814]
+| enques_hello[45]
+-------------------------------------
+
+delaytc[0.453336]
+enques_tc[11]
+| sender[1]->receiver[2] : HELLO[14]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[19.223492]TIME
+| Sendernode = 【0】 
+| delayhello[0.097835]
+| enques_hello[46]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[19.282506]TIME
+| Sendernode = 【3】 
+| delayhello[0.001865]
+| enques_hello[47]
+-------------------------------------
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[19.291309]TIME
+| Receivernode = 【2】
+| recv_hello[66]
+| sender[3]->receiver[2] : HELLO[12]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[19.335093]TIME
+| Receivernode = 【1】
+| recv_hello[67]
+| sender[0]->receiver[1] : HELLO[12]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[19.342313]TIME
+| Receivernode = 【1】
+| recv_hello[68]
+| sender[2]->receiver[1] : HELLO[15]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[19.342313]TIME
+| Receivernode = 【3】
+| recv_hello[69]
+| sender[2]->receiver[3] : HELLO[17]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[2]->receiver[3] : HELLO[18]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+delaytc[0.099047]
+enques_tc[12]
+delaytc[0.078734]
+enques_tc[13]
+| sender[2]->receiver[1] : HELLO[16]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[2]->receiver[3] : HELLO[19]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[1]->receiver[0] : HELLO[15]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[20.258150]TIME
+| Sendernode = 【1】 
+| delayhello[0.176361]
+| enques_hello[48]
+-------------------------------------
+
+MYID[0]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[20.457224]TIME
+| Receivernode = 【0】
+| recv_hello[70]
+| sender[1]->receiver[0] : HELLO[16]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[20.457224]TIME
+| Receivernode = 【2】
+| recv_hello[71]
+| sender[1]->receiver[2] : HELLO[15]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[20.687774]TIME
+| Sendernode = 【2】 
+| delayhello[0.138378]
+| enques_hello[49]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[20.733709]TIME
+| Sendernode = 【0】 
+| delayhello[0.424497]
+| enques_hello[50]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[20.829385]TIME
+| Receivernode = 【1】
+| recv_hello[72]
+| sender[2]->receiver[1] : HELLO[17]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[20.829385]TIME
+| Receivernode = 【3】
+| recv_hello[73]
+| sender[2]->receiver[3] : HELLO[20]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[21.156310]TIME
+| Sendernode = 【3】 
+| delayhello[0.347400]
+| enques_hello[51]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[21.162708]TIME
+| Receivernode = 【1】
+| recv_hello[74]
+| sender[0]->receiver[1] : HELLO[13]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[21.506388]TIME
+| Receivernode = 【2】
+| recv_hello[75]
+| sender[3]->receiver[2] : HELLO[13]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[22.010535]TIME
+| Sendernode = 【1】 
+| delayhello[0.127719]
+| enques_hello[52]
+-------------------------------------
+
+MYID[0]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[22.150804]TIME
+| Receivernode = 【0】
+| recv_hello[76]
+| sender[1]->receiver[0] : HELLO[17]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[22.150804]TIME
+| Receivernode = 【2】
+| recv_hello[77]
+| sender[1]->receiver[2] : HELLO[16]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[22.625008]TIME
+| Sendernode = 【2】 
+| delayhello[0.001010]
+| enques_hello[53]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[22.628755]TIME
+| Receivernode = 【1】
+| recv_hello[78]
+| sender[2]->receiver[1] : HELLO[18]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[22.628755]TIME
+| Receivernode = 【3】
+| recv_hello[79]
+| sender[2]->receiver[3] : HELLO[21]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[22.666480]TIME
+| Sendernode = 【0】 
+| delayhello[0.445891]
+| enques_hello[54]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[22.894352]TIME
+| Sendernode = 【3】 
+| delayhello[0.491118]
+| enques_hello[55]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[23.132663]TIME
+| Receivernode = 【1】
+| recv_hello[80]
+| sender[0]->receiver[1] : HELLO[14]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[23.418947]TIME
+| Receivernode = 【2】
+| recv_hello[81]
+| sender[3]->receiver[2] : HELLO[14]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[23.693422]TIME
+| Sendernode = 【1】 
+| delayhello[0.484101]
+| enques_hello[56]
+-------------------------------------
+
+delaytc[0.220296]
+enques_tc[14]
+MYID[0]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[23.991902]TIME
+| Receivernode = 【0】
+| recv_hello[82]
+| sender[1]->receiver[0] : HELLO[18]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[1]->receiver[0] : HELLO[19]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[24.318910]TIME
+| Sendernode = 【2】 
+| delayhello[0.103003]
+| enques_hello[57]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[24.423794]TIME
+| Receivernode = 【1】
+| recv_hello[83]
+| sender[2]->receiver[1] : HELLO[19]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[24.423794]TIME
+| Receivernode = 【3】
+| recv_hello[84]
+| sender[2]->receiver[3] : HELLO[22]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[24.442662]TIME
+| Sendernode = 【0】 
+| delayhello[0.228887]
+| enques_hello[58]
+-------------------------------------
+
+delaytc[0.124258]
+enques_tc[15]
+delaytc[0.248473]
+enques_tc[16]
+| sender[2]->receiver[1] : HELLO[20]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[2]->receiver[3] : HELLO[23]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[24.674928]TIME
+| Sendernode = 【3】 
+| delayhello[0.445444]
+| enques_hello[59]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[24.682092]TIME
+| Receivernode = 【1】
+| recv_hello[85]
+| sender[0]->receiver[1] : HELLO[15]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[1]->receiver[0] : HELLO[20]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[25.131814]TIME
+| Receivernode = 【2】
+| recv_hello[86]
+| sender[3]->receiver[2] : HELLO[15]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[25.286876]TIME
+| Sendernode = 【1】 
+| delayhello[0.311665]
+| enques_hello[60]
+-------------------------------------
+
+MYID[0]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[25.627914]TIME
+| Receivernode = 【0】
+| recv_hello[87]
+| sender[1]->receiver[0] : HELLO[21]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[25.627914]TIME
+| Receivernode = 【2】
+| recv_hello[88]
+| sender[1]->receiver[2] : HELLO[17]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[25.849189]TIME
+| Sendernode = 【2】 
+| delayhello[0.266028]
+| enques_hello[61]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[26.119758]TIME
+| Receivernode = 【1】
+| recv_hello[89]
+| sender[2]->receiver[1] : HELLO[21]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[26.119758]TIME
+| Receivernode = 【3】
+| recv_hello[90]
+| sender[2]->receiver[3] : HELLO[24]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[26.265664]TIME
+| Sendernode = 【3】 
+| delayhello[0.061153]
+| enques_hello[62]
+-------------------------------------
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[26.327925]TIME
+| Receivernode = 【2】
+| recv_hello[91]
+| sender[3]->receiver[2] : HELLO[16]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[26.401939]TIME
+| Sendernode = 【0】 
+| delayhello[0.115754]
+| enques_hello[63]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[26.535502]TIME
+| Receivernode = 【1】
+| recv_hello[92]
+| sender[0]->receiver[1] : HELLO[16]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[26.866991]TIME
+| Sendernode = 【1】 
+| delayhello[0.418307]
+| enques_hello[64]
+-------------------------------------
+
+MYID[0]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[27.289334]TIME
+| Receivernode = 【0】
+| recv_hello[93]
+| sender[1]->receiver[0] : HELLO[22]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[27.289334]TIME
+| Receivernode = 【2】
+| recv_hello[94]
+| sender[1]->receiver[2] : HELLO[18]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[27.573537]TIME
+| Sendernode = 【2】 
+| delayhello[0.122429]
+| enques_hello[65]
+-------------------------------------
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[27.709079]TIME
+| Receivernode = 【3】
+| recv_hello[95]
+| sender[2]->receiver[3] : HELLO[25]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[27.966023]TIME
+| Sendernode = 【0】 
+| delayhello[0.162557]
+| enques_hello[66]
+-------------------------------------
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[28.182847]TIME
+| Receivernode = 【1】
+| recv_hello[96]
+| sender[0]->receiver[1] : HELLO[17]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[28.200133]TIME
+| Sendernode = 【3】 
+| delayhello[0.220717]
+| enques_hello[67]
+-------------------------------------
+
+delaytc[0.329994]
+enques_tc[17]
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[28.431228]TIME
+| Receivernode = 【2】
+| recv_hello[97]
+| sender[3]->receiver[2] : HELLO[17]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[28.541307]TIME
+| Sendernode = 【1】 
+| delayhello[0.426608]
+| enques_hello[68]
+-------------------------------------
+
+delaytc[0.040330]
+enques_tc[18]
+| sender[1]->receiver[2] : HELLO[19]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[2]	Neighbor[1]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[28.729701]TIME
+| Receivernode = 【2】
+| recv_hello[98]
+| sender[1]->receiver[2] : HELLO[20]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[2]->receiver[3] : HELLO[26]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+delaytc[0.478149]
+enques_tc[19]
+
+---------------HELLO-----------------
+[29.523922]TIME
+| Sendernode = 【2】 
+| delayhello[0.268744]
+| enques_hello[69]
+-------------------------------------
+
+delaytc[0.127610]
+enques_tc[20]
+| sender[2]->receiver[1] : HELLO[22]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[29.790949]TIME
+| Receivernode = 【1】
+| recv_hello[99]
+| sender[2]->receiver[1] : HELLO[23]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| sender[2]->receiver[3] : HELLO[27]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[3]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[29.790949]TIME
+| Receivernode = 【3】
+| recv_hello[100]
+| sender[2]->receiver[3] : HELLO[28]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+---------------HELLO-----------------
+[29.797874]TIME
+| Sendernode = 【3】 
+| delayhello[0.337743]
+| enques_hello[70]
+-------------------------------------
+
+
+---------------HELLO-----------------
+[29.867676]TIME
+| Sendernode = 【0】 
+| delayhello[0.062519]
+| enques_hello[71]
+-------------------------------------
+
+| sender[1]->receiver[0] : HELLO[23]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+MYID[1]	Neighbor[2]
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[29.957644]TIME
+| Receivernode = 【1】
+NS EXITING...
+| recv_hello[101]
+| sender[0]->receiver[1] : HELLO[18]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+

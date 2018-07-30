@@ -1,0 +1,602 @@
+*** NOTE: no connection pattern specified.
+*** NOTE: no scenario file specified.
+Starting Simulation...
+num_nodes is set 2
+JITTER = 0.277771
+
+---------------HELLO-----------------
+[0.000000]TIME
+| Sendernode = 【0】 
+| delayhello[0.000170]
+| enques_hello[1]
+-------------------------------------
+
+JITTER = 0.178991
+
+---------------HELLO-----------------
+[0.000000]TIME
+| Sendernode = 【1】 
+| delayhello[0.220587]
+| enques_hello[2]
+-------------------------------------
+
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[0.001358]TIME
+| Receivernode = 【1】
+| recv_hello[1]
+| sender[0]->receiver[1] : HELLO[1]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[0.221795]TIME
+| Receivernode = 【0】
+| recv_hello[2]
+| sender[1]->receiver[0] : HELLO[1]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.0606754
+
+---------------HELLO-----------------
+[1.843519]TIME
+| Sendernode = 【1】 
+| delayhello[0.082073]
+| enques_hello[3]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[1.926964]TIME
+| Receivernode = 【0】
+| recv_hello[3]
+| sender[1]->receiver[0] : HELLO[2]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.0274586
+
+---------------HELLO-----------------
+[1.992898]TIME
+| Sendernode = 【0】 
+| delayhello[0.473132]
+| enques_hello[4]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[2.470942]TIME
+| Receivernode = 【1】
+| recv_hello[4]
+| sender[0]->receiver[1] : HELLO[2]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.0523337
+
+---------------HELLO-----------------
+[3.523485]TIME
+| Sendernode = 【1】 
+| delayhello[0.191204]
+| enques_hello[5]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[3.716162]TIME
+| Receivernode = 【0】
+| recv_hello[5]
+| sender[1]->receiver[0] : HELLO[3]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.122478
+
+---------------HELLO-----------------
+[3.936882]TIME
+| Sendernode = 【0】 
+| delayhello[0.229181]
+| enques_hello[6]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[4.170802]TIME
+| Receivernode = 【1】
+| recv_hello[6]
+| sender[0]->receiver[1] : HELLO[3]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.153927
+
+---------------HELLO-----------------
+[5.105510]TIME
+| Sendernode = 【1】 
+| delayhello[0.423345]
+| enques_hello[7]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[5.530533]TIME
+| Receivernode = 【0】
+| recv_hello[7]
+| sender[1]->receiver[0] : HELLO[4]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.0672
+
+---------------HELLO-----------------
+[5.730382]TIME
+| Sendernode = 【0】 
+| delayhello[0.096620]
+| enques_hello[8]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[5.829482]TIME
+| Receivernode = 【1】
+| recv_hello[8]
+| sender[0]->receiver[1] : HELLO[4]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.140832
+
+---------------HELLO-----------------
+[6.968757]TIME
+| Sendernode = 【1】 
+| delayhello[0.253621]
+| enques_hello[9]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[7.225859]TIME
+| Receivernode = 【0】
+| recv_hello[9]
+| sender[1]->receiver[0] : HELLO[5]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.129498
+
+---------------HELLO-----------------
+[7.618369]TIME
+| Sendernode = 【0】 
+| delayhello[0.106275]
+| enques_hello[10]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[7.725891]TIME
+| Receivernode = 【1】
+| recv_hello[10]
+| sender[0]->receiver[1] : HELLO[5]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.211495
+
+---------------HELLO-----------------
+[8.811902]TIME
+| Sendernode = 【1】 
+| delayhello[0.089618]
+| enques_hello[11]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[8.905560]TIME
+| Receivernode = 【0】
+| recv_hello[11]
+| sender[1]->receiver[0] : HELLO[6]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.0122994
+
+---------------HELLO-----------------
+[9.609358]TIME
+| Sendernode = 【0】 
+| delayhello[0.264978]
+| enques_hello[12]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[9.876910]TIME
+| Receivernode = 【1】
+| recv_hello[12]
+| sender[0]->receiver[1] : HELLO[6]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.455543
+
+---------------HELLO-----------------
+[10.543177]TIME
+| Sendernode = 【1】 
+| delayhello[0.456367]
+| enques_hello[13]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[11.002492]TIME
+| Receivernode = 【0】
+| recv_hello[13]
+| sender[1]->receiver[0] : HELLO[7]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.321197
+
+---------------HELLO-----------------
+[11.455759]TIME
+| Sendernode = 【0】 
+| delayhello[0.023958]
+| enques_hello[14]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[11.482283]TIME
+| Receivernode = 【1】
+| recv_hello[14]
+| sender[0]->receiver[1] : HELLO[7]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.216526
+
+---------------HELLO-----------------
+[12.530723]TIME
+| Sendernode = 【1】 
+| delayhello[0.201483]
+| enques_hello[15]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[12.735140]TIME
+| Receivernode = 【0】
+| recv_hello[15]
+| sender[1]->receiver[0] : HELLO[8]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.0107238
+
+---------------HELLO-----------------
+[13.214589]TIME
+| Sendernode = 【0】 
+| delayhello[0.482572]
+| enques_hello[16]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[13.702334]TIME
+| Receivernode = 【1】
+| recv_hello[16]
+| sender[0]->receiver[1] : HELLO[8]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.287557
+
+---------------HELLO-----------------
+[14.289892]TIME
+| Sendernode = 【1】 
+| delayhello[0.043924]
+| enques_hello[17]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[14.340791]TIME
+| Receivernode = 【0】
+| recv_hello[17]
+| sender[1]->receiver[0] : HELLO[9]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.0447957
+
+---------------HELLO-----------------
+[14.997646]TIME
+| Sendernode = 【0】 
+| delayhello[0.090908]
+| enques_hello[18]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[15.090199]TIME
+| Receivernode = 【1】
+| recv_hello[18]
+| sender[0]->receiver[1] : HELLO[9]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.265171
+
+---------------HELLO-----------------
+[15.833538]TIME
+| Sendernode = 【1】 
+| delayhello[0.205471]
+| enques_hello[19]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[16.040969]TIME
+| Receivernode = 【0】
+| recv_hello[19]
+| sender[1]->receiver[0] : HELLO[10]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.019257
+
+---------------HELLO-----------------
+[16.566373]TIME
+| Sendernode = 【0】 
+| delayhello[0.285149]
+| enques_hello[20]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[16.856134]TIME
+| Receivernode = 【1】
+| recv_hello[20]
+| sender[0]->receiver[1] : HELLO[10]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.161326
+
+---------------HELLO-----------------
+[17.458425]TIME
+| Sendernode = 【1】 
+| delayhello[0.135589]
+| enques_hello[21]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[17.597629]TIME
+| Receivernode = 【0】
+| recv_hello[21]
+| sender[1]->receiver[0] : HELLO[11]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.329913
+
+---------------HELLO-----------------
+[18.481940]TIME
+| Sendernode = 【0】 
+| delayhello[0.340686]
+| enques_hello[22]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[18.826210]TIME
+| Receivernode = 【1】
+| recv_hello[22]
+| sender[0]->receiver[1] : HELLO[11]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.0151779
+
+---------------HELLO-----------------
+[19.183130]TIME
+| Sendernode = 【1】 
+| delayhello[0.053835]
+| enques_hello[23]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[19.240005]TIME
+| Receivernode = 【0】
+| recv_hello[23]
+| sender[1]->receiver[0] : HELLO[12]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.327828
+
+---------------HELLO-----------------
+[20.420697]TIME
+| Sendernode = 【0】 
+| delayhello[0.381712]
+| enques_hello[24]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[20.804319]TIME
+| Receivernode = 【1】
+| recv_hello[24]
+| sender[0]->receiver[1] : HELLO[12]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.369237
+
+---------------HELLO-----------------
+[20.921276]TIME
+| Sendernode = 【1】 
+| delayhello[0.478844]
+| enques_hello[25]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[21.406331]TIME
+| Receivernode = 【0】
+| recv_hello[25]
+| sender[1]->receiver[0] : HELLO[13]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.0118602
+
+---------------HELLO-----------------
+[22.023610]TIME
+| Sendernode = 【0】 
+| delayhello[0.457366]
+| enques_hello[26]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[22.483459]TIME
+| Receivernode = 【1】
+| recv_hello[26]
+| sender[0]->receiver[1] : HELLO[13]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.0401321
+
+---------------HELLO-----------------
+[22.800671]TIME
+| Sendernode = 【1】 
+| delayhello[0.431184]
+| enques_hello[27]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[23.233145]TIME
+| Receivernode = 【0】
+| recv_hello[27]
+| sender[1]->receiver[0] : HELLO[14]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.0275824
+
+---------------HELLO-----------------
+[23.862098]TIME
+| Sendernode = 【0】 
+| delayhello[0.461799]
+| enques_hello[28]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[24.327178]TIME
+| Receivernode = 【1】
+| recv_hello[28]
+| sender[0]->receiver[1] : HELLO[14]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.0187598
+
+---------------HELLO-----------------
+[24.478014]TIME
+| Sendernode = 【1】 
+| delayhello[0.074350]
+| enques_hello[29]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[24.556313]TIME
+| Receivernode = 【0】
+| recv_hello[29]
+| sender[1]->receiver[0] : HELLO[15]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.199953
+
+---------------HELLO-----------------
+[25.762385]TIME
+| Sendernode = 【0】 
+| delayhello[0.442794]
+| enques_hello[30]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[26.207283]TIME
+| Receivernode = 【1】
+| recv_hello[30]
+| sender[0]->receiver[1] : HELLO[15]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.0479593
+
+---------------HELLO-----------------
+[26.269945]TIME
+| Sendernode = 【1】 
+| delayhello[0.195562]
+| enques_hello[31]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[26.473083]TIME
+| Receivernode = 【0】
+| recv_hello[31]
+| sender[1]->receiver[0] : HELLO[16]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.0461627
+
+---------------HELLO-----------------
+[27.377436]TIME
+| Sendernode = 【0】 
+| delayhello[0.056072]
+| enques_hello[32]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[27.435862]TIME
+| Receivernode = 【1】
+| recv_hello[32]
+| sender[0]->receiver[1] : HELLO[16]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.0332107
+
+---------------HELLO-----------------
+[28.109207]TIME
+| Sendernode = 【1】 
+| delayhello[0.147405]
+| enques_hello[33]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[28.259337]TIME
+| Receivernode = 【0】
+| recv_hello[33]
+| sender[1]->receiver[0] : HELLO[17]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = -0.0673805
+
+---------------HELLO-----------------
+[28.913217]TIME
+| Sendernode = 【0】 
+| delayhello[0.146826]
+| enques_hello[34]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[29.062395]TIME
+| Receivernode = 【1】
+| recv_hello[34]
+| sender[0]->receiver[1] : HELLO[17]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+JITTER = 0.170971
+
+---------------HELLO-----------------
+[29.692967]TIME
+| Sendernode = 【1】 
+| delayhello[0.285976]
+| enques_hello[35]
+-------------------------------------
+
+
+^^^^^^^^^^^^^^^Recieve^^^^^^^^^^^^^^^
+[29.983313]TIME
+| Receivernode = 【0】
+NS EXITING...
+| recv_hello[35]
+| sender[1]->receiver[0] : HELLO[18]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+

@@ -1,0 +1,617 @@
+*** NOTE: no connection pattern specified.
+*** NOTE: no scenario file specified.
+Starting Simulation...
+num_nodes is set 4
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+recv_olsr[1]
+
+Time[0.001158]
+sender[0]->receiver[1] : HELLO[1]
+recv_olsr[2]
+
+Time[0.045170]
+sender[1]->receiver[0] : HELLO[1]
+recv_olsr[3]
+
+Time[0.045170]
+sender[1]->receiver[2] : HELLO[1]
+recv_olsr[4]
+
+Time[0.045170]
+sender[1]->receiver[3] : HELLO[1]
+recv_olsr[5]
+
+Time[0.157669]
+sender[2]->receiver[3] : HELLO[1]
+recv_olsr[6]
+
+Time[0.157669]
+sender[2]->receiver[1] : HELLO[1]
+recv_olsr[7]
+
+Time[0.320861]
+sender[3]->receiver[2] : HELLO[1]
+recv_olsr[8]
+
+Time[0.320861]
+sender[3]->receiver[1] : HELLO[1]
+recv_olsr[9]
+
+Time[1.852516]
+sender[0]->receiver[1] : HELLO[2]
+recv_olsr[10]
+
+Time[1.996680]
+sender[2]->receiver[3] : HELLO[2]
+recv_olsr[11]
+
+Time[1.996681]
+sender[2]->receiver[1] : HELLO[2]
+recv_olsr[12]
+
+Time[2.040114]
+sender[1]->receiver[0] : HELLO[2]
+recv_olsr[13]
+
+Time[2.040114]
+sender[1]->receiver[2] : HELLO[2]
+recv_olsr[14]
+
+Time[2.040114]
+sender[1]->receiver[3] : HELLO[2]
+recv_olsr[15]
+
+Time[2.192798]
+sender[3]->receiver[2] : HELLO[2]
+recv_olsr[16]
+
+Time[2.192798]
+sender[3]->receiver[1] : HELLO[2]
+recv_olsr[17]
+
+Time[3.470290]
+sender[3]->receiver[2] : HELLO[3]
+recv_olsr[18]
+
+Time[3.470291]
+sender[3]->receiver[1] : HELLO[3]
+recv_olsr[19]
+
+Time[3.512698]
+sender[2]->receiver[3] : HELLO[3]
+recv_olsr[20]
+
+Time[3.512699]
+sender[2]->receiver[1] : HELLO[3]
+recv_olsr[21]
+
+Time[3.524633]
+sender[0]->receiver[1] : HELLO[3]
+recv_olsr[22]
+
+Time[3.882224]
+sender[1]->receiver[0] : HELLO[3]
+recv_olsr[23]
+
+Time[3.882224]
+sender[1]->receiver[2] : HELLO[3]
+recv_olsr[24]
+
+Time[3.882224]
+sender[1]->receiver[3] : HELLO[3]
+recv_olsr[25]
+
+Time[5.187589]
+sender[2]->receiver[3] : HELLO[4]
+recv_olsr[26]
+
+Time[5.187590]
+sender[2]->receiver[1] : HELLO[4]
+recv_olsr[27]
+
+Time[5.324823]
+sender[0]->receiver[1] : HELLO[4]
+recv_olsr[28]
+
+Time[5.465073]
+sender[1]->receiver[0] : HELLO[4]
+recv_olsr[29]
+
+Time[5.465073]
+sender[1]->receiver[2] : HELLO[4]
+recv_olsr[30]
+
+Time[5.465073]
+sender[1]->receiver[3] : HELLO[4]
+recv_olsr[31]
+
+Time[5.687007]
+sender[3]->receiver[2] : HELLO[4]
+recv_olsr[32]
+
+Time[5.687008]
+sender[3]->receiver[1] : HELLO[4]
+recv_olsr[33]
+
+Time[7.037781]
+sender[3]->receiver[2] : HELLO[5]
+recv_olsr[34]
+
+Time[7.037782]
+sender[3]->receiver[1] : HELLO[5]
+recv_olsr[35]
+
+Time[7.281547]
+sender[0]->receiver[1] : HELLO[5]
+recv_olsr[36]
+
+Time[7.325528]
+sender[2]->receiver[3] : HELLO[5]
+recv_olsr[37]
+
+Time[7.325528]
+sender[2]->receiver[1] : HELLO[5]
+recv_olsr[38]
+
+Time[7.574380]
+sender[1]->receiver[0] : HELLO[5]
+recv_olsr[39]
+
+Time[7.574380]
+sender[1]->receiver[2] : HELLO[5]
+recv_olsr[40]
+
+Time[7.574380]
+sender[1]->receiver[3] : HELLO[5]
+recv_olsr[41]
+
+Time[8.523911]
+sender[2]->receiver[3] : HELLO[6]
+recv_olsr[42]
+
+Time[8.523912]
+sender[2]->receiver[1] : HELLO[6]
+recv_olsr[43]
+
+Time[8.695825]
+sender[0]->receiver[1] : HELLO[6]
+recv_olsr[44]
+
+Time[8.965795]
+sender[3]->receiver[2] : HELLO[6]
+recv_olsr[45]
+
+Time[8.965795]
+sender[3]->receiver[1] : HELLO[6]
+recv_olsr[46]
+
+Time[9.436094]
+sender[1]->receiver[0] : HELLO[6]
+recv_olsr[47]
+
+Time[9.436094]
+sender[1]->receiver[2] : HELLO[6]
+recv_olsr[48]
+
+Time[9.436094]
+sender[1]->receiver[3] : HELLO[6]
+recv_olsr[49]
+
+Time[9.848272]
+sender[1]->receiver[0] : HELLO[7]
+recv_olsr[50]
+
+Time[9.848272]
+sender[1]->receiver[2] : HELLO[7]
+recv_olsr[51]
+
+Time[9.848272]
+sender[1]->receiver[3] : HELLO[7]
+recv_olsr[52]
+
+Time[10.244120]
+sender[0]->receiver[1] : HELLO[7]
+recv_olsr[53]
+
+Time[10.541577]
+sender[2]->receiver[3] : HELLO[7]
+recv_olsr[54]
+
+Time[10.541578]
+sender[2]->receiver[1] : HELLO[7]
+recv_olsr[55]
+
+Time[10.766893]
+sender[1]->receiver[0] : HELLO[8]
+recv_olsr[56]
+
+Time[10.766893]
+sender[1]->receiver[2] : HELLO[8]
+recv_olsr[57]
+
+Time[10.766893]
+sender[1]->receiver[3] : HELLO[8]
+recv_olsr[58]
+
+Time[10.998603]
+sender[3]->receiver[2] : HELLO[7]
+recv_olsr[59]
+
+Time[10.998604]
+sender[3]->receiver[1] : HELLO[7]
+recv_olsr[60]
+
+Time[12.120564]
+sender[2]->receiver[3] : HELLO[8]
+recv_olsr[61]
+
+Time[12.120564]
+sender[2]->receiver[1] : HELLO[8]
+recv_olsr[62]
+
+Time[12.133334]
+sender[0]->receiver[1] : HELLO[8]
+recv_olsr[63]
+
+Time[12.558570]
+sender[3]->receiver[2] : HELLO[8]
+recv_olsr[64]
+
+Time[12.558571]
+sender[3]->receiver[1] : HELLO[8]
+recv_olsr[65]
+
+Time[12.766668]
+sender[1]->receiver[0] : HELLO[9]
+recv_olsr[66]
+
+Time[12.766668]
+sender[1]->receiver[2] : HELLO[9]
+recv_olsr[67]
+
+Time[12.766668]
+sender[1]->receiver[3] : HELLO[9]
+recv_olsr[68]
+
+Time[14.066629]
+sender[2]->receiver[3] : HELLO[9]
+recv_olsr[69]
+
+Time[14.066629]
+sender[2]->receiver[1] : HELLO[9]
+recv_olsr[70]
+
+Time[14.068015]
+sender[3]->receiver[2] : HELLO[9]
+recv_olsr[71]
+
+Time[14.068015]
+sender[3]->receiver[1] : HELLO[9]
+recv_olsr[72]
+
+Time[14.422627]
+sender[1]->receiver[0] : HELLO[10]
+
+Time[14.422627]
+sender[1]->receiver[0] : HELLO[11]
+recv_olsr[73]
+
+Time[14.422627]
+sender[1]->receiver[2] : HELLO[10]
+
+Time[14.422627]
+sender[1]->receiver[2] : HELLO[11]
+recv_olsr[74]
+
+Time[14.422627]
+sender[1]->receiver[3] : HELLO[10]
+
+Time[14.422627]
+sender[1]->receiver[3] : HELLO[11]
+recv_olsr[75]
+
+Time[14.462179]
+sender[0]->receiver[1] : HELLO[9]
+recv_olsr[76]
+
+Time[15.499256]
+sender[2]->receiver[3] : HELLO[10]
+recv_olsr[77]
+
+Time[15.499257]
+sender[2]->receiver[1] : HELLO[10]
+recv_olsr[78]
+
+Time[15.614291]
+sender[0]->receiver[1] : HELLO[10]
+recv_olsr[79]
+
+Time[15.946376]
+sender[3]->receiver[2] : HELLO[10]
+recv_olsr[80]
+
+Time[15.946377]
+sender[3]->receiver[1] : HELLO[10]
+recv_olsr[81]
+
+Time[16.262067]
+sender[1]->receiver[0] : HELLO[12]
+recv_olsr[82]
+
+Time[16.262067]
+sender[1]->receiver[2] : HELLO[12]
+recv_olsr[83]
+
+Time[16.262067]
+sender[1]->receiver[3] : HELLO[12]
+recv_olsr[84]
+
+Time[17.588809]
+sender[2]->receiver[3] : HELLO[11]
+recv_olsr[85]
+
+Time[17.588810]
+sender[2]->receiver[1] : HELLO[11]
+recv_olsr[86]
+
+Time[17.593665]
+sender[3]->receiver[2] : HELLO[11]
+recv_olsr[87]
+
+Time[17.593665]
+sender[3]->receiver[1] : HELLO[11]
+recv_olsr[88]
+
+Time[17.630524]
+sender[0]->receiver[1] : HELLO[11]
+recv_olsr[89]
+
+Time[17.976896]
+sender[1]->receiver[0] : HELLO[13]
+recv_olsr[90]
+
+Time[17.976896]
+sender[1]->receiver[2] : HELLO[13]
+recv_olsr[91]
+
+Time[17.976896]
+sender[1]->receiver[3] : HELLO[13]
+recv_olsr[92]
+
+Time[18.958305]
+sender[2]->receiver[3] : HELLO[12]
+recv_olsr[93]
+
+Time[18.958306]
+sender[2]->receiver[1] : HELLO[12]
+recv_olsr[94]
+
+Time[18.961170]
+sender[1]->receiver[0] : HELLO[14]
+recv_olsr[95]
+
+Time[18.961170]
+sender[1]->receiver[2] : HELLO[14]
+recv_olsr[96]
+
+Time[18.961170]
+sender[1]->receiver[3] : HELLO[14]
+recv_olsr[97]
+
+Time[19.308715]
+sender[3]->receiver[2] : HELLO[12]
+recv_olsr[98]
+
+Time[19.308716]
+sender[3]->receiver[1] : HELLO[12]
+recv_olsr[99]
+
+Time[19.396848]
+sender[0]->receiver[1] : HELLO[12]
+recv_olsr[100]
+
+Time[19.830869]
+sender[1]->receiver[0] : HELLO[15]
+recv_olsr[101]
+
+Time[19.830869]
+sender[1]->receiver[2] : HELLO[15]
+recv_olsr[102]
+
+Time[19.830869]
+sender[1]->receiver[3] : HELLO[15]
+recv_olsr[103]
+
+Time[20.831447]
+sender[2]->receiver[3] : HELLO[13]
+recv_olsr[104]
+
+Time[20.831448]
+sender[2]->receiver[1] : HELLO[13]
+recv_olsr[105]
+
+Time[20.890970]
+sender[0]->receiver[1] : HELLO[13]
+recv_olsr[106]
+
+Time[21.054373]
+sender[3]->receiver[2] : HELLO[13]
+recv_olsr[107]
+
+Time[21.054374]
+sender[3]->receiver[1] : HELLO[13]
+recv_olsr[108]
+
+Time[21.445058]
+sender[1]->receiver[0] : HELLO[16]
+recv_olsr[109]
+
+Time[21.445058]
+sender[1]->receiver[2] : HELLO[16]
+recv_olsr[110]
+
+Time[21.445058]
+sender[1]->receiver[3] : HELLO[16]
+recv_olsr[111]
+
+Time[22.510953]
+sender[0]->receiver[1] : HELLO[14]
+recv_olsr[112]
+
+Time[22.806492]
+sender[3]->receiver[2] : HELLO[14]
+recv_olsr[113]
+
+Time[22.806492]
+sender[3]->receiver[1] : HELLO[14]
+recv_olsr[114]
+
+Time[22.840156]
+sender[2]->receiver[3] : HELLO[14]
+recv_olsr[115]
+
+Time[22.840156]
+sender[2]->receiver[1] : HELLO[14]
+recv_olsr[116]
+
+Time[23.564145]
+sender[1]->receiver[0] : HELLO[17]
+recv_olsr[117]
+
+Time[23.564145]
+sender[1]->receiver[2] : HELLO[17]
+recv_olsr[118]
+
+Time[23.564145]
+sender[1]->receiver[3] : HELLO[17]
+recv_olsr[119]
+
+Time[24.073915]
+sender[0]->receiver[1] : HELLO[15]
+recv_olsr[120]
+
+Time[24.094331]
+sender[1]->receiver[0] : HELLO[18]
+recv_olsr[121]
+
+Time[24.094331]
+sender[1]->receiver[2] : HELLO[18]
+recv_olsr[122]
+
+Time[24.094331]
+sender[1]->rNS EXITING...
+eceiver[3] : HELLO[18]
+recv_olsr[123]
+
+Time[24.277886]
+sender[3]->receiver[2] : HELLO[15]
+recv_olsr[124]
+
+Time[24.277886]
+sender[3]->receiver[1] : HELLO[15]
+recv_olsr[125]
+
+Time[24.552728]
+sender[2]->receiver[3] : HELLO[15]
+recv_olsr[126]
+
+Time[24.552729]
+sender[2]->receiver[1] : HELLO[15]
+recv_olsr[127]
+
+Time[24.859728]
+sender[1]->receiver[0] : HELLO[19]
+recv_olsr[128]
+
+Time[24.859728]
+sender[1]->receiver[2] : HELLO[19]
+recv_olsr[129]
+
+Time[24.859728]
+sender[1]->receiver[3] : HELLO[19]
+recv_olsr[130]
+
+Time[25.633622]
+sender[0]->receiver[1] : HELLO[16]
+recv_olsr[131]
+
+Time[25.885741]
+sender[3]->receiver[2] : HELLO[16]
+recv_olsr[132]
+
+Time[25.885741]
+sender[3]->receiver[1] : HELLO[16]
+recv_olsr[133]
+
+Time[26.223611]
+sender[2]->receiver[3] : HELLO[16]
+recv_olsr[134]
+
+Time[26.223612]
+sender[2]->receiver[1] : HELLO[16]
+recv_olsr[135]
+
+Time[26.449788]
+sender[1]->receiver[0] : HELLO[20]
+recv_olsr[136]
+
+Time[26.449788]
+sender[1]->receiver[2] : HELLO[20]
+recv_olsr[137]
+
+Time[26.449788]
+sender[1]->receiver[3] : HELLO[20]
+recv_olsr[138]
+
+Time[27.172290]
+sender[0]->receiver[1] : HELLO[17]
+recv_olsr[139]
+
+Time[27.554031]
+sender[3]->receiver[2] : HELLO[17]
+recv_olsr[140]
+
+Time[27.554032]
+sender[3]->receiver[1] : HELLO[17]
+recv_olsr[141]
+
+Time[28.072631]
+sender[2]->receiver[3] : HELLO[17]
+recv_olsr[142]
+
+Time[28.072631]
+sender[2]->receiver[1] : HELLO[17]
+recv_olsr[143]
+
+Time[28.544628]
+sender[1]->receiver[0] : HELLO[21]
+
+Time[28.544628]
+sender[1]->receiver[0] : HELLO[22]
+recv_olsr[144]
+
+Time[28.544628]
+sender[1]->receiver[2] : HELLO[21]
+
+Time[28.544628]
+sender[1]->receiver[2] : HELLO[22]
+recv_olsr[145]
+
+Time[28.544628]
+sender[1]->receiver[3] : HELLO[21]
+
+Time[28.544628]
+sender[1]->receiver[3] : HELLO[22]
+recv_olsr[146]
+
+Time[29.142876]
+sender[0]->receiver[1] : HELLO[18]
+recv_olsr[147]
+
+Time[29.340579]
+sender[3]->receiver[2] : HELLO[18]
+recv_olsr[148]
+
+Time[29.340579]
+sender[3]->receiver[1] : HELLO[18]
