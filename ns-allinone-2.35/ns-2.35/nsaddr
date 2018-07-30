@@ -1,0 +1,2281 @@
+./mac/arp.h:80:	nsaddr_t	arp_spa;
+./mac/arp.h:83:	nsaddr_t	arp_tpa;
+./mac/arp.h:96:	ARPEntry(ARPEntry_List* head, nsaddr_t dst) {
+./mac/arp.h:108:	nsaddr_t	ipaddr_;
+./mac/arp.h:121:	int     arpresolve(nsaddr_t dst, Packet *p, LL *ll);
+./mac/arp.h:123:	ARPEntry* arplookup(nsaddr_t dst);
+./mac/arp.h:124:	void arprequest(nsaddr_t src, nsaddr_t dst, LL *ll);
+./mac/arp.cc:44: * type Af_INET stored in nsaddr_t variables are stored in 24/8 format.
+./mac/arp.cc:45: * Many variables in nsaddr_t's in this file store ip addrs as simple ints.
+./mac/arp.cc:122:ARPTable::arpresolve(nsaddr_t dst, Packet *p, LL *ll)
+./mac/arp.cc:202:ARPTable::arplookup(nsaddr_t dst)
+./mac/arp.cc:215:ARPTable::arprequest(nsaddr_t src, nsaddr_t dst, LL *ll)
+./mac/arp.cc:242:	ah->arp_pln = sizeof(nsaddr_t);
+./mac/arp.cc:338:		nsaddr_t t = ah->arp_spa;
+./mac/ll.cc:172:	nsaddr_t dst = (nsaddr_t)Address::instance().get_nodeaddr(ih->daddr());
+./mac/ll.cc:173:	//nsaddr_t dst = ih->dst();
+./mac/ll.h:82:	friend void ARPTable::arprequest(nsaddr_t src, nsaddr_t dst, LL* ll);
+./sensor-nets/agent-list.cc:52:AgentList::AddAgent(nsaddr_t node_addr, void *a) {
+./sensor-nets/flood-agent.cc:220:  nsaddr_t last_hop_id;
+./sensor-nets/flood-agent.cc:430:FloodAgent::search_queries_list(nsaddr_t src, int obj_name, int origin_time, int num_hops, nsaddr_t last_hop_id)
+./sensor-nets/flood-agent.cc:484:nsaddr_t
+./sensor-nets/flood-agent.cc:485:FloodAgent::get_next_hop(nsaddr_t src, int obj_name, int origin_time)
+./sensor-nets/flood-agent.h:28:  nsaddr_t src_;
+./sensor-nets/flood-agent.h:32:  nsaddr_t last_hop_id_;
+./sensor-nets/flood-agent.h:71:  int search_queries_list(nsaddr_t src, int obj_name, int origin_time, int num_hops, nsaddr_t last_hop_id);
+./sensor-nets/flood-agent.h:73:  nsaddr_t get_next_hop(nsaddr_t src, int obj_name, int origin_time);
+./sensor-nets/landmark.h:208:  nsaddr_t id_;
+./sensor-nets/landmark.h:220:  nsaddr_t dst_node_;
+./sensor-nets/landmark.h:221:  nsaddr_t dst_next_hop_;
+./sensor-nets/landmark.h:232:  LMNode(nsaddr_t id, nsaddr_t next_hop, int num_hops, int level, int num_children, int energy, int origin_time, double update_time) {
+./sensor-nets/landmark.h:259:  nsaddr_t id_;             // ID of this node
+./sensor-nets/landmark.h:261:  nsaddr_t next_hop_;	    // Next hop to reach this node
+./sensor-nets/landmark.h:355:  int UpdatePotlParent(nsaddr_t id, nsaddr_t next_hop, int num_hops, int level,int num_children, int energy, int origin_time, int delete_flag);
+./sensor-nets/landmark.h:356:  int UpdatePotlChild(nsaddr_t id, nsaddr_t next_hop, int num_hops, int level, int num_children, int energy, int origin_time, int child_flag, int delete_flag, compr_taglist *taglist);
+./sensor-nets/landmark.h:357:  void UpdateChildLMAddr(nsaddr_t id, int num_lm_addrs, int64_t *lm_addrs);
+./sensor-nets/landmark.h:407:  void Addparent(const nsaddr_t parent, int level);
+./sensor-nets/landmark.h:409:  void Addpotentialchild(const nsaddr_t child, int level);
+./sensor-nets/landmark.h:430:  int CheckDemotionMsg(nsaddr_t id, int level, int origin_time);
+./sensor-nets/landmark.h:443:  NodeIDList *search_tag(int obj_name, int prev_hop_level, int next_hop_level, nsaddr_t last_hop_id, int *num_dst);
+./sensor-nets/landmark.h:444:  virtual nsaddr_t get_next_hop(nsaddr_t dst, int next_hop_level);
+./sensor-nets/landmark.h:479:  nsaddr_t global_lm_id_;
+./sensor-nets/landmark.cc:258:LandmarkAgent::CheckDemotionMsg(nsaddr_t id, int level, int origin_time)
+./sensor-nets/landmark.cc:301:ParentChildrenList::UpdateChildLMAddr(nsaddr_t id, int num_lm_addrs, int64_t *lm_addrs)
+./sensor-nets/landmark.cc:322:ParentChildrenList::UpdatePotlParent(nsaddr_t id, nsaddr_t next_hop, int num_hops, int level, int num_children, int energy, int origin_time, int delete_flag)
+./sensor-nets/landmark.cc:432:ParentChildrenList::UpdatePotlChild(nsaddr_t id, nsaddr_t next_hop, int num_hops, int level, int num_children, int energy, int origin_time, int child_flag, int delete_flag, compr_taglist *taglist)
+./sensor-nets/landmark.cc:563:  nsaddr_t origin_id, parent, next_hop;
+./sensor-nets/landmark.cc:566:  nsaddr_t *potl_children;
+./sensor-nets/landmark.cc:681:      potl_children = new nsaddr_t[num_potl_children];
+./sensor-nets/landmark.cc:2947:  nsaddr_t last_hop_id;
+./sensor-nets/landmark.cc:3318:LandmarkAgent::search_tag(int obj_name, int prev_hop_level, int next_hop_level,nsaddr_t last_hop_id, int *num_dst)
+./sensor-nets/landmark.cc:3454:nsaddr_t
+./sensor-nets/landmark.cc:3455:LandmarkAgent::get_next_hop(nsaddr_t dst, int next_hop_level)
+./sensor-nets/agent-list.h:26:  void AddAgent(nsaddr_t node_addr, void *a);
+./sensor-nets/agent-list.h:27:  void* GetAgent(nsaddr_t node_addr) {
+./sensor-nets/sensor-query.h:33:  nsaddr_t myaddr_;
+./common/packet.h:621:	nsaddr_t prev_hop_;     // IP addr of forwarding hop
+./common/packet.h:622:	nsaddr_t next_hop_;	// next hop for this packet
+./common/packet.h:624:	nsaddr_t last_hop_;     // for tracing on multi-user channels
+./common/packet.h:669:	inline nsaddr_t& next_hop() { return (next_hop_); }
+./common/node.cc:315:Node* Node::get_node_by_address (nsaddr_t id)
+./common/agent.h:90:			    nsaddr_t dst);
+./common/agent.h:96:	virtual void sendto(int nbytes, const char* flags, nsaddr_t dst);
+./common/agent.h:98:	virtual void connect(nsaddr_t dst);
+./common/agent.h:103:	inline nsaddr_t& addr() { return here_.addr_; }
+./common/agent.h:104:	inline nsaddr_t& port() { return here_.port_; }
+./common/agent.h:105:	inline nsaddr_t& daddr() { return dst_.addr_; }
+./common/agent.h:106:	inline nsaddr_t& dport() { return dst_.port_; }
+./common/Decapsulator.h:49:// 	nsaddr_t src_;        //bound variables: real source of a packet
+./common/Decapsulator.h:50://      nsaddr_t star_value_; //  replaces src_ before sending (e.g. to emulate (*,G)
+./common/sessionhelper.cc:88:	nsaddr_t addr;
+./common/sessionhelper.cc:120:	nsaddr_t src_;
+./common/agent.cc:165:			connect((nsaddr_t)atoi(argv[2]));
+./common/agent.cc:183:			sendto(atoi(argv[2]), argv[3], (nsaddr_t)atoi(argv[4]));
+./common/agent.cc:389:void Agent::connect(nsaddr_t /*dst*/)
+./common/agent.cc:412:		   nsaddr_t /*dst*/)
+./common/agent.cc:429:void Agent::sendto(int /*nbytes*/, const char /*flags*/[], nsaddr_t /*dst*/)
+./common/node.h:157:	static Node* get_node_by_address(nsaddr_t);
+./common/ip.h:80:	nsaddr_t& saddr() { return (src_.addr_); }
+./common/ip.h:84:	nsaddr_t& daddr() { return (dst_.addr_); }
+./gaf/gaf.h:144:	GAFAgent(nsaddr_t id);
+./gaf/gaf.cc:73:		return (new GAFAgent((nsaddr_t) atoi(argv[4])));
+./gaf/gaf.cc:93:GAFAgent::GAFAgent(nsaddr_t id) : Agent(PT_GAF), beacon_(1), randomflag_(1), timer_(this), stimer_(this), dtimer_(this), maxttl_(5), state_(GAF_FREE),leader_settime_(0),adapt_mobility_(0)
+./wpan/p802_15_4mac.cc:1035:			if (p802_15_4macDA(p) == (nsaddr_t)MAC_BROADCAST)
+./wpan/p802_15_4mac.cc:5029:				if (p802_15_4macDA(p) != (nsaddr_t)MAC_BROADCAST)
+バイナリファイル ./ns に一致しました
+./olsr-0.2.3-ns-2.34/olsr.patch:503:+      return new OLSR((nsaddr_t)Address::instance().str2addr(argv[4]));
+./olsr-0.2.3-ns-2.34/olsr.patch:849:+  OLSR::OLSR(nsaddr_t id) :  Agent(PT_OLSR), link_quality_timer_ (this),
+./olsr-0.2.3-ns-2.34/olsr.patch:1106:+    std::set<nsaddr_t> deleted_addrs;
+./olsr-0.2.3-ns-2.34/olsr.patch:1160:+      for (std::set<nsaddr_t>::iterator it2 = deleted_addrs.begin();
+./olsr-0.2.3-ns-2.34/olsr.patch:1234:+        std::set<nsaddr_t> nb2hop_addrs;
+./olsr-0.2.3-ns-2.34/olsr.patch:1245:+          std::set<nsaddr_t>::iterator it2 =
+./olsr-0.2.3-ns-2.34/olsr.patch:1313:+    std::set<nsaddr_t> deleted_addrs;
+./olsr-0.2.3-ns-2.34/olsr.patch:1367:+      for (std::set<nsaddr_t>::iterator it2 = deleted_addrs.begin();
+./olsr-0.2.3-ns-2.34/olsr.patch:1469:+        std::set<nsaddr_t> nb2hop_addrs;
+./olsr-0.2.3-ns-2.34/olsr.patch:1480:+          std::set<nsaddr_t>::iterator it2 =
+./olsr-0.2.3-ns-2.34/olsr.patch:1631:+        std::set<nsaddr_t> nb2hop_addrs;
+./olsr-0.2.3-ns-2.34/olsr.patch:1642:+          std::set<nsaddr_t>::iterator it2 =
+./olsr-0.2.3-ns-2.34/olsr.patch:1815:+        std::set<nsaddr_t> nb2hop_addrs;
+./olsr-0.2.3-ns-2.34/olsr.patch:1826:+          std::set<nsaddr_t>::iterator it2 =
+./olsr-0.2.3-ns-2.34/olsr.patch:2005:+    map<nsaddr_t, std::vector<OLSR_nb2hop_tuple*> > N;
+./olsr-0.2.3-ns-2.34/olsr.patch:2006:+    set<nsaddr_t> N_index;
+./olsr-0.2.3-ns-2.34/olsr.patch:2009:+      nsaddr_t nb2hop_main_addr = nb2hop_tuple->nb2hop_addr();
+./olsr-0.2.3-ns-2.34/olsr.patch:2010:+      nsaddr_t nb_main_addr = nb2hop_tuple->nb_main_addr();
+./olsr-0.2.3-ns-2.34/olsr.patch:2040:+    for (set<nsaddr_t>::iterator it = N_index.begin(); it != N_index.end(); it++) {
+./olsr-0.2.3-ns-2.34/olsr.patch:2041:+      nsaddr_t nb_main_addr = *it;
+./olsr-0.2.3-ns-2.34/olsr.patch:2079:+    set<nsaddr_t> processed_nodes;
+./olsr-0.2.3-ns-2.34/olsr.patch:2080:+    for (set<nsaddr_t>::iterator it = dijkstra->all_nodes()->begin();
+./olsr-0.2.3-ns-2.34/olsr.patch:2088:+    for (set<nsaddr_t>::iterator it = processed_nodes.begin(); it != processed_nodes.end(); it++)
+./olsr-0.2.3-ns-2.34/olsr.patch:2091:+    for (set<nsaddr_t>::iterator it = dijkstra->all_nodes()->begin();
+./olsr-0.2.3-ns-2.34/olsr.patch:2101:+    for (set<nsaddr_t>::iterator it = processed_nodes.begin(); it != processed_nodes.end(); it++)
+./olsr-0.2.3-ns-2.34/olsr.patch:2105:+      for (set<nsaddr_t>::iterator it = dijkstra->all_nodes()->begin();
+./olsr-0.2.3-ns-2.34/olsr.patch:2115:+      for (set<nsaddr_t>::iterator it = processed_nodes.begin(); it != processed_nodes.end(); it++)
+./olsr-0.2.3-ns-2.34/olsr.patch:2155:+    (OLSR_msg& msg, nsaddr_t receiver_iface, nsaddr_t sender_iface,
+./olsr-0.2.3-ns-2.34/olsr.patch:2197:+  OLSR::process_tc(OLSR_msg& msg, nsaddr_t sender_iface) {
+./olsr-0.2.3-ns-2.34/olsr.patch:2228:+      nsaddr_t addr = tc.nb_main_addr(i).iface_address();
+./olsr-0.2.3-ns-2.34/olsr.patch:2276:+  OLSR::process_mid(OLSR_msg& msg, nsaddr_t sender_iface) {
+./olsr-0.2.3-ns-2.34/olsr.patch:2338:+  OLSR::forward_default(Packet* p, OLSR_msg& msg, OLSR_dup_tuple* dup_tuple, nsaddr_t local_iface) {
+./olsr-0.2.3-ns-2.34/olsr.patch:2871:+          nsaddr_t mpr_addr = *it;
+./olsr-0.2.3-ns-2.34/olsr.patch:2927:+          nsaddr_t mpr_addr = *it;
+./olsr-0.2.3-ns-2.34/olsr.patch:2993:+    (OLSR_msg& msg, nsaddr_t receiver_iface, nsaddr_t sender_iface,
+./olsr-0.2.3-ns-2.34/olsr.patch:3152:+              nsaddr_t nb2hop_addr = get_main_addr(hello_msg.nb_iface_addr(j).iface_address());
+./olsr-0.2.3-ns-2.34/olsr.patch:3221:+              nsaddr_t nb2hop_addr = get_main_addr(hello_msg.nb_iface_addr(j).iface_address());
+./olsr-0.2.3-ns-2.34/olsr.patch:3451:+    nsaddr_t nb_addr  = get_main_addr(tuple->nb_iface_addr());
+./olsr-0.2.3-ns-2.34/olsr.patch:3643:+  nsaddr_t
+./olsr-0.2.3-ns-2.34/olsr.patch:3644:+  OLSR::get_main_addr(nsaddr_t iface_addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:3743:+  OLSR::node_id(nsaddr_t addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:3791:+    D_ = new std::map<nsaddr_t, hop * >();
+./olsr-0.2.3-ns-2.34/olsr.patch:3792:+    nonprocessed_nodes_ = new std::set<nsaddr_t>();
+./olsr-0.2.3-ns-2.34/olsr.patch:3793:+    link_array_ = new map<nsaddr_t, vector<edge*> * > ();
+./olsr-0.2.3-ns-2.34/olsr.patch:3794:+    all_nodes_ = new std::set<nsaddr_t> ();
+./olsr-0.2.3-ns-2.34/olsr.patch:3797:+  void Dijkstra::add_edge (nsaddr_t dest_node, nsaddr_t last_node, double delay,
+./olsr-0.2.3-ns-2.34/olsr.patch:3836:+  set<nsaddr_t>::iterator Dijkstra::best_cost ()
+./olsr-0.2.3-ns-2.34/olsr.patch:3838:+    set<nsaddr_t>::iterator best = (*nonprocessed_nodes_).end();
+./olsr-0.2.3-ns-2.34/olsr.patch:3842:+    for (set<nsaddr_t>::iterator it = (*nonprocessed_nodes_).begin();
+./olsr-0.2.3-ns-2.34/olsr.patch:3876:+  edge* Dijkstra::get_edge (nsaddr_t dest_node, nsaddr_t last_node)
+./olsr-0.2.3-ns-2.34/olsr.patch:3893:+      set<nsaddr_t>::iterator current_node = best_cost();
+./olsr-0.2.3-ns-2.34/olsr.patch:3901:+      for (set<nsaddr_t>::iterator dest_node = (*all_nodes_).begin();
+./olsr-0.2.3-ns-2.34/olsr.patch:4013:+    for (map<nsaddr_t, vector<edge*>*>::iterator it = (*link_array_).begin(); it != (*link_array_).end(); it++) {
+./olsr-0.2.3-ns-2.34/olsr.patch:4020:+    for (map<nsaddr_t, hop * >::iterator it = D_->begin(); it != D_->end(); it++)
+./olsr-0.2.3-ns-2.34/olsr.patch:4070:+    nsaddr_t last_node_; // last node to reach node X
+./olsr-0.2.3-ns-2.34/olsr.patch:4074:+    inline nsaddr_t& last_node() { return last_node_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:4098:+    set<nsaddr_t> * nonprocessed_nodes_;
+./olsr-0.2.3-ns-2.34/olsr.patch:4099:+    map<nsaddr_t, vector<edge*> *> * link_array_;
+./olsr-0.2.3-ns-2.34/olsr.patch:4102:+    set<nsaddr_t>::iterator best_cost();
+./olsr-0.2.3-ns-2.34/olsr.patch:4103:+    edge* get_edge (nsaddr_t, nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:4106:+    set<nsaddr_t> *all_nodes_;
+./olsr-0.2.3-ns-2.34/olsr.patch:4111:+    map<nsaddr_t, hop * > *D_;
+./olsr-0.2.3-ns-2.34/olsr.patch:4116:+    void add_edge (nsaddr_t, nsaddr_t, double, double, bool);
+./olsr-0.2.3-ns-2.34/olsr.patch:4120:+    inline set<nsaddr_t> * all_nodes() { return all_nodes_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:4121:+    inline hop * D(nsaddr_t node) { return (*D_)[node]; }
+./olsr-0.2.3-ns-2.34/olsr.patch:4477:+    nsaddr_t  ra_addr_;
+./olsr-0.2.3-ns-2.34/olsr.patch:4536:+    inline nsaddr_t&  ra_addr()  { return ra_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:4564:+    void    process_hello(OLSR_msg&, nsaddr_t, nsaddr_t, u_int16_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:4565:+    void    process_tc(OLSR_msg&, nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:4566:+    void    process_mid(OLSR_msg&, nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:4568:+    void    forward_default(Packet*, OLSR_msg&, OLSR_dup_tuple*, nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:4579:+    void    link_sensing(OLSR_msg&, nsaddr_t, nsaddr_t, u_int16_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:4612:+    nsaddr_t  get_main_addr(nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:4619:+    OLSR(nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:4626:+    static int    node_id(nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:4832:+    nsaddr_t  iface_address_;
+./olsr-0.2.3-ns-2.34/olsr.patch:4842:+    inline nsaddr_t& iface_address() { return iface_address_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:4947:+    nsaddr_t  iface_addrs_[OLSR_MAX_ADDRS];
+./olsr-0.2.3-ns-2.34/olsr.patch:4951:+    inline nsaddr_t&  iface_addr(int i)  { return iface_addrs_[i]; }
+./olsr-0.2.3-ns-2.34/olsr.patch:4963:+    nsaddr_t  orig_addr_;  ///< Main address of the node which generated this message.
+./olsr-0.2.3-ns-2.34/olsr.patch:4976:+    inline  nsaddr_t&  orig_addr()  { return orig_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5502:+    nsaddr_t  dest_addr_;  ///< Address of the destination node.
+./olsr-0.2.3-ns-2.34/olsr.patch:5503:+    nsaddr_t  next_addr_;  ///< Address of the next hop.
+./olsr-0.2.3-ns-2.34/olsr.patch:5504:+    nsaddr_t  iface_addr_;  ///< Address of the local interface.
+./olsr-0.2.3-ns-2.34/olsr.patch:5507:+    inline nsaddr_t&  dest_addr()  { return dest_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5508:+    inline nsaddr_t&  next_addr()  { return next_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5509:+    inline nsaddr_t&  iface_addr()  { return iface_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5516:+    nsaddr_t  iface_addr_;
+./olsr-0.2.3-ns-2.34/olsr.patch:5518:+    nsaddr_t  main_addr_;
+./olsr-0.2.3-ns-2.34/olsr.patch:5522:+    inline nsaddr_t&  iface_addr()  { return iface_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5523:+    inline nsaddr_t&  main_addr()  { return main_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5535:+    nsaddr_t        local_iface_addr_;
+./olsr-0.2.3-ns-2.34/olsr.patch:5537:+    nsaddr_t        nb_iface_addr_;
+./olsr-0.2.3-ns-2.34/olsr.patch:5547:+    inline nsaddr_t&  local_iface_addr()  { return local_iface_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5548:+    inline nsaddr_t&  nb_iface_addr()    { return nb_iface_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5772:+    nsaddr_t nb_main_addr_;
+./olsr-0.2.3-ns-2.34/olsr.patch:5778:+    inline nsaddr_t&  nb_main_addr()  { return nb_main_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5786:+    nsaddr_t  nb_main_addr_;
+./olsr-0.2.3-ns-2.34/olsr.patch:5788:+    nsaddr_t  nb2hop_addr_;
+./olsr-0.2.3-ns-2.34/olsr.patch:5792:+    inline nsaddr_t&  nb_main_addr()  { return nb_main_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5793:+    inline nsaddr_t&  nb2hop_addr()  { return nb2hop_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5845:+    nsaddr_t  main_addr_;
+./olsr-0.2.3-ns-2.34/olsr.patch:5849:+    inline nsaddr_t&  main_addr()  { return main_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5854:+  typedef std::vector<nsaddr_t> addr_list_t;
+./olsr-0.2.3-ns-2.34/olsr.patch:5859:+    nsaddr_t  addr_;
+./olsr-0.2.3-ns-2.34/olsr.patch:5869:+    inline nsaddr_t&  addr()    { return addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5879:+    nsaddr_t  dest_addr_;
+./olsr-0.2.3-ns-2.34/olsr.patch:5881:+    nsaddr_t  last_addr_;
+./olsr-0.2.3-ns-2.34/olsr.patch:5887:+    inline nsaddr_t&  dest_addr()  { return dest_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5888:+    inline nsaddr_t&  last_addr()  { return last_addr_; }
+./olsr-0.2.3-ns-2.34/olsr.patch:5939:+  typedef std::set<nsaddr_t>      mprset_t;  ///< MPR Set type.
+./olsr-0.2.3-ns-2.34/olsr.patch:6022:+  OLSR_rtable::rm_entry(nsaddr_t dest) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6034:+  OLSR_rtable::lookup(nsaddr_t dest) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6081:+  OLSR_rtable::add_entry(nsaddr_t dest, nsaddr_t next, nsaddr_t iface, u_int32_t dist) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6192:+  typedef std::map<nsaddr_t, OLSR_rt_entry*> rtable_t;
+./olsr-0.2.3-ns-2.34/olsr.patch:6208:+    void    rm_entry(nsaddr_t dest);
+./olsr-0.2.3-ns-2.34/olsr.patch:6209:+    OLSR_rt_entry*  add_entry(nsaddr_t dest, nsaddr_t next, nsaddr_t iface, u_int32_t dist);
+./olsr-0.2.3-ns-2.34/olsr.patch:6210:+    OLSR_rt_entry*  lookup(nsaddr_t dest);
+./olsr-0.2.3-ns-2.34/olsr.patch:6262:+  OLSR_state::find_mprsel_tuple(nsaddr_t main_addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6282:+  OLSR_state::erase_mprsel_tuples(nsaddr_t main_addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6300:+  OLSR_state::find_nb_tuple(nsaddr_t main_addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6310:+  OLSR_state::find_sym_nb_tuple(nsaddr_t main_addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6320:+  OLSR_state::find_nb_tuple(nsaddr_t main_addr, u_int8_t willingness) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6340:+  OLSR_state::erase_nb_tuple(nsaddr_t main_addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6358:+  OLSR_state::find_nb2hop_tuple(nsaddr_t nb_main_addr, nsaddr_t nb2hop_addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6378:+  OLSR_state::erase_nb2hop_tuples(nsaddr_t nb_main_addr, nsaddr_t nb2hop_addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6389:+  OLSR_state::erase_nb2hop_tuples(nsaddr_t nb_main_addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6407:+  OLSR_state::find_mpr_addr(nsaddr_t addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6413:+  OLSR_state::insert_mpr_addr(nsaddr_t addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6425:+  OLSR_state::find_dup_tuple(nsaddr_t addr, u_int16_t seq_num) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6452:+  OLSR_state::find_link_tuple(nsaddr_t iface_addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6462:+  OLSR_state::find_sym_link_tuple(nsaddr_t iface_addr, double now) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6476:+  OLSR_state::find_best_sym_link_tuple(nsaddr_t main_addr, double now) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6537:+  OLSR_state::find_topology_tuple(nsaddr_t dest_addr, nsaddr_t last_addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6547:+  OLSR_state::find_newer_topology_tuple(nsaddr_t last_addr, u_int16_t ansn) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6567:+  OLSR_state::erase_older_topology_tuples(nsaddr_t last_addr, u_int16_t ansn) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6585:+  OLSR_state::find_ifaceassoc_tuple(nsaddr_t iface_addr) {
+./olsr-0.2.3-ns-2.34/olsr.patch:6674:+    OLSR_mprsel_tuple*  find_mprsel_tuple(nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6676:+    void      erase_mprsel_tuples(nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6679:+    OLSR_nb_tuple*    find_nb_tuple(nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6680:+    OLSR_nb_tuple*    find_sym_nb_tuple(nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6681:+    OLSR_nb_tuple*    find_nb_tuple(nsaddr_t, u_int8_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6683:+    void      erase_nb_tuple(nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6686:+    OLSR_nb2hop_tuple*  find_nb2hop_tuple(nsaddr_t, nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6688:+    void      erase_nb2hop_tuples(nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6689:+    void      erase_nb2hop_tuples(nsaddr_t, nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6692:+    bool      find_mpr_addr(nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6693:+    void      insert_mpr_addr(nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6696:+    OLSR_dup_tuple*    find_dup_tuple(nsaddr_t, u_int16_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6700:+    OLSR_link_tuple*  find_link_tuple(nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6701:+    OLSR_link_tuple*  find_sym_link_tuple(nsaddr_t, double);
+./olsr-0.2.3-ns-2.34/olsr.patch:6702:+    OLSR_link_tuple*  find_best_sym_link_tuple(nsaddr_t, double);
+./olsr-0.2.3-ns-2.34/olsr.patch:6706:+    OLSR_topology_tuple*  find_topology_tuple(nsaddr_t, nsaddr_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6707:+    OLSR_topology_tuple*  find_newer_topology_tuple(nsaddr_t, u_int16_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6709:+    void      erase_older_topology_tuples(nsaddr_t, u_int16_t);
+./olsr-0.2.3-ns-2.34/olsr.patch:6712:+    OLSR_iface_assoc_tuple* find_ifaceassoc_tuple(nsaddr_t);
+./um-olsr/OLSR.cc:76:		return new OLSR((nsaddr_t)Address::instance().str2addr(argv[4]));
+./um-olsr/OLSR.cc:425:OLSR::OLSR(nsaddr_t id) :	Agent(PT_OLSR),
+./um-olsr/OLSR.cc:582:    			std::map<nsaddr_t, int>::map new_m;
+./um-olsr/OLSR.cc:716:	std::set<nsaddr_t> deleted_addrs;
+./um-olsr/OLSR.cc:758:		for (std::set<nsaddr_t>::iterator it2 = deleted_addrs.begin();
+./um-olsr/OLSR.cc:836:			std::set<nsaddr_t> nb2hop_addrs;
+./um-olsr/OLSR.cc:847:				std::set<nsaddr_t>::iterator it2 =
+./um-olsr/OLSR.cc:1027:OLSR::process_hello(OLSR_msg& msg, nsaddr_t receiver_iface, nsaddr_t sender_iface) {
+./um-olsr/OLSR.cc:1062:OLSR::process_tc(OLSR_msg& msg, nsaddr_t sender_iface) {
+./um-olsr/OLSR.cc:1093:		nsaddr_t addr = tc.nb_main_addr(i);
+./um-olsr/OLSR.cc:1134:OLSR::process_mid(OLSR_msg& msg, nsaddr_t sender_iface) {
+./um-olsr/OLSR.cc:1184:OLSR::forward_default(Packet* p, OLSR_msg& msg, OLSR_dup_tuple* dup_tuple, nsaddr_t local_iface) {
+./um-olsr/OLSR.cc:1561:OLSR::link_sensing(OLSR_msg& msg, nsaddr_t receiver_iface, nsaddr_t sender_iface) {
+./um-olsr/OLSR.cc:1666:						nsaddr_t nb2hop_addr = hello_msg.nb_iface_addr(j);
+./um-olsr/OLSR.cc:1902:	nsaddr_t nb_addr	= get_main_addr(tuple->nb_iface_addr());
+./um-olsr/OLSR.cc:2123:nsaddr_t
+./um-olsr/OLSR.cc:2124:OLSR::get_main_addr(nsaddr_t iface_addr) {
+./um-olsr/OLSR.cc:2224:OLSR::node_id(nsaddr_t addr) {
+./um-olsr/OLSR_rtable.cc:63:OLSR_rtable::rm_entry(nsaddr_t dest) {
+./um-olsr/OLSR_rtable.cc:75:OLSR_rtable::lookup(nsaddr_t dest) {
+./um-olsr/OLSR_rtable.cc:122:OLSR_rtable::add_entry(nsaddr_t dest, nsaddr_t next, nsaddr_t iface, u_int32_t dist) {
+./um-olsr/OLSR.h:330:	nsaddr_t	ra_addr_;
+./um-olsr/OLSR.h:350:	//std::map<nsaddr_t, >
+./um-olsr/OLSR.h:351:	std::map<nsaddr_t, std::map<nsaddr_t ,int> > hellocount_;	
+./um-olsr/OLSR.h:378:	inline nsaddr_t&	ra_addr()	{ return ra_addr_; }
+./um-olsr/OLSR.h:400:	void		process_hello(OLSR_msg&, nsaddr_t, nsaddr_t);
+./um-olsr/OLSR.h:401:	void		process_tc(OLSR_msg&, nsaddr_t);
+./um-olsr/OLSR.h:402:	void		process_mid(OLSR_msg&, nsaddr_t);
+./um-olsr/OLSR.h:404:	void		forward_default(Packet*, OLSR_msg&, OLSR_dup_tuple*, nsaddr_t);
+./um-olsr/OLSR.h:413:	void		link_sensing(OLSR_msg&, nsaddr_t, nsaddr_t);
+./um-olsr/OLSR.h:439:	nsaddr_t	get_main_addr(nsaddr_t);
+./um-olsr/OLSR.h:445:	OLSR(nsaddr_t);
+./um-olsr/OLSR.h:452:	static int		node_id(nsaddr_t);
+./um-olsr/OLSR_repositories.h:35:	nsaddr_t	dest_addr_;	///< Address of the destination node.
+./um-olsr/OLSR_repositories.h:36:	nsaddr_t	next_addr_;	///< Address of the next hop.
+./um-olsr/OLSR_repositories.h:37:	nsaddr_t	iface_addr_;	///< Address of the local interface.
+./um-olsr/OLSR_repositories.h:40:	inline nsaddr_t&	dest_addr()	{ return dest_addr_; }
+./um-olsr/OLSR_repositories.h:41:	inline nsaddr_t&	next_addr()	{ return next_addr_; }
+./um-olsr/OLSR_repositories.h:42:	inline nsaddr_t&	iface_addr()	{ return iface_addr_; }
+./um-olsr/OLSR_repositories.h:49:	nsaddr_t	iface_addr_;
+./um-olsr/OLSR_repositories.h:51:	nsaddr_t	main_addr_;
+./um-olsr/OLSR_repositories.h:55:	inline nsaddr_t&	iface_addr()	{ return iface_addr_; }
+./um-olsr/OLSR_repositories.h:56:	inline nsaddr_t&	main_addr()	{ return main_addr_; }
+./um-olsr/OLSR_repositories.h:63:	nsaddr_t	local_iface_addr_;
+./um-olsr/OLSR_repositories.h:65:	nsaddr_t	nb_iface_addr_;
+./um-olsr/OLSR_repositories.h:75:	inline nsaddr_t&	local_iface_addr()	{ return local_iface_addr_; }
+./um-olsr/OLSR_repositories.h:76:	inline nsaddr_t&	nb_iface_addr()		{ return nb_iface_addr_; }
+./um-olsr/OLSR_repositories.h:86:	nsaddr_t nb_main_addr_;
+./um-olsr/OLSR_repositories.h:92:	inline nsaddr_t&	nb_main_addr()	{ return nb_main_addr_; }
+./um-olsr/OLSR_repositories.h:100:	nsaddr_t	nb_main_addr_;
+./um-olsr/OLSR_repositories.h:102:	nsaddr_t	nb2hop_addr_;
+./um-olsr/OLSR_repositories.h:106:	inline nsaddr_t&	nb_main_addr()	{ return nb_main_addr_; }
+./um-olsr/OLSR_repositories.h:107:	inline nsaddr_t&	nb2hop_addr()	{ return nb2hop_addr_; }
+./um-olsr/OLSR_repositories.h:114:	nsaddr_t	main_addr_;
+./um-olsr/OLSR_repositories.h:118:	inline nsaddr_t&	main_addr()	{ return main_addr_; }
+./um-olsr/OLSR_repositories.h:123:typedef std::vector<nsaddr_t> addr_list_t;
+./um-olsr/OLSR_repositories.h:128:	nsaddr_t	addr_;
+./um-olsr/OLSR_repositories.h:138:	inline nsaddr_t&	addr()		{ return addr_; }
+./um-olsr/OLSR_repositories.h:148:	nsaddr_t	dest_addr_;
+./um-olsr/OLSR_repositories.h:150:	nsaddr_t	last_addr_;
+./um-olsr/OLSR_repositories.h:156:	inline nsaddr_t&	dest_addr()	{ return dest_addr_; }
+./um-olsr/OLSR_repositories.h:157:	inline nsaddr_t&	last_addr()	{ return last_addr_; }
+./um-olsr/OLSR_repositories.h:164:	nsaddr_t sender_;
+./um-olsr/OLSR_repositories.h:165:	nsaddr_t receiver_;
+./um-olsr/OLSR_repositories.h:168:	inline nsaddr_t&       sender()         { return sender_; }
+./um-olsr/OLSR_repositories.h:169:	inline nsaddr_t&       receiver()       { return receiver_; }
+./um-olsr/OLSR_repositories.h:174:typedef std::set<nsaddr_t>			mprset_t;	///< MPR Set type.
+./um-olsr/OLSR_state.h:54:	OLSR_mprsel_tuple*	find_mprsel_tuple(nsaddr_t);
+./um-olsr/OLSR_state.h:56:	void			erase_mprsel_tuples(nsaddr_t);
+./um-olsr/OLSR_state.h:59:	OLSR_nb_tuple*		find_nb_tuple(nsaddr_t);
+./um-olsr/OLSR_state.h:60:	OLSR_nb_tuple*		find_sym_nb_tuple(nsaddr_t);
+./um-olsr/OLSR_state.h:61:	OLSR_nb_tuple*		find_nb_tuple(nsaddr_t, u_int8_t);
+./um-olsr/OLSR_state.h:63:	void			erase_nb_tuple(nsaddr_t);
+./um-olsr/OLSR_state.h:66:	OLSR_nb2hop_tuple*	find_nb2hop_tuple(nsaddr_t, nsaddr_t);
+./um-olsr/OLSR_state.h:68:	void			erase_nb2hop_tuples(nsaddr_t);
+./um-olsr/OLSR_state.h:69:	void			erase_nb2hop_tuples(nsaddr_t, nsaddr_t);
+./um-olsr/OLSR_state.h:72:	bool			find_mpr_addr(nsaddr_t);
+./um-olsr/OLSR_state.h:73:	void			insert_mpr_addr(nsaddr_t);
+./um-olsr/OLSR_state.h:76:	OLSR_dup_tuple*		find_dup_tuple(nsaddr_t, u_int16_t);
+./um-olsr/OLSR_state.h:80:	OLSR_link_tuple*	find_link_tuple(nsaddr_t);
+./um-olsr/OLSR_state.h:81:	OLSR_link_tuple*	find_sym_link_tuple(nsaddr_t, double);
+./um-olsr/OLSR_state.h:85:	OLSR_topology_tuple*	find_topology_tuple(nsaddr_t, nsaddr_t);
+./um-olsr/OLSR_state.h:86:	OLSR_topology_tuple*	find_newer_topology_tuple(nsaddr_t, u_int16_t);
+./um-olsr/OLSR_state.h:88:	void			erase_older_topology_tuples(nsaddr_t, u_int16_t);
+./um-olsr/OLSR_state.h:91:	OLSR_iface_assoc_tuple* find_ifaceassoc_tuple(nsaddr_t);
+バイナリファイル ./um-olsr/OLSR.o に一致しました
+./um-olsr/OLSR_state.cc:33:OLSR_state::find_mprsel_tuple(nsaddr_t main_addr) {
+./um-olsr/OLSR_state.cc:53:OLSR_state::erase_mprsel_tuples(nsaddr_t main_addr) {
+./um-olsr/OLSR_state.cc:71:OLSR_state::find_nb_tuple(nsaddr_t main_addr) {
+./um-olsr/OLSR_state.cc:81:OLSR_state::find_sym_nb_tuple(nsaddr_t main_addr) {
+./um-olsr/OLSR_state.cc:91:OLSR_state::find_nb_tuple(nsaddr_t main_addr, u_int8_t willingness) {
+./um-olsr/OLSR_state.cc:111:OLSR_state::erase_nb_tuple(nsaddr_t main_addr) {
+./um-olsr/OLSR_state.cc:129:OLSR_state::find_nb2hop_tuple(nsaddr_t nb_main_addr, nsaddr_t nb2hop_addr) {
+./um-olsr/OLSR_state.cc:149:OLSR_state::erase_nb2hop_tuples(nsaddr_t nb_main_addr, nsaddr_t nb2hop_addr) {
+./um-olsr/OLSR_state.cc:160:OLSR_state::erase_nb2hop_tuples(nsaddr_t nb_main_addr) {
+./um-olsr/OLSR_state.cc:178:OLSR_state::find_mpr_addr(nsaddr_t addr) {
+./um-olsr/OLSR_state.cc:184:OLSR_state::insert_mpr_addr(nsaddr_t addr) {
+./um-olsr/OLSR_state.cc:196:OLSR_state::find_dup_tuple(nsaddr_t addr, u_int16_t seq_num) {
+./um-olsr/OLSR_state.cc:223:OLSR_state::find_link_tuple(nsaddr_t iface_addr) {
+./um-olsr/OLSR_state.cc:233:OLSR_state::find_sym_link_tuple(nsaddr_t iface_addr, double now) {
+./um-olsr/OLSR_state.cc:264:OLSR_state::find_topology_tuple(nsaddr_t dest_addr, nsaddr_t last_addr) {
+./um-olsr/OLSR_state.cc:274:OLSR_state::find_newer_topology_tuple(nsaddr_t last_addr, u_int16_t ansn) {
+./um-olsr/OLSR_state.cc:294:OLSR_state::erase_older_topology_tuples(nsaddr_t last_addr, u_int16_t ansn) {
+./um-olsr/OLSR_state.cc:312:OLSR_state::find_ifaceassoc_tuple(nsaddr_t iface_addr) {
+./um-olsr/OLSR_rtable.h:39:typedef std::map<nsaddr_t, OLSR_rt_entry*> rtable_t;
+./um-olsr/OLSR_rtable.h:53:	void		rm_entry(nsaddr_t dest);
+./um-olsr/OLSR_rtable.h:54:	OLSR_rt_entry*	add_entry(nsaddr_t dest, nsaddr_t next, nsaddr_t iface, u_int32_t dist);
+./um-olsr/OLSR_rtable.h:55:	OLSR_rt_entry*	lookup(nsaddr_t dest);
+./um-olsr/OLSR_pkt.h:93:	nsaddr_t	nb_iface_addrs_[OLSR_MAX_ADDRS];
+./um-olsr/OLSR_pkt.h:100:	inline nsaddr_t&	nb_iface_addr(int i)	{ return nb_iface_addrs_[i]; }
+./um-olsr/OLSR_pkt.h:142:	nsaddr_t	nb_main_addrs_[OLSR_MAX_ADDRS];
+./um-olsr/OLSR_pkt.h:148:	inline	nsaddr_t&	nb_main_addr(int i)	{ return nb_main_addrs_[i]; }
+./um-olsr/OLSR_pkt.h:158:	nsaddr_t	iface_addrs_[OLSR_MAX_ADDRS];
+./um-olsr/OLSR_pkt.h:162:	inline nsaddr_t&	iface_addr(int i)	{ return iface_addrs_[i]; }
+./um-olsr/OLSR_pkt.h:174:	nsaddr_t	orig_addr_;	///< Main address of the node which generated this message.
+./um-olsr/OLSR_pkt.h:187:	inline	nsaddr_t&	orig_addr()	{ return orig_addr_; }
+./mobile/god.cc:681:        nsaddr_t src = ih->saddr();
+./mobile/god.cc:682:        nsaddr_t dst = ih->daddr();
+./mobile/mip.cc:99:	//hdr->dst() = addr_ & ~(~(nsaddr_t)0 << shift_) | (te & mask_) << shift_;;
+./mobile/mip-reg.cc:148:	    //iph->dst() = iph->dst() & ~(~(nsaddr_t)0 << shift_) | (miph->ha_ & mask_) << shift_;
+./mobile/mip-reg.cc:178:	  //iph->dst() = iph->dst() & ~(~(nsaddr_t)0 << shift_) |(miph->haddr_ & mask_) << shift_;
+./mobile/mip-reg.cc:420:	//iph->dst() = iph->dst() & ~(~(nsaddr_t)0 << shift_) | (coa_ & mask_) << shift_;
+./routing/rttable.cc:85:rt_entry::nb_insert(nsaddr_t id)
+./routing/rttable.cc:96:rt_entry::nb_lookup(nsaddr_t id)
+./routing/rttable.cc:111:rttable::rt_lookup(nsaddr_t id)
+./routing/rttable.cc:123:rttable::rt_delete(nsaddr_t id)
+./routing/rttable.cc:134:rttable::rt_add(nsaddr_t id)
+./routing/rttable.h:63:        nsaddr_t        nb_addr;
+./routing/rttable.h:82:        void            nb_insert(nsaddr_t id);
+./routing/rttable.h:83:        Neighbor*       nb_lookup(nsaddr_t id);
+./routing/rttable.h:87:        nsaddr_t        rt_dst;
+./routing/rttable.h:89:        nsaddr_t        rt_nexthop;     // next hop IP address
+./routing/rttable.h:139:        rt_entry*       rt_lookup(nsaddr_t id);
+./routing/rttable.h:140:        void            rt_delete(nsaddr_t id);
+./routing/rttable.h:141:        rt_entry*       rt_add(nsaddr_t id);
+./trace/trace.h:57:	nsaddr_t src_;
+./trace/trace.h:58:        nsaddr_t dst_;
+./aomdv/aomdv_logs.cc:95:AOMDV::log_link_del(nsaddr_t dst)
+./aomdv/aomdv_logs.cc:136:AOMDV::log_link_kept(nsaddr_t dst)
+./aomdv/aomdv_rqueue.h:121:        Packet*         deque(nsaddr_t dst);
+./aomdv/aomdv_rqueue.h:125:        char            find(nsaddr_t dst);
+./aomdv/aomdv_rqueue.h:130:	void		findPacketWithDst(nsaddr_t dst, Packet*& p, Packet*& prev);
+./aomdv/aomdv.cc:127:		//return (new AODV((nsaddr_t) atoi(argv[4])));
+./aomdv/aomdv.cc:128:		return (new AOMDV((nsaddr_t) Address::instance().str2addr(argv[4])));
+./aomdv/aomdv.cc:202:AOMDV::AOMDV(nsaddr_t id) : Agent(PT_AOMDV),
+./aomdv/aomdv.cc:297:AOMDV::id_insert(nsaddr_t id, u_int32_t bid) {
+./aomdv/aomdv.cc:308:AOMDV::id_lookup(nsaddr_t id, u_int32_t bid) {
+./aomdv/aomdv.cc:321:AOMDV::id_get(nsaddr_t id, u_int32_t bid) {
+./aomdv/aomdv.cc:394:	nsaddr_t broken_nbr = ch->next_hop_;
+./aomdv/aomdv.cc:473:AOMDV::handle_link_failure(nsaddr_t id) {
+./aomdv/aomdv.cc:1385:		assert(ih->daddr() == (nsaddr_t) IP_BROADCAST);
+./aomdv/aomdv.cc:1390:	if (ih->daddr() == (nsaddr_t) IP_BROADCAST) {
+./aomdv/aomdv.cc:1413:AOMDV::sendRequest(nsaddr_t dst) {
+./aomdv/aomdv.cc:1537:AOMDV::sendReply(nsaddr_t ipdst, u_int32_t hop_count, nsaddr_t rpdst,
+./aomdv/aomdv.cc:1539:					  nsaddr_t nexthop, u_int32_t bcast_id, nsaddr_t rp_first_hop) {
+./aomdv/aomdv.cc:1694:AOMDV::nb_insert(nsaddr_t id) {
+./aomdv/aomdv.cc:1713:AOMDV::nb_lookup(nsaddr_t id) {
+./aomdv/aomdv.cc:1728:AOMDV::nb_delete(nsaddr_t id) {
+./aomdv/aomdv.cc:1833:		assert(ih->daddr() == (nsaddr_t) IP_BROADCAST);
+./aomdv/aomdv.cc:1838:	if (ih->daddr() == (nsaddr_t) IP_BROADCAST) {
+./aomdv/aomdv_rqueue.cc:159:aomdv_rqueue::deque(nsaddr_t dst) {
+./aomdv/aomdv_rqueue.cc:193:aomdv_rqueue::find(nsaddr_t dst) {
+./aomdv/aomdv_rqueue.cc:229:aomdv_rqueue::findPacketWithDst(nsaddr_t dst, Packet*& p, Packet*& prev) {
+./aomdv/aomdv_rtable.cc:155:aomdv_rt_entry::nb_insert(nsaddr_t id)
+./aomdv/aomdv_rtable.cc:167:aomdv_rt_entry::nb_lookup(nsaddr_t id)
+./aomdv/aomdv_rtable.cc:181:aomdv_rt_entry::path_insert(nsaddr_t nexthop, u_int16_t hopcount, double expire_time, nsaddr_t lasthop) {
+./aomdv/aomdv_rtable.cc:207:aomdv_rt_entry::path_lookup(nsaddr_t id)
+./aomdv/aomdv_rtable.cc:220:aomdv_rt_entry::disjoint_path_lookup(nsaddr_t nexthop, nsaddr_t lasthop)
+./aomdv/aomdv_rtable.cc:234:aomdv_rt_entry::new_disjoint_path(nsaddr_t nexthop, nsaddr_t lasthop)
+./aomdv/aomdv_rtable.cc:248:aomdv_rt_entry::path_lookup_lasthop(nsaddr_t id)
+./aomdv/aomdv_rtable.cc:262:aomdv_rt_entry::path_delete(nsaddr_t id) {
+./aomdv/aomdv_rtable.cc:409:aomdv_rt_entry::pc_insert(nsaddr_t id)
+./aomdv/aomdv_rtable.cc:421:aomdv_rt_entry::pc_lookup(nsaddr_t id)
+./aomdv/aomdv_rtable.cc:434:aomdv_rt_entry::pc_delete(nsaddr_t id) {
+./aomdv/aomdv_rtable.cc:470:aomdv_rtable::rt_lookup(nsaddr_t id)
+./aomdv/aomdv_rtable.cc:483:aomdv_rtable::rt_delete(nsaddr_t id)
+./aomdv/aomdv_rtable.cc:495:aomdv_rtable::rt_add(nsaddr_t id)
+./aomdv/aomdv_packet.h:132:        nsaddr_t        rq_dst;         // Destination IP Address
+./aomdv/aomdv_packet.h:134:        nsaddr_t        rq_src;         // Source IP Address
+./aomdv/aomdv_packet.h:140:        nsaddr_t        rq_first_hop;  // First Hop taken by the RREQ
+./aomdv/aomdv_packet.h:154:	     + sizeof(nsaddr_t)		// rq_dst
+./aomdv/aomdv_packet.h:156:	     + sizeof(nsaddr_t)		// rq_src
+./aomdv/aomdv_packet.h:161:   sz += sizeof(nsaddr_t);    // rq_first_hop 
+./aomdv/aomdv_packet.h:171:        nsaddr_t        rp_dst;                 // Destination IP Address
+./aomdv/aomdv_packet.h:173:        nsaddr_t        rp_src;                 // Source IP Address
+./aomdv/aomdv_packet.h:180:        nsaddr_t        rp_first_hop;
+./aomdv/aomdv_packet.h:189:	     + sizeof(nsaddr_t)		// rp_dst
+./aomdv/aomdv_packet.h:191:	     + sizeof(nsaddr_t)		// rp_src
+./aomdv/aomdv_packet.h:198:      sz += sizeof(nsaddr_t);    // rp_first_hop
+./aomdv/aomdv_packet.h:211:        nsaddr_t        unreachable_dst[AOMDV_MAX_ERRORS];   
+./aomdv/aomdv_packet.h:220:	     + length*sizeof(nsaddr_t); // unreachable destinations
+./aomdv/aomdv.h:253:        AOMDV_Route(nsaddr_t nexthop, nsaddr_t lasthop=0) {
+./aomdv/aomdv.h:259:        nsaddr_t        nh_addr;
+./aomdv/aomdv.h:260:        nsaddr_t        lh_addr;
+./aomdv/aomdv.h:272:        AOMDVBroadcastID(nsaddr_t i, u_int32_t b) { 
+./aomdv/aomdv.h:282:        nsaddr_t        src;
+./aomdv/aomdv.h:291:        inline AOMDV_Route* reverse_path_insert(nsaddr_t nexthop, nsaddr_t lasthop=0) {
+./aomdv/aomdv.h:298:        inline AOMDV_Route* reverse_path_lookup(nsaddr_t nexthop, nsaddr_t lasthop=0) {
+./aomdv/aomdv.h:309:			inline AOMDV_Route* forward_path_insert(nsaddr_t nexthop, nsaddr_t lasthop=0) {
+./aomdv/aomdv.h:316:			inline AOMDV_Route* forward_path_lookup(nsaddr_t nexthop, nsaddr_t lasthop=0) {
+./aomdv/aomdv.h:348:        AOMDV(nsaddr_t id);
+./aomdv/aomdv.h:365:			// void            rt_update(aodv_rt_entry *rt, u_int32_t seqnum, u_int16_t metric, nsaddr_t nexthop, double expire_time);
+./aomdv/aomdv.h:366:			// void            handle_link_failure(nsaddr_t id);
+./aomdv/aomdv.h:367:        void            handle_link_failure(nsaddr_t id);
+./aomdv/aomdv.h:377:        void            nb_insert(nsaddr_t id);
+./aomdv/aomdv.h:378:        AOMDV_Neighbor*       nb_lookup(nsaddr_t id);
+./aomdv/aomdv.h:379:        void            nb_delete(nsaddr_t id);
+./aomdv/aomdv.h:387:			void            id_insert(nsaddr_t id, u_int32_t bid);
+./aomdv/aomdv.h:388:			bool	        id_lookup(nsaddr_t id, u_int32_t bid);
+./aomdv/aomdv.h:389:         AOMDVBroadcastID*    id_get(nsaddr_t id, u_int32_t bid);
+./aomdv/aomdv.h:399:        void            sendRequest(nsaddr_t dst);
+./aomdv/aomdv.h:402:			// void            sendReply(nsaddr_t ipdst, u_int32_t hop_count, nsaddr_t rpdst, u_int32_t rpseq, u_int32_t lifetime, double timestamp);
+./aomdv/aomdv.h:403:        void            sendReply(nsaddr_t ipdst, u_int32_t hop_count,
+./aomdv/aomdv.h:404:                                  nsaddr_t rpdst, u_int32_t rpseq,
+./aomdv/aomdv.h:406:              nsaddr_t nexthop, u_int32_t bcast_id, nsaddr_t rp_first_hop);
+./aomdv/aomdv.h:425:        nsaddr_t        index;                  // IP Address of this node
+./aomdv/aomdv.h:467:        void            log_link_del(nsaddr_t dst);
+./aomdv/aomdv.h:469:        void            log_link_kept(nsaddr_t dst);
+./aomdv/aomdv_rtable.h:105:        nsaddr_t        nb_addr;
+./aomdv/aomdv_rtable.h:119:        AOMDV_Path(nsaddr_t nh, u_int16_t h, double expire_time, nsaddr_t lh=0) { 
+./aomdv/aomdv_rtable.h:141:        nsaddr_t        nexthop;    // nexthop address
+./aomdv/aomdv_rtable.h:145:        nsaddr_t        lasthop;    // lasthop address
+./aomdv/aomdv_rtable.h:164:        nsaddr_t        pc_addr;	// precursor address
+./aomdv/aomdv_rtable.h:182:        void            nb_insert(nsaddr_t id);
+./aomdv/aomdv_rtable.h:183:        AOMDV_Neighbor*  nb_lookup(nsaddr_t id);
+./aomdv/aomdv_rtable.h:186:        AOMDV_Path*   path_insert(nsaddr_t nexthop, u_int16_t hopcount, double expire_time, nsaddr_t lasthop=0);
+./aomdv/aomdv_rtable.h:188:        AOMDV_Path*   path_lookup(nsaddr_t id);  // lookup path by nexthop
+./aomdv/aomdv_rtable.h:190:        AOMDV_Path*   disjoint_path_lookup(nsaddr_t nexthop, nsaddr_t lasthop);
+./aomdv/aomdv_rtable.h:191:        bool         new_disjoint_path(nsaddr_t nexthop, nsaddr_t lasthop);
+./aomdv/aomdv_rtable.h:193:        AOMDV_Path*   path_lookup_lasthop(nsaddr_t id);   // lookup path by lasthop
+./aomdv/aomdv_rtable.h:194:        void         path_delete(nsaddr_t id);           // delete path by nexthop
+./aomdv/aomdv_rtable.h:204:        void            pc_insert(nsaddr_t id);
+./aomdv/aomdv_rtable.h:205:        AOMDV_Precursor* pc_lookup(nsaddr_t id);
+./aomdv/aomdv_rtable.h:206:        void 		pc_delete(nsaddr_t id);
+./aomdv/aomdv_rtable.h:218:        nsaddr_t        rt_dst;
+./aomdv/aomdv_rtable.h:273:        aomdv_rt_entry*       rt_add(nsaddr_t id);
+./aomdv/aomdv_rtable.h:274:        void                 rt_delete(nsaddr_t id);
+./aomdv/aomdv_rtable.h:275:        aomdv_rt_entry*       rt_lookup(nsaddr_t id);
+./aodv/aodv.h:180:        BroadcastID(nsaddr_t i, u_int32_t b) { src = i; id = b;  }
+./aodv/aodv.h:183:        nsaddr_t        src;
+./aodv/aodv.h:208:        AODV(nsaddr_t id);
+./aodv/aodv.h:221:		     	  	u_int16_t metric, nsaddr_t nexthop,
+./aodv/aodv.h:227:        void            handle_link_failure(nsaddr_t id);
+./aodv/aodv.h:237:        void            nb_insert(nsaddr_t id);
+./aodv/aodv.h:238:        AODV_Neighbor*       nb_lookup(nsaddr_t id);
+./aodv/aodv.h:239:        void            nb_delete(nsaddr_t id);
+./aodv/aodv.h:246:        void            id_insert(nsaddr_t id, u_int32_t bid);
+./aodv/aodv.h:247:        bool	        id_lookup(nsaddr_t id, u_int32_t bid);
+./aodv/aodv.h:255:        void            sendRequest(nsaddr_t dst);
+./aodv/aodv.h:257:        void            sendReply(nsaddr_t ipdst, u_int32_t hop_count,
+./aodv/aodv.h:258:                                  nsaddr_t rpdst, u_int32_t rpseq,
+./aodv/aodv.h:278:        nsaddr_t        index;                  // IP Address of this node
+./aodv/aodv.h:320:        void            log_link_del(nsaddr_t dst);
+./aodv/aodv.h:322:        void            log_link_kept(nsaddr_t dst);
+./aodv/aodv_logs.cc:43:AODV::log_link_del(nsaddr_t dst)
+./aodv/aodv_logs.cc:85:AODV::log_link_kept(nsaddr_t dst)
+./aodv/aodv_rqueue.h:69:        Packet*         deque(nsaddr_t dst);
+./aodv/aodv_rqueue.h:73:        char            find(nsaddr_t dst);
+./aodv/aodv_rqueue.h:78:	void		findPacketWithDst(nsaddr_t dst, Packet*& p, Packet*& prev);
+./aodv/aodv_rtable.h:54:        nsaddr_t        nb_addr;
+./aodv/aodv_rtable.h:71:        nsaddr_t        pc_addr;	// precursor address
+./aodv/aodv_rtable.h:89:        void            nb_insert(nsaddr_t id);
+./aodv/aodv_rtable.h:90:        AODV_Neighbor*  nb_lookup(nsaddr_t id);
+./aodv/aodv_rtable.h:92:        void            pc_insert(nsaddr_t id);
+./aodv/aodv_rtable.h:93:        AODV_Precursor* pc_lookup(nsaddr_t id);
+./aodv/aodv_rtable.h:94:        void 		pc_delete(nsaddr_t id);
+./aodv/aodv_rtable.h:104:        nsaddr_t        rt_dst;
+./aodv/aodv_rtable.h:109:        nsaddr_t        rt_nexthop;    		// next hop IP address
+./aodv/aodv_rtable.h:153:        aodv_rt_entry*       rt_add(nsaddr_t id);
+./aodv/aodv_rtable.h:154:        void                 rt_delete(nsaddr_t id);
+./aodv/aodv_rtable.h:155:        aodv_rt_entry*       rt_lookup(nsaddr_t id);
+./aodv/aodv_rqueue.cc:107:aodv_rqueue::deque(nsaddr_t dst) {
+./aodv/aodv_rqueue.cc:141:aodv_rqueue::find(nsaddr_t dst) {
+./aodv/aodv_rqueue.cc:177:aodv_rqueue::findPacketWithDst(nsaddr_t dst, Packet*& p, Packet*& prev) {
+./aodv/aodv_rtable.cc:90:aodv_rt_entry::nb_insert(nsaddr_t id)
+./aodv/aodv_rtable.cc:102:aodv_rt_entry::nb_lookup(nsaddr_t id)
+./aodv/aodv_rtable.cc:116:aodv_rt_entry::pc_insert(nsaddr_t id)
+./aodv/aodv_rtable.cc:128:aodv_rt_entry::pc_lookup(nsaddr_t id)
+./aodv/aodv_rtable.cc:141:aodv_rt_entry::pc_delete(nsaddr_t id) {
+./aodv/aodv_rtable.cc:177:aodv_rtable::rt_lookup(nsaddr_t id)
+./aodv/aodv_rtable.cc:190:aodv_rtable::rt_delete(nsaddr_t id)
+./aodv/aodv_rtable.cc:202:aodv_rtable::rt_add(nsaddr_t id)
+./aodv/aodv_packet.h:80:        nsaddr_t        rq_dst;         // Destination IP Address
+./aodv/aodv_packet.h:82:        nsaddr_t        rq_src;         // Source IP Address
+./aodv/aodv_packet.h:100:	     + sizeof(nsaddr_t)		// rq_dst
+./aodv/aodv_packet.h:102:	     + sizeof(nsaddr_t)		// rq_src
+./aodv/aodv_packet.h:115:        nsaddr_t        rp_dst;                 // Destination IP Address
+./aodv/aodv_packet.h:117:        nsaddr_t        rp_src;                 // Source IP Address
+./aodv/aodv_packet.h:130:	     + sizeof(nsaddr_t)		// rp_dst
+./aodv/aodv_packet.h:132:	     + sizeof(nsaddr_t)		// rp_src
+./aodv/aodv_packet.h:147:        nsaddr_t        unreachable_dst[AODV_MAX_ERRORS];   
+./aodv/aodv_packet.h:156:	     + length*sizeof(nsaddr_t); // unreachable destinations
+./aodv/aodv.cc:69:          //return (new AODV((nsaddr_t) atoi(argv[4])));
+./aodv/aodv.cc:70:	  return (new AODV((nsaddr_t) Address::instance().str2addr(argv[4])));
+./aodv/aodv.cc:138:AODV::AODV(nsaddr_t id) : Agent(PT_AODV),
+./aodv/aodv.cc:221:AODV::id_insert(nsaddr_t id, u_int32_t bid) {
+./aodv/aodv.cc:231:AODV::id_lookup(nsaddr_t id, u_int32_t bid) {
+./aodv/aodv.cc:299:nsaddr_t broken_nbr = ch->next_hop_;
+./aodv/aodv.cc:348:AODV::handle_link_failure(nsaddr_t id) {
+./aodv/aodv.cc:404:	       	nsaddr_t nexthop, double expire_time) {
+./aodv/aodv.cc:1031:   assert(ih->daddr() == (nsaddr_t) IP_BROADCAST);
+./aodv/aodv.cc:1036:if (ih->daddr() == (nsaddr_t) IP_BROADCAST) {
+./aodv/aodv.cc:1063:AODV::sendRequest(nsaddr_t dst) {
+./aodv/aodv.cc:1186:AODV::sendReply(nsaddr_t ipdst, u_int32_t hop_count, nsaddr_t rpdst,
+./aodv/aodv.cc:1326:AODV::nb_insert(nsaddr_t id) {
+./aodv/aodv.cc:1339:AODV::nb_lookup(nsaddr_t id) {
+./aodv/aodv.cc:1354:AODV::nb_delete(nsaddr_t id) {
+./queue/dsr-priqueue.h:99:  Packet* prq_get_nexthop(nsaddr_t id);
+./queue/dsr-priqueue.h:110:  nsaddr_t	prq_ipaddr_;	/* IP Address of this machine */
+./queue/priqueue.cc:155:PriQueue::filter(nsaddr_t id)
+./queue/rtqueue.cc:74:rtqueue::deque(nsaddr_t dst)
+./queue/rtqueue.cc:108:rtqueue::find(nsaddr_t dst)
+./queue/rtqueue.cc:155:rtqueue::findPacketWithDst(nsaddr_t dst, Packet*& p, Packet*& prev)
+./queue/dsr-priqueue.cc:195:CMUPriQueue::prq_get_nexthop(nsaddr_t id)
+./queue/rtqueue.h:41:        Packet*         deque(nsaddr_t dst);
+./queue/rtqueue.h:45:        char            find(nsaddr_t dst);
+./queue/rtqueue.h:50:	void		findPacketWithDst(nsaddr_t dst, Packet*& p, Packet*& prev);
+./queue/priqueue.h:70:        Packet* filter(nsaddr_t id);
+./nsaddr_t:1:./mac/arp.h:80:	nsaddr_t	arp_spa;
+./nsaddr_t:2:./mac/arp.h:83:	nsaddr_t	arp_tpa;
+./nsaddr_t:3:./mac/arp.h:96:	ARPEntry(ARPEntry_List* head, nsaddr_t dst) {
+./nsaddr_t:4:./mac/arp.h:108:	nsaddr_t	ipaddr_;
+./nsaddr_t:5:./mac/arp.h:121:	int     arpresolve(nsaddr_t dst, Packet *p, LL *ll);
+./nsaddr_t:6:./mac/arp.h:123:	ARPEntry* arplookup(nsaddr_t dst);
+./nsaddr_t:7:./mac/arp.h:124:	void arprequest(nsaddr_t src, nsaddr_t dst, LL *ll);
+./nsaddr_t:8:./mac/arp.cc:44: * type Af_INET stored in nsaddr_t variables are stored in 24/8 format.
+./nsaddr_t:9:./mac/arp.cc:45: * Many variables in nsaddr_t's in this file store ip addrs as simple ints.
+./nsaddr_t:10:./mac/arp.cc:122:ARPTable::arpresolve(nsaddr_t dst, Packet *p, LL *ll)
+./nsaddr_t:11:./mac/arp.cc:202:ARPTable::arplookup(nsaddr_t dst)
+./nsaddr_t:12:./mac/arp.cc:215:ARPTable::arprequest(nsaddr_t src, nsaddr_t dst, LL *ll)
+./nsaddr_t:13:./mac/arp.cc:242:	ah->arp_pln = sizeof(nsaddr_t);
+./nsaddr_t:14:./mac/arp.cc:338:		nsaddr_t t = ah->arp_spa;
+./nsaddr_t:15:./mac/ll.cc:172:	nsaddr_t dst = (nsaddr_t)Address::instance().get_nodeaddr(ih->daddr());
+./nsaddr_t:16:./mac/ll.cc:173:	//nsaddr_t dst = ih->dst();
+./nsaddr_t:17:./mac/ll.h:82:	friend void ARPTable::arprequest(nsaddr_t src, nsaddr_t dst, LL* ll);
+./nsaddr_t:18:./sensor-nets/agent-list.cc:52:AgentList::AddAgent(nsaddr_t node_addr, void *a) {
+./nsaddr_t:19:./sensor-nets/flood-agent.cc:220:  nsaddr_t last_hop_id;
+./nsaddr_t:20:./sensor-nets/flood-agent.cc:430:FloodAgent::search_queries_list(nsaddr_t src, int obj_name, int origin_time, int num_hops, nsaddr_t last_hop_id)
+./nsaddr_t:21:./sensor-nets/flood-agent.cc:484:nsaddr_t
+./nsaddr_t:22:./sensor-nets/flood-agent.cc:485:FloodAgent::get_next_hop(nsaddr_t src, int obj_name, int origin_time)
+./nsaddr_t:23:./sensor-nets/flood-agent.h:28:  nsaddr_t src_;
+./nsaddr_t:24:./sensor-nets/flood-agent.h:32:  nsaddr_t last_hop_id_;
+./nsaddr_t:25:./sensor-nets/flood-agent.h:71:  int search_queries_list(nsaddr_t src, int obj_name, int origin_time, int num_hops, nsaddr_t last_hop_id);
+./nsaddr_t:26:./sensor-nets/flood-agent.h:73:  nsaddr_t get_next_hop(nsaddr_t src, int obj_name, int origin_time);
+./nsaddr_t:27:./sensor-nets/landmark.h:208:  nsaddr_t id_;
+./nsaddr_t:28:./sensor-nets/landmark.h:220:  nsaddr_t dst_node_;
+./nsaddr_t:29:./sensor-nets/landmark.h:221:  nsaddr_t dst_next_hop_;
+./nsaddr_t:30:./sensor-nets/landmark.h:232:  LMNode(nsaddr_t id, nsaddr_t next_hop, int num_hops, int level, int num_children, int energy, int origin_time, double update_time) {
+./nsaddr_t:31:./sensor-nets/landmark.h:259:  nsaddr_t id_;             // ID of this node
+./nsaddr_t:32:./sensor-nets/landmark.h:261:  nsaddr_t next_hop_;	    // Next hop to reach this node
+./nsaddr_t:33:./sensor-nets/landmark.h:355:  int UpdatePotlParent(nsaddr_t id, nsaddr_t next_hop, int num_hops, int level,int num_children, int energy, int origin_time, int delete_flag);
+./nsaddr_t:34:./sensor-nets/landmark.h:356:  int UpdatePotlChild(nsaddr_t id, nsaddr_t next_hop, int num_hops, int level, int num_children, int energy, int origin_time, int child_flag, int delete_flag, compr_taglist *taglist);
+./nsaddr_t:35:./sensor-nets/landmark.h:357:  void UpdateChildLMAddr(nsaddr_t id, int num_lm_addrs, int64_t *lm_addrs);
+./nsaddr_t:36:./sensor-nets/landmark.h:407:  void Addparent(const nsaddr_t parent, int level);
+./nsaddr_t:37:./sensor-nets/landmark.h:409:  void Addpotentialchild(const nsaddr_t child, int level);
+./nsaddr_t:38:./sensor-nets/landmark.h:430:  int CheckDemotionMsg(nsaddr_t id, int level, int origin_time);
+./nsaddr_t:39:./sensor-nets/landmark.h:443:  NodeIDList *search_tag(int obj_name, int prev_hop_level, int next_hop_level, nsaddr_t last_hop_id, int *num_dst);
+./nsaddr_t:40:./sensor-nets/landmark.h:444:  virtual nsaddr_t get_next_hop(nsaddr_t dst, int next_hop_level);
+./nsaddr_t:41:./sensor-nets/landmark.h:479:  nsaddr_t global_lm_id_;
+./nsaddr_t:42:./sensor-nets/landmark.cc:258:LandmarkAgent::CheckDemotionMsg(nsaddr_t id, int level, int origin_time)
+./nsaddr_t:43:./sensor-nets/landmark.cc:301:ParentChildrenList::UpdateChildLMAddr(nsaddr_t id, int num_lm_addrs, int64_t *lm_addrs)
+./nsaddr_t:44:./sensor-nets/landmark.cc:322:ParentChildrenList::UpdatePotlParent(nsaddr_t id, nsaddr_t next_hop, int num_hops, int level, int num_children, int energy, int origin_time, int delete_flag)
+./nsaddr_t:45:./sensor-nets/landmark.cc:432:ParentChildrenList::UpdatePotlChild(nsaddr_t id, nsaddr_t next_hop, int num_hops, int level, int num_children, int energy, int origin_time, int child_flag, int delete_flag, compr_taglist *taglist)
+./nsaddr_t:46:./sensor-nets/landmark.cc:563:  nsaddr_t origin_id, parent, next_hop;
+./nsaddr_t:47:./sensor-nets/landmark.cc:566:  nsaddr_t *potl_children;
+./nsaddr_t:48:./sensor-nets/landmark.cc:681:      potl_children = new nsaddr_t[num_potl_children];
+./nsaddr_t:49:./sensor-nets/landmark.cc:2947:  nsaddr_t last_hop_id;
+./nsaddr_t:50:./sensor-nets/landmark.cc:3318:LandmarkAgent::search_tag(int obj_name, int prev_hop_level, int next_hop_level,nsaddr_t last_hop_id, int *num_dst)
+./nsaddr_t:51:./sensor-nets/landmark.cc:3454:nsaddr_t
+./nsaddr_t:52:./sensor-nets/landmark.cc:3455:LandmarkAgent::get_next_hop(nsaddr_t dst, int next_hop_level)
+./nsaddr_t:53:./sensor-nets/agent-list.h:26:  void AddAgent(nsaddr_t node_addr, void *a);
+./nsaddr_t:54:./sensor-nets/agent-list.h:27:  void* GetAgent(nsaddr_t node_addr) {
+./nsaddr_t:55:./sensor-nets/sensor-query.h:33:  nsaddr_t myaddr_;
+./nsaddr_t:56:./common/packet.h:621:	nsaddr_t prev_hop_;     // IP addr of forwarding hop
+./nsaddr_t:57:./common/packet.h:622:	nsaddr_t next_hop_;	// next hop for this packet
+./nsaddr_t:58:./common/packet.h:624:	nsaddr_t last_hop_;     // for tracing on multi-user channels
+./nsaddr_t:59:./common/packet.h:669:	inline nsaddr_t& next_hop() { return (next_hop_); }
+./nsaddr_t:60:./common/node.cc:315:Node* Node::get_node_by_address (nsaddr_t id)
+./nsaddr_t:61:./common/agent.h:90:			    nsaddr_t dst);
+./nsaddr_t:62:./common/agent.h:96:	virtual void sendto(int nbytes, const char* flags, nsaddr_t dst);
+./nsaddr_t:63:./common/agent.h:98:	virtual void connect(nsaddr_t dst);
+./nsaddr_t:64:./common/agent.h:103:	inline nsaddr_t& addr() { return here_.addr_; }
+./nsaddr_t:65:./common/agent.h:104:	inline nsaddr_t& port() { return here_.port_; }
+./nsaddr_t:66:./common/agent.h:105:	inline nsaddr_t& daddr() { return dst_.addr_; }
+./nsaddr_t:67:./common/agent.h:106:	inline nsaddr_t& dport() { return dst_.port_; }
+./nsaddr_t:68:./common/Decapsulator.h:49:// 	nsaddr_t src_;        //bound variables: real source of a packet
+./nsaddr_t:69:./common/Decapsulator.h:50://      nsaddr_t star_value_; //  replaces src_ before sending (e.g. to emulate (*,G)
+./nsaddr_t:70:./common/sessionhelper.cc:88:	nsaddr_t addr;
+./nsaddr_t:71:./common/sessionhelper.cc:120:	nsaddr_t src_;
+./nsaddr_t:72:./common/agent.cc:165:			connect((nsaddr_t)atoi(argv[2]));
+./nsaddr_t:73:./common/agent.cc:183:			sendto(atoi(argv[2]), argv[3], (nsaddr_t)atoi(argv[4]));
+./nsaddr_t:74:./common/agent.cc:389:void Agent::connect(nsaddr_t /*dst*/)
+./nsaddr_t:75:./common/agent.cc:412:		   nsaddr_t /*dst*/)
+./nsaddr_t:76:./common/agent.cc:429:void Agent::sendto(int /*nbytes*/, const char /*flags*/[], nsaddr_t /*dst*/)
+./nsaddr_t:77:./common/node.h:157:	static Node* get_node_by_address(nsaddr_t);
+./nsaddr_t:78:./common/ip.h:80:	nsaddr_t& saddr() { return (src_.addr_); }
+./nsaddr_t:79:./common/ip.h:84:	nsaddr_t& daddr() { return (dst_.addr_); }
+./nsaddr_t:80:./gaf/gaf.h:144:	GAFAgent(nsaddr_t id);
+./nsaddr_t:81:./gaf/gaf.cc:73:		return (new GAFAgent((nsaddr_t) atoi(argv[4])));
+./nsaddr_t:82:./gaf/gaf.cc:93:GAFAgent::GAFAgent(nsaddr_t id) : Agent(PT_GAF), beacon_(1), randomflag_(1), timer_(this), stimer_(this), dtimer_(this), maxttl_(5), state_(GAF_FREE),leader_settime_(0),adapt_mobility_(0)
+./nsaddr_t:83:./wpan/p802_15_4mac.cc:1035:			if (p802_15_4macDA(p) == (nsaddr_t)MAC_BROADCAST)
+./nsaddr_t:84:./wpan/p802_15_4mac.cc:5029:				if (p802_15_4macDA(p) != (nsaddr_t)MAC_BROADCAST)
+./nsaddr_t:86:./olsr-0.2.3-ns-2.34/olsr.patch:503:+      return new OLSR((nsaddr_t)Address::instance().str2addr(argv[4]));
+./nsaddr_t:87:./olsr-0.2.3-ns-2.34/olsr.patch:849:+  OLSR::OLSR(nsaddr_t id) :  Agent(PT_OLSR), link_quality_timer_ (this),
+./nsaddr_t:88:./olsr-0.2.3-ns-2.34/olsr.patch:1106:+    std::set<nsaddr_t> deleted_addrs;
+./nsaddr_t:89:./olsr-0.2.3-ns-2.34/olsr.patch:1160:+      for (std::set<nsaddr_t>::iterator it2 = deleted_addrs.begin();
+./nsaddr_t:90:./olsr-0.2.3-ns-2.34/olsr.patch:1234:+        std::set<nsaddr_t> nb2hop_addrs;
+./nsaddr_t:91:./olsr-0.2.3-ns-2.34/olsr.patch:1245:+          std::set<nsaddr_t>::iterator it2 =
+./nsaddr_t:92:./olsr-0.2.3-ns-2.34/olsr.patch:1313:+    std::set<nsaddr_t> deleted_addrs;
+./nsaddr_t:93:./olsr-0.2.3-ns-2.34/olsr.patch:1367:+      for (std::set<nsaddr_t>::iterator it2 = deleted_addrs.begin();
+./nsaddr_t:94:./olsr-0.2.3-ns-2.34/olsr.patch:1469:+        std::set<nsaddr_t> nb2hop_addrs;
+./nsaddr_t:95:./olsr-0.2.3-ns-2.34/olsr.patch:1480:+          std::set<nsaddr_t>::iterator it2 =
+./nsaddr_t:96:./olsr-0.2.3-ns-2.34/olsr.patch:1631:+        std::set<nsaddr_t> nb2hop_addrs;
+./nsaddr_t:97:./olsr-0.2.3-ns-2.34/olsr.patch:1642:+          std::set<nsaddr_t>::iterator it2 =
+./nsaddr_t:98:./olsr-0.2.3-ns-2.34/olsr.patch:1815:+        std::set<nsaddr_t> nb2hop_addrs;
+./nsaddr_t:99:./olsr-0.2.3-ns-2.34/olsr.patch:1826:+          std::set<nsaddr_t>::iterator it2 =
+./nsaddr_t:100:./olsr-0.2.3-ns-2.34/olsr.patch:2005:+    map<nsaddr_t, std::vector<OLSR_nb2hop_tuple*> > N;
+./nsaddr_t:101:./olsr-0.2.3-ns-2.34/olsr.patch:2006:+    set<nsaddr_t> N_index;
+./nsaddr_t:102:./olsr-0.2.3-ns-2.34/olsr.patch:2009:+      nsaddr_t nb2hop_main_addr = nb2hop_tuple->nb2hop_addr();
+./nsaddr_t:103:./olsr-0.2.3-ns-2.34/olsr.patch:2010:+      nsaddr_t nb_main_addr = nb2hop_tuple->nb_main_addr();
+./nsaddr_t:104:./olsr-0.2.3-ns-2.34/olsr.patch:2040:+    for (set<nsaddr_t>::iterator it = N_index.begin(); it != N_index.end(); it++) {
+./nsaddr_t:105:./olsr-0.2.3-ns-2.34/olsr.patch:2041:+      nsaddr_t nb_main_addr = *it;
+./nsaddr_t:106:./olsr-0.2.3-ns-2.34/olsr.patch:2079:+    set<nsaddr_t> processed_nodes;
+./nsaddr_t:107:./olsr-0.2.3-ns-2.34/olsr.patch:2080:+    for (set<nsaddr_t>::iterator it = dijkstra->all_nodes()->begin();
+./nsaddr_t:108:./olsr-0.2.3-ns-2.34/olsr.patch:2088:+    for (set<nsaddr_t>::iterator it = processed_nodes.begin(); it != processed_nodes.end(); it++)
+./nsaddr_t:109:./olsr-0.2.3-ns-2.34/olsr.patch:2091:+    for (set<nsaddr_t>::iterator it = dijkstra->all_nodes()->begin();
+./nsaddr_t:110:./olsr-0.2.3-ns-2.34/olsr.patch:2101:+    for (set<nsaddr_t>::iterator it = processed_nodes.begin(); it != processed_nodes.end(); it++)
+./nsaddr_t:111:./olsr-0.2.3-ns-2.34/olsr.patch:2105:+      for (set<nsaddr_t>::iterator it = dijkstra->all_nodes()->begin();
+./nsaddr_t:112:./olsr-0.2.3-ns-2.34/olsr.patch:2115:+      for (set<nsaddr_t>::iterator it = processed_nodes.begin(); it != processed_nodes.end(); it++)
+./nsaddr_t:113:./olsr-0.2.3-ns-2.34/olsr.patch:2155:+    (OLSR_msg& msg, nsaddr_t receiver_iface, nsaddr_t sender_iface,
+./nsaddr_t:114:./olsr-0.2.3-ns-2.34/olsr.patch:2197:+  OLSR::process_tc(OLSR_msg& msg, nsaddr_t sender_iface) {
+./nsaddr_t:115:./olsr-0.2.3-ns-2.34/olsr.patch:2228:+      nsaddr_t addr = tc.nb_main_addr(i).iface_address();
+./nsaddr_t:116:./olsr-0.2.3-ns-2.34/olsr.patch:2276:+  OLSR::process_mid(OLSR_msg& msg, nsaddr_t sender_iface) {
+./nsaddr_t:117:./olsr-0.2.3-ns-2.34/olsr.patch:2338:+  OLSR::forward_default(Packet* p, OLSR_msg& msg, OLSR_dup_tuple* dup_tuple, nsaddr_t local_iface) {
+./nsaddr_t:118:./olsr-0.2.3-ns-2.34/olsr.patch:2871:+          nsaddr_t mpr_addr = *it;
+./nsaddr_t:119:./olsr-0.2.3-ns-2.34/olsr.patch:2927:+          nsaddr_t mpr_addr = *it;
+./nsaddr_t:120:./olsr-0.2.3-ns-2.34/olsr.patch:2993:+    (OLSR_msg& msg, nsaddr_t receiver_iface, nsaddr_t sender_iface,
+./nsaddr_t:121:./olsr-0.2.3-ns-2.34/olsr.patch:3152:+              nsaddr_t nb2hop_addr = get_main_addr(hello_msg.nb_iface_addr(j).iface_address());
+./nsaddr_t:122:./olsr-0.2.3-ns-2.34/olsr.patch:3221:+              nsaddr_t nb2hop_addr = get_main_addr(hello_msg.nb_iface_addr(j).iface_address());
+./nsaddr_t:123:./olsr-0.2.3-ns-2.34/olsr.patch:3451:+    nsaddr_t nb_addr  = get_main_addr(tuple->nb_iface_addr());
+./nsaddr_t:124:./olsr-0.2.3-ns-2.34/olsr.patch:3643:+  nsaddr_t
+./nsaddr_t:125:./olsr-0.2.3-ns-2.34/olsr.patch:3644:+  OLSR::get_main_addr(nsaddr_t iface_addr) {
+./nsaddr_t:126:./olsr-0.2.3-ns-2.34/olsr.patch:3743:+  OLSR::node_id(nsaddr_t addr) {
+./nsaddr_t:127:./olsr-0.2.3-ns-2.34/olsr.patch:3791:+    D_ = new std::map<nsaddr_t, hop * >();
+./nsaddr_t:128:./olsr-0.2.3-ns-2.34/olsr.patch:3792:+    nonprocessed_nodes_ = new std::set<nsaddr_t>();
+./nsaddr_t:129:./olsr-0.2.3-ns-2.34/olsr.patch:3793:+    link_array_ = new map<nsaddr_t, vector<edge*> * > ();
+./nsaddr_t:130:./olsr-0.2.3-ns-2.34/olsr.patch:3794:+    all_nodes_ = new std::set<nsaddr_t> ();
+./nsaddr_t:131:./olsr-0.2.3-ns-2.34/olsr.patch:3797:+  void Dijkstra::add_edge (nsaddr_t dest_node, nsaddr_t last_node, double delay,
+./nsaddr_t:132:./olsr-0.2.3-ns-2.34/olsr.patch:3836:+  set<nsaddr_t>::iterator Dijkstra::best_cost ()
+./nsaddr_t:133:./olsr-0.2.3-ns-2.34/olsr.patch:3838:+    set<nsaddr_t>::iterator best = (*nonprocessed_nodes_).end();
+./nsaddr_t:134:./olsr-0.2.3-ns-2.34/olsr.patch:3842:+    for (set<nsaddr_t>::iterator it = (*nonprocessed_nodes_).begin();
+./nsaddr_t:135:./olsr-0.2.3-ns-2.34/olsr.patch:3876:+  edge* Dijkstra::get_edge (nsaddr_t dest_node, nsaddr_t last_node)
+./nsaddr_t:136:./olsr-0.2.3-ns-2.34/olsr.patch:3893:+      set<nsaddr_t>::iterator current_node = best_cost();
+./nsaddr_t:137:./olsr-0.2.3-ns-2.34/olsr.patch:3901:+      for (set<nsaddr_t>::iterator dest_node = (*all_nodes_).begin();
+./nsaddr_t:138:./olsr-0.2.3-ns-2.34/olsr.patch:4013:+    for (map<nsaddr_t, vector<edge*>*>::iterator it = (*link_array_).begin(); it != (*link_array_).end(); it++) {
+./nsaddr_t:139:./olsr-0.2.3-ns-2.34/olsr.patch:4020:+    for (map<nsaddr_t, hop * >::iterator it = D_->begin(); it != D_->end(); it++)
+./nsaddr_t:140:./olsr-0.2.3-ns-2.34/olsr.patch:4070:+    nsaddr_t last_node_; // last node to reach node X
+./nsaddr_t:141:./olsr-0.2.3-ns-2.34/olsr.patch:4074:+    inline nsaddr_t& last_node() { return last_node_; }
+./nsaddr_t:142:./olsr-0.2.3-ns-2.34/olsr.patch:4098:+    set<nsaddr_t> * nonprocessed_nodes_;
+./nsaddr_t:143:./olsr-0.2.3-ns-2.34/olsr.patch:4099:+    map<nsaddr_t, vector<edge*> *> * link_array_;
+./nsaddr_t:144:./olsr-0.2.3-ns-2.34/olsr.patch:4102:+    set<nsaddr_t>::iterator best_cost();
+./nsaddr_t:145:./olsr-0.2.3-ns-2.34/olsr.patch:4103:+    edge* get_edge (nsaddr_t, nsaddr_t);
+./nsaddr_t:146:./olsr-0.2.3-ns-2.34/olsr.patch:4106:+    set<nsaddr_t> *all_nodes_;
+./nsaddr_t:147:./olsr-0.2.3-ns-2.34/olsr.patch:4111:+    map<nsaddr_t, hop * > *D_;
+./nsaddr_t:148:./olsr-0.2.3-ns-2.34/olsr.patch:4116:+    void add_edge (nsaddr_t, nsaddr_t, double, double, bool);
+./nsaddr_t:149:./olsr-0.2.3-ns-2.34/olsr.patch:4120:+    inline set<nsaddr_t> * all_nodes() { return all_nodes_; }
+./nsaddr_t:150:./olsr-0.2.3-ns-2.34/olsr.patch:4121:+    inline hop * D(nsaddr_t node) { return (*D_)[node]; }
+./nsaddr_t:151:./olsr-0.2.3-ns-2.34/olsr.patch:4477:+    nsaddr_t  ra_addr_;
+./nsaddr_t:152:./olsr-0.2.3-ns-2.34/olsr.patch:4536:+    inline nsaddr_t&  ra_addr()  { return ra_addr_; }
+./nsaddr_t:153:./olsr-0.2.3-ns-2.34/olsr.patch:4564:+    void    process_hello(OLSR_msg&, nsaddr_t, nsaddr_t, u_int16_t);
+./nsaddr_t:154:./olsr-0.2.3-ns-2.34/olsr.patch:4565:+    void    process_tc(OLSR_msg&, nsaddr_t);
+./nsaddr_t:155:./olsr-0.2.3-ns-2.34/olsr.patch:4566:+    void    process_mid(OLSR_msg&, nsaddr_t);
+./nsaddr_t:156:./olsr-0.2.3-ns-2.34/olsr.patch:4568:+    void    forward_default(Packet*, OLSR_msg&, OLSR_dup_tuple*, nsaddr_t);
+./nsaddr_t:157:./olsr-0.2.3-ns-2.34/olsr.patch:4579:+    void    link_sensing(OLSR_msg&, nsaddr_t, nsaddr_t, u_int16_t);
+./nsaddr_t:158:./olsr-0.2.3-ns-2.34/olsr.patch:4612:+    nsaddr_t  get_main_addr(nsaddr_t);
+./nsaddr_t:159:./olsr-0.2.3-ns-2.34/olsr.patch:4619:+    OLSR(nsaddr_t);
+./nsaddr_t:160:./olsr-0.2.3-ns-2.34/olsr.patch:4626:+    static int    node_id(nsaddr_t);
+./nsaddr_t:161:./olsr-0.2.3-ns-2.34/olsr.patch:4832:+    nsaddr_t  iface_address_;
+./nsaddr_t:162:./olsr-0.2.3-ns-2.34/olsr.patch:4842:+    inline nsaddr_t& iface_address() { return iface_address_; }
+./nsaddr_t:163:./olsr-0.2.3-ns-2.34/olsr.patch:4947:+    nsaddr_t  iface_addrs_[OLSR_MAX_ADDRS];
+./nsaddr_t:164:./olsr-0.2.3-ns-2.34/olsr.patch:4951:+    inline nsaddr_t&  iface_addr(int i)  { return iface_addrs_[i]; }
+./nsaddr_t:165:./olsr-0.2.3-ns-2.34/olsr.patch:4963:+    nsaddr_t  orig_addr_;  ///< Main address of the node which generated this message.
+./nsaddr_t:166:./olsr-0.2.3-ns-2.34/olsr.patch:4976:+    inline  nsaddr_t&  orig_addr()  { return orig_addr_; }
+./nsaddr_t:167:./olsr-0.2.3-ns-2.34/olsr.patch:5502:+    nsaddr_t  dest_addr_;  ///< Address of the destination node.
+./nsaddr_t:168:./olsr-0.2.3-ns-2.34/olsr.patch:5503:+    nsaddr_t  next_addr_;  ///< Address of the next hop.
+./nsaddr_t:169:./olsr-0.2.3-ns-2.34/olsr.patch:5504:+    nsaddr_t  iface_addr_;  ///< Address of the local interface.
+./nsaddr_t:170:./olsr-0.2.3-ns-2.34/olsr.patch:5507:+    inline nsaddr_t&  dest_addr()  { return dest_addr_; }
+./nsaddr_t:171:./olsr-0.2.3-ns-2.34/olsr.patch:5508:+    inline nsaddr_t&  next_addr()  { return next_addr_; }
+./nsaddr_t:172:./olsr-0.2.3-ns-2.34/olsr.patch:5509:+    inline nsaddr_t&  iface_addr()  { return iface_addr_; }
+./nsaddr_t:173:./olsr-0.2.3-ns-2.34/olsr.patch:5516:+    nsaddr_t  iface_addr_;
+./nsaddr_t:174:./olsr-0.2.3-ns-2.34/olsr.patch:5518:+    nsaddr_t  main_addr_;
+./nsaddr_t:175:./olsr-0.2.3-ns-2.34/olsr.patch:5522:+    inline nsaddr_t&  iface_addr()  { return iface_addr_; }
+./nsaddr_t:176:./olsr-0.2.3-ns-2.34/olsr.patch:5523:+    inline nsaddr_t&  main_addr()  { return main_addr_; }
+./nsaddr_t:177:./olsr-0.2.3-ns-2.34/olsr.patch:5535:+    nsaddr_t        local_iface_addr_;
+./nsaddr_t:178:./olsr-0.2.3-ns-2.34/olsr.patch:5537:+    nsaddr_t        nb_iface_addr_;
+./nsaddr_t:179:./olsr-0.2.3-ns-2.34/olsr.patch:5547:+    inline nsaddr_t&  local_iface_addr()  { return local_iface_addr_; }
+./nsaddr_t:180:./olsr-0.2.3-ns-2.34/olsr.patch:5548:+    inline nsaddr_t&  nb_iface_addr()    { return nb_iface_addr_; }
+./nsaddr_t:181:./olsr-0.2.3-ns-2.34/olsr.patch:5772:+    nsaddr_t nb_main_addr_;
+./nsaddr_t:182:./olsr-0.2.3-ns-2.34/olsr.patch:5778:+    inline nsaddr_t&  nb_main_addr()  { return nb_main_addr_; }
+./nsaddr_t:183:./olsr-0.2.3-ns-2.34/olsr.patch:5786:+    nsaddr_t  nb_main_addr_;
+./nsaddr_t:184:./olsr-0.2.3-ns-2.34/olsr.patch:5788:+    nsaddr_t  nb2hop_addr_;
+./nsaddr_t:185:./olsr-0.2.3-ns-2.34/olsr.patch:5792:+    inline nsaddr_t&  nb_main_addr()  { return nb_main_addr_; }
+./nsaddr_t:186:./olsr-0.2.3-ns-2.34/olsr.patch:5793:+    inline nsaddr_t&  nb2hop_addr()  { return nb2hop_addr_; }
+./nsaddr_t:187:./olsr-0.2.3-ns-2.34/olsr.patch:5845:+    nsaddr_t  main_addr_;
+./nsaddr_t:188:./olsr-0.2.3-ns-2.34/olsr.patch:5849:+    inline nsaddr_t&  main_addr()  { return main_addr_; }
+./nsaddr_t:189:./olsr-0.2.3-ns-2.34/olsr.patch:5854:+  typedef std::vector<nsaddr_t> addr_list_t;
+./nsaddr_t:190:./olsr-0.2.3-ns-2.34/olsr.patch:5859:+    nsaddr_t  addr_;
+./nsaddr_t:191:./olsr-0.2.3-ns-2.34/olsr.patch:5869:+    inline nsaddr_t&  addr()    { return addr_; }
+./nsaddr_t:192:./olsr-0.2.3-ns-2.34/olsr.patch:5879:+    nsaddr_t  dest_addr_;
+./nsaddr_t:193:./olsr-0.2.3-ns-2.34/olsr.patch:5881:+    nsaddr_t  last_addr_;
+./nsaddr_t:194:./olsr-0.2.3-ns-2.34/olsr.patch:5887:+    inline nsaddr_t&  dest_addr()  { return dest_addr_; }
+./nsaddr_t:195:./olsr-0.2.3-ns-2.34/olsr.patch:5888:+    inline nsaddr_t&  last_addr()  { return last_addr_; }
+./nsaddr_t:196:./olsr-0.2.3-ns-2.34/olsr.patch:5939:+  typedef std::set<nsaddr_t>      mprset_t;  ///< MPR Set type.
+./nsaddr_t:197:./olsr-0.2.3-ns-2.34/olsr.patch:6022:+  OLSR_rtable::rm_entry(nsaddr_t dest) {
+./nsaddr_t:198:./olsr-0.2.3-ns-2.34/olsr.patch:6034:+  OLSR_rtable::lookup(nsaddr_t dest) {
+./nsaddr_t:199:./olsr-0.2.3-ns-2.34/olsr.patch:6081:+  OLSR_rtable::add_entry(nsaddr_t dest, nsaddr_t next, nsaddr_t iface, u_int32_t dist) {
+./nsaddr_t:200:./olsr-0.2.3-ns-2.34/olsr.patch:6192:+  typedef std::map<nsaddr_t, OLSR_rt_entry*> rtable_t;
+./nsaddr_t:201:./olsr-0.2.3-ns-2.34/olsr.patch:6208:+    void    rm_entry(nsaddr_t dest);
+./nsaddr_t:202:./olsr-0.2.3-ns-2.34/olsr.patch:6209:+    OLSR_rt_entry*  add_entry(nsaddr_t dest, nsaddr_t next, nsaddr_t iface, u_int32_t dist);
+./nsaddr_t:203:./olsr-0.2.3-ns-2.34/olsr.patch:6210:+    OLSR_rt_entry*  lookup(nsaddr_t dest);
+./nsaddr_t:204:./olsr-0.2.3-ns-2.34/olsr.patch:6262:+  OLSR_state::find_mprsel_tuple(nsaddr_t main_addr) {
+./nsaddr_t:205:./olsr-0.2.3-ns-2.34/olsr.patch:6282:+  OLSR_state::erase_mprsel_tuples(nsaddr_t main_addr) {
+./nsaddr_t:206:./olsr-0.2.3-ns-2.34/olsr.patch:6300:+  OLSR_state::find_nb_tuple(nsaddr_t main_addr) {
+./nsaddr_t:207:./olsr-0.2.3-ns-2.34/olsr.patch:6310:+  OLSR_state::find_sym_nb_tuple(nsaddr_t main_addr) {
+./nsaddr_t:208:./olsr-0.2.3-ns-2.34/olsr.patch:6320:+  OLSR_state::find_nb_tuple(nsaddr_t main_addr, u_int8_t willingness) {
+./nsaddr_t:209:./olsr-0.2.3-ns-2.34/olsr.patch:6340:+  OLSR_state::erase_nb_tuple(nsaddr_t main_addr) {
+./nsaddr_t:210:./olsr-0.2.3-ns-2.34/olsr.patch:6358:+  OLSR_state::find_nb2hop_tuple(nsaddr_t nb_main_addr, nsaddr_t nb2hop_addr) {
+./nsaddr_t:211:./olsr-0.2.3-ns-2.34/olsr.patch:6378:+  OLSR_state::erase_nb2hop_tuples(nsaddr_t nb_main_addr, nsaddr_t nb2hop_addr) {
+./nsaddr_t:212:./olsr-0.2.3-ns-2.34/olsr.patch:6389:+  OLSR_state::erase_nb2hop_tuples(nsaddr_t nb_main_addr) {
+./nsaddr_t:213:./olsr-0.2.3-ns-2.34/olsr.patch:6407:+  OLSR_state::find_mpr_addr(nsaddr_t addr) {
+./nsaddr_t:214:./olsr-0.2.3-ns-2.34/olsr.patch:6413:+  OLSR_state::insert_mpr_addr(nsaddr_t addr) {
+./nsaddr_t:215:./olsr-0.2.3-ns-2.34/olsr.patch:6425:+  OLSR_state::find_dup_tuple(nsaddr_t addr, u_int16_t seq_num) {
+./nsaddr_t:216:./olsr-0.2.3-ns-2.34/olsr.patch:6452:+  OLSR_state::find_link_tuple(nsaddr_t iface_addr) {
+./nsaddr_t:217:./olsr-0.2.3-ns-2.34/olsr.patch:6462:+  OLSR_state::find_sym_link_tuple(nsaddr_t iface_addr, double now) {
+./nsaddr_t:218:./olsr-0.2.3-ns-2.34/olsr.patch:6476:+  OLSR_state::find_best_sym_link_tuple(nsaddr_t main_addr, double now) {
+./nsaddr_t:219:./olsr-0.2.3-ns-2.34/olsr.patch:6537:+  OLSR_state::find_topology_tuple(nsaddr_t dest_addr, nsaddr_t last_addr) {
+./nsaddr_t:220:./olsr-0.2.3-ns-2.34/olsr.patch:6547:+  OLSR_state::find_newer_topology_tuple(nsaddr_t last_addr, u_int16_t ansn) {
+./nsaddr_t:221:./olsr-0.2.3-ns-2.34/olsr.patch:6567:+  OLSR_state::erase_older_topology_tuples(nsaddr_t last_addr, u_int16_t ansn) {
+./nsaddr_t:222:./olsr-0.2.3-ns-2.34/olsr.patch:6585:+  OLSR_state::find_ifaceassoc_tuple(nsaddr_t iface_addr) {
+./nsaddr_t:223:./olsr-0.2.3-ns-2.34/olsr.patch:6674:+    OLSR_mprsel_tuple*  find_mprsel_tuple(nsaddr_t);
+./nsaddr_t:224:./olsr-0.2.3-ns-2.34/olsr.patch:6676:+    void      erase_mprsel_tuples(nsaddr_t);
+./nsaddr_t:225:./olsr-0.2.3-ns-2.34/olsr.patch:6679:+    OLSR_nb_tuple*    find_nb_tuple(nsaddr_t);
+./nsaddr_t:226:./olsr-0.2.3-ns-2.34/olsr.patch:6680:+    OLSR_nb_tuple*    find_sym_nb_tuple(nsaddr_t);
+./nsaddr_t:227:./olsr-0.2.3-ns-2.34/olsr.patch:6681:+    OLSR_nb_tuple*    find_nb_tuple(nsaddr_t, u_int8_t);
+./nsaddr_t:228:./olsr-0.2.3-ns-2.34/olsr.patch:6683:+    void      erase_nb_tuple(nsaddr_t);
+./nsaddr_t:229:./olsr-0.2.3-ns-2.34/olsr.patch:6686:+    OLSR_nb2hop_tuple*  find_nb2hop_tuple(nsaddr_t, nsaddr_t);
+./nsaddr_t:230:./olsr-0.2.3-ns-2.34/olsr.patch:6688:+    void      erase_nb2hop_tuples(nsaddr_t);
+./nsaddr_t:231:./olsr-0.2.3-ns-2.34/olsr.patch:6689:+    void      erase_nb2hop_tuples(nsaddr_t, nsaddr_t);
+./nsaddr_t:232:./olsr-0.2.3-ns-2.34/olsr.patch:6692:+    bool      find_mpr_addr(nsaddr_t);
+./nsaddr_t:233:./olsr-0.2.3-ns-2.34/olsr.patch:6693:+    void      insert_mpr_addr(nsaddr_t);
+./nsaddr_t:234:./olsr-0.2.3-ns-2.34/olsr.patch:6696:+    OLSR_dup_tuple*    find_dup_tuple(nsaddr_t, u_int16_t);
+./nsaddr_t:235:./olsr-0.2.3-ns-2.34/olsr.patch:6700:+    OLSR_link_tuple*  find_link_tuple(nsaddr_t);
+./nsaddr_t:236:./olsr-0.2.3-ns-2.34/olsr.patch:6701:+    OLSR_link_tuple*  find_sym_link_tuple(nsaddr_t, double);
+./nsaddr_t:237:./olsr-0.2.3-ns-2.34/olsr.patch:6702:+    OLSR_link_tuple*  find_best_sym_link_tuple(nsaddr_t, double);
+./nsaddr_t:238:./olsr-0.2.3-ns-2.34/olsr.patch:6706:+    OLSR_topology_tuple*  find_topology_tuple(nsaddr_t, nsaddr_t);
+./nsaddr_t:239:./olsr-0.2.3-ns-2.34/olsr.patch:6707:+    OLSR_topology_tuple*  find_newer_topology_tuple(nsaddr_t, u_int16_t);
+./nsaddr_t:240:./olsr-0.2.3-ns-2.34/olsr.patch:6709:+    void      erase_older_topology_tuples(nsaddr_t, u_int16_t);
+./nsaddr_t:241:./olsr-0.2.3-ns-2.34/olsr.patch:6712:+    OLSR_iface_assoc_tuple* find_ifaceassoc_tuple(nsaddr_t);
+./nsaddr_t:242:./um-olsr/OLSR.cc:76:		return new OLSR((nsaddr_t)Address::instance().str2addr(argv[4]));
+./nsaddr_t:243:./um-olsr/OLSR.cc:425:OLSR::OLSR(nsaddr_t id) :	Agent(PT_OLSR),
+./nsaddr_t:244:./um-olsr/OLSR.cc:582:    			std::map<nsaddr_t, int>::map new_m;
+./nsaddr_t:245:./um-olsr/OLSR.cc:716:	std::set<nsaddr_t> deleted_addrs;
+./nsaddr_t:246:./um-olsr/OLSR.cc:758:		for (std::set<nsaddr_t>::iterator it2 = deleted_addrs.begin();
+./nsaddr_t:247:./um-olsr/OLSR.cc:836:			std::set<nsaddr_t> nb2hop_addrs;
+./nsaddr_t:248:./um-olsr/OLSR.cc:847:				std::set<nsaddr_t>::iterator it2 =
+./nsaddr_t:249:./um-olsr/OLSR.cc:1027:OLSR::process_hello(OLSR_msg& msg, nsaddr_t receiver_iface, nsaddr_t sender_iface) {
+./nsaddr_t:250:./um-olsr/OLSR.cc:1062:OLSR::process_tc(OLSR_msg& msg, nsaddr_t sender_iface) {
+./nsaddr_t:251:./um-olsr/OLSR.cc:1093:		nsaddr_t addr = tc.nb_main_addr(i);
+./nsaddr_t:252:./um-olsr/OLSR.cc:1134:OLSR::process_mid(OLSR_msg& msg, nsaddr_t sender_iface) {
+./nsaddr_t:253:./um-olsr/OLSR.cc:1184:OLSR::forward_default(Packet* p, OLSR_msg& msg, OLSR_dup_tuple* dup_tuple, nsaddr_t local_iface) {
+./nsaddr_t:254:./um-olsr/OLSR.cc:1561:OLSR::link_sensing(OLSR_msg& msg, nsaddr_t receiver_iface, nsaddr_t sender_iface) {
+./nsaddr_t:255:./um-olsr/OLSR.cc:1666:						nsaddr_t nb2hop_addr = hello_msg.nb_iface_addr(j);
+./nsaddr_t:256:./um-olsr/OLSR.cc:1902:	nsaddr_t nb_addr	= get_main_addr(tuple->nb_iface_addr());
+./nsaddr_t:257:./um-olsr/OLSR.cc:2123:nsaddr_t
+./nsaddr_t:258:./um-olsr/OLSR.cc:2124:OLSR::get_main_addr(nsaddr_t iface_addr) {
+./nsaddr_t:259:./um-olsr/OLSR.cc:2224:OLSR::node_id(nsaddr_t addr) {
+./nsaddr_t:260:./um-olsr/OLSR_rtable.cc:63:OLSR_rtable::rm_entry(nsaddr_t dest) {
+./nsaddr_t:261:./um-olsr/OLSR_rtable.cc:75:OLSR_rtable::lookup(nsaddr_t dest) {
+./nsaddr_t:262:./um-olsr/OLSR_rtable.cc:122:OLSR_rtable::add_entry(nsaddr_t dest, nsaddr_t next, nsaddr_t iface, u_int32_t dist) {
+./nsaddr_t:263:./um-olsr/OLSR.h:330:	nsaddr_t	ra_addr_;
+./nsaddr_t:264:./um-olsr/OLSR.h:350:	//std::map<nsaddr_t, >
+./nsaddr_t:265:./um-olsr/OLSR.h:351:	std::map<nsaddr_t, std::map<nsaddr_t ,int> > hellocount_;	
+./nsaddr_t:266:./um-olsr/OLSR.h:378:	inline nsaddr_t&	ra_addr()	{ return ra_addr_; }
+./nsaddr_t:267:./um-olsr/OLSR.h:400:	void		process_hello(OLSR_msg&, nsaddr_t, nsaddr_t);
+./nsaddr_t:268:./um-olsr/OLSR.h:401:	void		process_tc(OLSR_msg&, nsaddr_t);
+./nsaddr_t:269:./um-olsr/OLSR.h:402:	void		process_mid(OLSR_msg&, nsaddr_t);
+./nsaddr_t:270:./um-olsr/OLSR.h:404:	void		forward_default(Packet*, OLSR_msg&, OLSR_dup_tuple*, nsaddr_t);
+./nsaddr_t:271:./um-olsr/OLSR.h:413:	void		link_sensing(OLSR_msg&, nsaddr_t, nsaddr_t);
+./nsaddr_t:272:./um-olsr/OLSR.h:439:	nsaddr_t	get_main_addr(nsaddr_t);
+./nsaddr_t:273:./um-olsr/OLSR.h:445:	OLSR(nsaddr_t);
+./nsaddr_t:274:./um-olsr/OLSR.h:452:	static int		node_id(nsaddr_t);
+./nsaddr_t:275:./um-olsr/OLSR_repositories.h:35:	nsaddr_t	dest_addr_;	///< Address of the destination node.
+./nsaddr_t:276:./um-olsr/OLSR_repositories.h:36:	nsaddr_t	next_addr_;	///< Address of the next hop.
+./nsaddr_t:277:./um-olsr/OLSR_repositories.h:37:	nsaddr_t	iface_addr_;	///< Address of the local interface.
+./nsaddr_t:278:./um-olsr/OLSR_repositories.h:40:	inline nsaddr_t&	dest_addr()	{ return dest_addr_; }
+./nsaddr_t:279:./um-olsr/OLSR_repositories.h:41:	inline nsaddr_t&	next_addr()	{ return next_addr_; }
+./nsaddr_t:280:./um-olsr/OLSR_repositories.h:42:	inline nsaddr_t&	iface_addr()	{ return iface_addr_; }
+./nsaddr_t:281:./um-olsr/OLSR_repositories.h:49:	nsaddr_t	iface_addr_;
+./nsaddr_t:282:./um-olsr/OLSR_repositories.h:51:	nsaddr_t	main_addr_;
+./nsaddr_t:283:./um-olsr/OLSR_repositories.h:55:	inline nsaddr_t&	iface_addr()	{ return iface_addr_; }
+./nsaddr_t:284:./um-olsr/OLSR_repositories.h:56:	inline nsaddr_t&	main_addr()	{ return main_addr_; }
+./nsaddr_t:285:./um-olsr/OLSR_repositories.h:63:	nsaddr_t	local_iface_addr_;
+./nsaddr_t:286:./um-olsr/OLSR_repositories.h:65:	nsaddr_t	nb_iface_addr_;
+./nsaddr_t:287:./um-olsr/OLSR_repositories.h:75:	inline nsaddr_t&	local_iface_addr()	{ return local_iface_addr_; }
+./nsaddr_t:288:./um-olsr/OLSR_repositories.h:76:	inline nsaddr_t&	nb_iface_addr()		{ return nb_iface_addr_; }
+./nsaddr_t:289:./um-olsr/OLSR_repositories.h:86:	nsaddr_t nb_main_addr_;
+./nsaddr_t:290:./um-olsr/OLSR_repositories.h:92:	inline nsaddr_t&	nb_main_addr()	{ return nb_main_addr_; }
+./nsaddr_t:291:./um-olsr/OLSR_repositories.h:100:	nsaddr_t	nb_main_addr_;
+./nsaddr_t:292:./um-olsr/OLSR_repositories.h:102:	nsaddr_t	nb2hop_addr_;
+./nsaddr_t:293:./um-olsr/OLSR_repositories.h:106:	inline nsaddr_t&	nb_main_addr()	{ return nb_main_addr_; }
+./nsaddr_t:294:./um-olsr/OLSR_repositories.h:107:	inline nsaddr_t&	nb2hop_addr()	{ return nb2hop_addr_; }
+./nsaddr_t:295:./um-olsr/OLSR_repositories.h:114:	nsaddr_t	main_addr_;
+./nsaddr_t:296:./um-olsr/OLSR_repositories.h:118:	inline nsaddr_t&	main_addr()	{ return main_addr_; }
+./nsaddr_t:297:./um-olsr/OLSR_repositories.h:123:typedef std::vector<nsaddr_t> addr_list_t;
+./nsaddr_t:298:./um-olsr/OLSR_repositories.h:128:	nsaddr_t	addr_;
+./nsaddr_t:299:./um-olsr/OLSR_repositories.h:138:	inline nsaddr_t&	addr()		{ return addr_; }
+./nsaddr_t:300:./um-olsr/OLSR_repositories.h:148:	nsaddr_t	dest_addr_;
+./nsaddr_t:301:./um-olsr/OLSR_repositories.h:150:	nsaddr_t	last_addr_;
+./nsaddr_t:302:./um-olsr/OLSR_repositories.h:156:	inline nsaddr_t&	dest_addr()	{ return dest_addr_; }
+./nsaddr_t:303:./um-olsr/OLSR_repositories.h:157:	inline nsaddr_t&	last_addr()	{ return last_addr_; }
+./nsaddr_t:304:./um-olsr/OLSR_repositories.h:164:	nsaddr_t sender_;
+./nsaddr_t:305:./um-olsr/OLSR_repositories.h:165:	nsaddr_t receiver_;
+./nsaddr_t:306:./um-olsr/OLSR_repositories.h:168:	inline nsaddr_t&       sender()         { return sender_; }
+./nsaddr_t:307:./um-olsr/OLSR_repositories.h:169:	inline nsaddr_t&       receiver()       { return receiver_; }
+./nsaddr_t:308:./um-olsr/OLSR_repositories.h:174:typedef std::set<nsaddr_t>			mprset_t;	///< MPR Set type.
+./nsaddr_t:309:./um-olsr/OLSR_state.h:54:	OLSR_mprsel_tuple*	find_mprsel_tuple(nsaddr_t);
+./nsaddr_t:310:./um-olsr/OLSR_state.h:56:	void			erase_mprsel_tuples(nsaddr_t);
+./nsaddr_t:311:./um-olsr/OLSR_state.h:59:	OLSR_nb_tuple*		find_nb_tuple(nsaddr_t);
+./nsaddr_t:312:./um-olsr/OLSR_state.h:60:	OLSR_nb_tuple*		find_sym_nb_tuple(nsaddr_t);
+./nsaddr_t:313:./um-olsr/OLSR_state.h:61:	OLSR_nb_tuple*		find_nb_tuple(nsaddr_t, u_int8_t);
+./nsaddr_t:314:./um-olsr/OLSR_state.h:63:	void			erase_nb_tuple(nsaddr_t);
+./nsaddr_t:315:./um-olsr/OLSR_state.h:66:	OLSR_nb2hop_tuple*	find_nb2hop_tuple(nsaddr_t, nsaddr_t);
+./nsaddr_t:316:./um-olsr/OLSR_state.h:68:	void			erase_nb2hop_tuples(nsaddr_t);
+./nsaddr_t:317:./um-olsr/OLSR_state.h:69:	void			erase_nb2hop_tuples(nsaddr_t, nsaddr_t);
+./nsaddr_t:318:./um-olsr/OLSR_state.h:72:	bool			find_mpr_addr(nsaddr_t);
+./nsaddr_t:319:./um-olsr/OLSR_state.h:73:	void			insert_mpr_addr(nsaddr_t);
+./nsaddr_t:320:./um-olsr/OLSR_state.h:76:	OLSR_dup_tuple*		find_dup_tuple(nsaddr_t, u_int16_t);
+./nsaddr_t:321:./um-olsr/OLSR_state.h:80:	OLSR_link_tuple*	find_link_tuple(nsaddr_t);
+./nsaddr_t:322:./um-olsr/OLSR_state.h:81:	OLSR_link_tuple*	find_sym_link_tuple(nsaddr_t, double);
+./nsaddr_t:323:./um-olsr/OLSR_state.h:85:	OLSR_topology_tuple*	find_topology_tuple(nsaddr_t, nsaddr_t);
+./nsaddr_t:324:./um-olsr/OLSR_state.h:86:	OLSR_topology_tuple*	find_newer_topology_tuple(nsaddr_t, u_int16_t);
+./nsaddr_t:325:./um-olsr/OLSR_state.h:88:	void			erase_older_topology_tuples(nsaddr_t, u_int16_t);
+./nsaddr_t:326:./um-olsr/OLSR_state.h:91:	OLSR_iface_assoc_tuple* find_ifaceassoc_tuple(nsaddr_t);
+./nsaddr_t:328:./um-olsr/OLSR_state.cc:33:OLSR_state::find_mprsel_tuple(nsaddr_t main_addr) {
+./nsaddr_t:329:./um-olsr/OLSR_state.cc:53:OLSR_state::erase_mprsel_tuples(nsaddr_t main_addr) {
+./nsaddr_t:330:./um-olsr/OLSR_state.cc:71:OLSR_state::find_nb_tuple(nsaddr_t main_addr) {
+./nsaddr_t:331:./um-olsr/OLSR_state.cc:81:OLSR_state::find_sym_nb_tuple(nsaddr_t main_addr) {
+./nsaddr_t:332:./um-olsr/OLSR_state.cc:91:OLSR_state::find_nb_tuple(nsaddr_t main_addr, u_int8_t willingness) {
+./nsaddr_t:333:./um-olsr/OLSR_state.cc:111:OLSR_state::erase_nb_tuple(nsaddr_t main_addr) {
+./nsaddr_t:334:./um-olsr/OLSR_state.cc:129:OLSR_state::find_nb2hop_tuple(nsaddr_t nb_main_addr, nsaddr_t nb2hop_addr) {
+./nsaddr_t:335:./um-olsr/OLSR_state.cc:149:OLSR_state::erase_nb2hop_tuples(nsaddr_t nb_main_addr, nsaddr_t nb2hop_addr) {
+./nsaddr_t:336:./um-olsr/OLSR_state.cc:160:OLSR_state::erase_nb2hop_tuples(nsaddr_t nb_main_addr) {
+./nsaddr_t:337:./um-olsr/OLSR_state.cc:178:OLSR_state::find_mpr_addr(nsaddr_t addr) {
+./nsaddr_t:338:./um-olsr/OLSR_state.cc:184:OLSR_state::insert_mpr_addr(nsaddr_t addr) {
+./nsaddr_t:339:./um-olsr/OLSR_state.cc:196:OLSR_state::find_dup_tuple(nsaddr_t addr, u_int16_t seq_num) {
+./nsaddr_t:340:./um-olsr/OLSR_state.cc:223:OLSR_state::find_link_tuple(nsaddr_t iface_addr) {
+./nsaddr_t:341:./um-olsr/OLSR_state.cc:233:OLSR_state::find_sym_link_tuple(nsaddr_t iface_addr, double now) {
+./nsaddr_t:342:./um-olsr/OLSR_state.cc:264:OLSR_state::find_topology_tuple(nsaddr_t dest_addr, nsaddr_t last_addr) {
+./nsaddr_t:343:./um-olsr/OLSR_state.cc:274:OLSR_state::find_newer_topology_tuple(nsaddr_t last_addr, u_int16_t ansn) {
+./nsaddr_t:344:./um-olsr/OLSR_state.cc:294:OLSR_state::erase_older_topology_tuples(nsaddr_t last_addr, u_int16_t ansn) {
+./nsaddr_t:345:./um-olsr/OLSR_state.cc:312:OLSR_state::find_ifaceassoc_tuple(nsaddr_t iface_addr) {
+./nsaddr_t:346:./um-olsr/OLSR_rtable.h:39:typedef std::map<nsaddr_t, OLSR_rt_entry*> rtable_t;
+./nsaddr_t:347:./um-olsr/OLSR_rtable.h:53:	void		rm_entry(nsaddr_t dest);
+./nsaddr_t:348:./um-olsr/OLSR_rtable.h:54:	OLSR_rt_entry*	add_entry(nsaddr_t dest, nsaddr_t next, nsaddr_t iface, u_int32_t dist);
+./nsaddr_t:349:./um-olsr/OLSR_rtable.h:55:	OLSR_rt_entry*	lookup(nsaddr_t dest);
+./nsaddr_t:350:./um-olsr/OLSR_pkt.h:93:	nsaddr_t	nb_iface_addrs_[OLSR_MAX_ADDRS];
+./nsaddr_t:351:./um-olsr/OLSR_pkt.h:100:	inline nsaddr_t&	nb_iface_addr(int i)	{ return nb_iface_addrs_[i]; }
+./nsaddr_t:352:./um-olsr/OLSR_pkt.h:142:	nsaddr_t	nb_main_addrs_[OLSR_MAX_ADDRS];
+./nsaddr_t:353:./um-olsr/OLSR_pkt.h:148:	inline	nsaddr_t&	nb_main_addr(int i)	{ return nb_main_addrs_[i]; }
+./nsaddr_t:354:./um-olsr/OLSR_pkt.h:158:	nsaddr_t	iface_addrs_[OLSR_MAX_ADDRS];
+./nsaddr_t:355:./um-olsr/OLSR_pkt.h:162:	inline nsaddr_t&	iface_addr(int i)	{ return iface_addrs_[i]; }
+./nsaddr_t:356:./um-olsr/OLSR_pkt.h:174:	nsaddr_t	orig_addr_;	///< Main address of the node which generated this message.
+./nsaddr_t:357:./um-olsr/OLSR_pkt.h:187:	inline	nsaddr_t&	orig_addr()	{ return orig_addr_; }
+./nsaddr_t:358:./mobile/god.cc:681:        nsaddr_t src = ih->saddr();
+./nsaddr_t:359:./mobile/god.cc:682:        nsaddr_t dst = ih->daddr();
+./nsaddr_t:360:./mobile/mip.cc:99:	//hdr->dst() = addr_ & ~(~(nsaddr_t)0 << shift_) | (te & mask_) << shift_;;
+./nsaddr_t:361:./mobile/mip-reg.cc:148:	    //iph->dst() = iph->dst() & ~(~(nsaddr_t)0 << shift_) | (miph->ha_ & mask_) << shift_;
+./nsaddr_t:362:./mobile/mip-reg.cc:178:	  //iph->dst() = iph->dst() & ~(~(nsaddr_t)0 << shift_) |(miph->haddr_ & mask_) << shift_;
+./nsaddr_t:363:./mobile/mip-reg.cc:420:	//iph->dst() = iph->dst() & ~(~(nsaddr_t)0 << shift_) | (coa_ & mask_) << shift_;
+./nsaddr_t:364:./routing/rttable.cc:85:rt_entry::nb_insert(nsaddr_t id)
+./nsaddr_t:365:./routing/rttable.cc:96:rt_entry::nb_lookup(nsaddr_t id)
+./nsaddr_t:366:./routing/rttable.cc:111:rttable::rt_lookup(nsaddr_t id)
+./nsaddr_t:367:./routing/rttable.cc:123:rttable::rt_delete(nsaddr_t id)
+./nsaddr_t:368:./routing/rttable.cc:134:rttable::rt_add(nsaddr_t id)
+./nsaddr_t:369:./routing/rttable.h:63:        nsaddr_t        nb_addr;
+./nsaddr_t:370:./routing/rttable.h:82:        void            nb_insert(nsaddr_t id);
+./nsaddr_t:371:./routing/rttable.h:83:        Neighbor*       nb_lookup(nsaddr_t id);
+./nsaddr_t:372:./routing/rttable.h:87:        nsaddr_t        rt_dst;
+./nsaddr_t:373:./routing/rttable.h:89:        nsaddr_t        rt_nexthop;     // next hop IP address
+./nsaddr_t:374:./routing/rttable.h:139:        rt_entry*       rt_lookup(nsaddr_t id);
+./nsaddr_t:375:./routing/rttable.h:140:        void            rt_delete(nsaddr_t id);
+./nsaddr_t:376:./routing/rttable.h:141:        rt_entry*       rt_add(nsaddr_t id);
+./nsaddr_t:377:./trace/trace.h:57:	nsaddr_t src_;
+./nsaddr_t:378:./trace/trace.h:58:        nsaddr_t dst_;
+./nsaddr_t:379:./aomdv/aomdv_logs.cc:95:AOMDV::log_link_del(nsaddr_t dst)
+./nsaddr_t:380:./aomdv/aomdv_logs.cc:136:AOMDV::log_link_kept(nsaddr_t dst)
+./nsaddr_t:381:./aomdv/aomdv_rqueue.h:121:        Packet*         deque(nsaddr_t dst);
+./nsaddr_t:382:./aomdv/aomdv_rqueue.h:125:        char            find(nsaddr_t dst);
+./nsaddr_t:383:./aomdv/aomdv_rqueue.h:130:	void		findPacketWithDst(nsaddr_t dst, Packet*& p, Packet*& prev);
+./nsaddr_t:384:./aomdv/aomdv.cc:127:		//return (new AODV((nsaddr_t) atoi(argv[4])));
+./nsaddr_t:385:./aomdv/aomdv.cc:128:		return (new AOMDV((nsaddr_t) Address::instance().str2addr(argv[4])));
+./nsaddr_t:386:./aomdv/aomdv.cc:202:AOMDV::AOMDV(nsaddr_t id) : Agent(PT_AOMDV),
+./nsaddr_t:387:./aomdv/aomdv.cc:297:AOMDV::id_insert(nsaddr_t id, u_int32_t bid) {
+./nsaddr_t:388:./aomdv/aomdv.cc:308:AOMDV::id_lookup(nsaddr_t id, u_int32_t bid) {
+./nsaddr_t:389:./aomdv/aomdv.cc:321:AOMDV::id_get(nsaddr_t id, u_int32_t bid) {
+./nsaddr_t:390:./aomdv/aomdv.cc:394:	nsaddr_t broken_nbr = ch->next_hop_;
+./nsaddr_t:391:./aomdv/aomdv.cc:473:AOMDV::handle_link_failure(nsaddr_t id) {
+./nsaddr_t:392:./aomdv/aomdv.cc:1385:		assert(ih->daddr() == (nsaddr_t) IP_BROADCAST);
+./nsaddr_t:393:./aomdv/aomdv.cc:1390:	if (ih->daddr() == (nsaddr_t) IP_BROADCAST) {
+./nsaddr_t:394:./aomdv/aomdv.cc:1413:AOMDV::sendRequest(nsaddr_t dst) {
+./nsaddr_t:395:./aomdv/aomdv.cc:1537:AOMDV::sendReply(nsaddr_t ipdst, u_int32_t hop_count, nsaddr_t rpdst,
+./nsaddr_t:396:./aomdv/aomdv.cc:1539:					  nsaddr_t nexthop, u_int32_t bcast_id, nsaddr_t rp_first_hop) {
+./nsaddr_t:397:./aomdv/aomdv.cc:1694:AOMDV::nb_insert(nsaddr_t id) {
+./nsaddr_t:398:./aomdv/aomdv.cc:1713:AOMDV::nb_lookup(nsaddr_t id) {
+./nsaddr_t:399:./aomdv/aomdv.cc:1728:AOMDV::nb_delete(nsaddr_t id) {
+./nsaddr_t:400:./aomdv/aomdv.cc:1833:		assert(ih->daddr() == (nsaddr_t) IP_BROADCAST);
+./nsaddr_t:401:./aomdv/aomdv.cc:1838:	if (ih->daddr() == (nsaddr_t) IP_BROADCAST) {
+./nsaddr_t:402:./aomdv/aomdv_rqueue.cc:159:aomdv_rqueue::deque(nsaddr_t dst) {
+./nsaddr_t:403:./aomdv/aomdv_rqueue.cc:193:aomdv_rqueue::find(nsaddr_t dst) {
+./nsaddr_t:404:./aomdv/aomdv_rqueue.cc:229:aomdv_rqueue::findPacketWithDst(nsaddr_t dst, Packet*& p, Packet*& prev) {
+./nsaddr_t:405:./aomdv/aomdv_rtable.cc:155:aomdv_rt_entry::nb_insert(nsaddr_t id)
+./nsaddr_t:406:./aomdv/aomdv_rtable.cc:167:aomdv_rt_entry::nb_lookup(nsaddr_t id)
+./nsaddr_t:407:./aomdv/aomdv_rtable.cc:181:aomdv_rt_entry::path_insert(nsaddr_t nexthop, u_int16_t hopcount, double expire_time, nsaddr_t lasthop) {
+./nsaddr_t:408:./aomdv/aomdv_rtable.cc:207:aomdv_rt_entry::path_lookup(nsaddr_t id)
+./nsaddr_t:409:./aomdv/aomdv_rtable.cc:220:aomdv_rt_entry::disjoint_path_lookup(nsaddr_t nexthop, nsaddr_t lasthop)
+./nsaddr_t:410:./aomdv/aomdv_rtable.cc:234:aomdv_rt_entry::new_disjoint_path(nsaddr_t nexthop, nsaddr_t lasthop)
+./nsaddr_t:411:./aomdv/aomdv_rtable.cc:248:aomdv_rt_entry::path_lookup_lasthop(nsaddr_t id)
+./nsaddr_t:412:./aomdv/aomdv_rtable.cc:262:aomdv_rt_entry::path_delete(nsaddr_t id) {
+./nsaddr_t:413:./aomdv/aomdv_rtable.cc:409:aomdv_rt_entry::pc_insert(nsaddr_t id)
+./nsaddr_t:414:./aomdv/aomdv_rtable.cc:421:aomdv_rt_entry::pc_lookup(nsaddr_t id)
+./nsaddr_t:415:./aomdv/aomdv_rtable.cc:434:aomdv_rt_entry::pc_delete(nsaddr_t id) {
+./nsaddr_t:416:./aomdv/aomdv_rtable.cc:470:aomdv_rtable::rt_lookup(nsaddr_t id)
+./nsaddr_t:417:./aomdv/aomdv_rtable.cc:483:aomdv_rtable::rt_delete(nsaddr_t id)
+./nsaddr_t:418:./aomdv/aomdv_rtable.cc:495:aomdv_rtable::rt_add(nsaddr_t id)
+./nsaddr_t:419:./aomdv/aomdv_packet.h:132:        nsaddr_t        rq_dst;         // Destination IP Address
+./nsaddr_t:420:./aomdv/aomdv_packet.h:134:        nsaddr_t        rq_src;         // Source IP Address
+./nsaddr_t:421:./aomdv/aomdv_packet.h:140:        nsaddr_t        rq_first_hop;  // First Hop taken by the RREQ
+./nsaddr_t:422:./aomdv/aomdv_packet.h:154:	     + sizeof(nsaddr_t)		// rq_dst
+./nsaddr_t:423:./aomdv/aomdv_packet.h:156:	     + sizeof(nsaddr_t)		// rq_src
+./nsaddr_t:424:./aomdv/aomdv_packet.h:161:   sz += sizeof(nsaddr_t);    // rq_first_hop 
+./nsaddr_t:425:./aomdv/aomdv_packet.h:171:        nsaddr_t        rp_dst;                 // Destination IP Address
+./nsaddr_t:426:./aomdv/aomdv_packet.h:173:        nsaddr_t        rp_src;                 // Source IP Address
+./nsaddr_t:427:./aomdv/aomdv_packet.h:180:        nsaddr_t        rp_first_hop;
+./nsaddr_t:428:./aomdv/aomdv_packet.h:189:	     + sizeof(nsaddr_t)		// rp_dst
+./nsaddr_t:429:./aomdv/aomdv_packet.h:191:	     + sizeof(nsaddr_t)		// rp_src
+./nsaddr_t:430:./aomdv/aomdv_packet.h:198:      sz += sizeof(nsaddr_t);    // rp_first_hop
+./nsaddr_t:431:./aomdv/aomdv_packet.h:211:        nsaddr_t        unreachable_dst[AOMDV_MAX_ERRORS];   
+./nsaddr_t:432:./aomdv/aomdv_packet.h:220:	     + length*sizeof(nsaddr_t); // unreachable destinations
+./nsaddr_t:433:./aomdv/aomdv.h:253:        AOMDV_Route(nsaddr_t nexthop, nsaddr_t lasthop=0) {
+./nsaddr_t:434:./aomdv/aomdv.h:259:        nsaddr_t        nh_addr;
+./nsaddr_t:435:./aomdv/aomdv.h:260:        nsaddr_t        lh_addr;
+./nsaddr_t:436:./aomdv/aomdv.h:272:        AOMDVBroadcastID(nsaddr_t i, u_int32_t b) { 
+./nsaddr_t:437:./aomdv/aomdv.h:282:        nsaddr_t        src;
+./nsaddr_t:438:./aomdv/aomdv.h:291:        inline AOMDV_Route* reverse_path_insert(nsaddr_t nexthop, nsaddr_t lasthop=0) {
+./nsaddr_t:439:./aomdv/aomdv.h:298:        inline AOMDV_Route* reverse_path_lookup(nsaddr_t nexthop, nsaddr_t lasthop=0) {
+./nsaddr_t:440:./aomdv/aomdv.h:309:			inline AOMDV_Route* forward_path_insert(nsaddr_t nexthop, nsaddr_t lasthop=0) {
+./nsaddr_t:441:./aomdv/aomdv.h:316:			inline AOMDV_Route* forward_path_lookup(nsaddr_t nexthop, nsaddr_t lasthop=0) {
+./nsaddr_t:442:./aomdv/aomdv.h:348:        AOMDV(nsaddr_t id);
+./nsaddr_t:443:./aomdv/aomdv.h:365:			// void            rt_update(aodv_rt_entry *rt, u_int32_t seqnum, u_int16_t metric, nsaddr_t nexthop, double expire_time);
+./nsaddr_t:444:./aomdv/aomdv.h:366:			// void            handle_link_failure(nsaddr_t id);
+./nsaddr_t:445:./aomdv/aomdv.h:367:        void            handle_link_failure(nsaddr_t id);
+./nsaddr_t:446:./aomdv/aomdv.h:377:        void            nb_insert(nsaddr_t id);
+./nsaddr_t:447:./aomdv/aomdv.h:378:        AOMDV_Neighbor*       nb_lookup(nsaddr_t id);
+./nsaddr_t:448:./aomdv/aomdv.h:379:        void            nb_delete(nsaddr_t id);
+./nsaddr_t:449:./aomdv/aomdv.h:387:			void            id_insert(nsaddr_t id, u_int32_t bid);
+./nsaddr_t:450:./aomdv/aomdv.h:388:			bool	        id_lookup(nsaddr_t id, u_int32_t bid);
+./nsaddr_t:451:./aomdv/aomdv.h:389:         AOMDVBroadcastID*    id_get(nsaddr_t id, u_int32_t bid);
+./nsaddr_t:452:./aomdv/aomdv.h:399:        void            sendRequest(nsaddr_t dst);
+./nsaddr_t:453:./aomdv/aomdv.h:402:			// void            sendReply(nsaddr_t ipdst, u_int32_t hop_count, nsaddr_t rpdst, u_int32_t rpseq, u_int32_t lifetime, double timestamp);
+./nsaddr_t:454:./aomdv/aomdv.h:403:        void            sendReply(nsaddr_t ipdst, u_int32_t hop_count,
+./nsaddr_t:455:./aomdv/aomdv.h:404:                                  nsaddr_t rpdst, u_int32_t rpseq,
+./nsaddr_t:456:./aomdv/aomdv.h:406:              nsaddr_t nexthop, u_int32_t bcast_id, nsaddr_t rp_first_hop);
+./nsaddr_t:457:./aomdv/aomdv.h:425:        nsaddr_t        index;                  // IP Address of this node
+./nsaddr_t:458:./aomdv/aomdv.h:467:        void            log_link_del(nsaddr_t dst);
+./nsaddr_t:459:./aomdv/aomdv.h:469:        void            log_link_kept(nsaddr_t dst);
+./nsaddr_t:460:./aomdv/aomdv_rtable.h:105:        nsaddr_t        nb_addr;
+./nsaddr_t:461:./aomdv/aomdv_rtable.h:119:        AOMDV_Path(nsaddr_t nh, u_int16_t h, double expire_time, nsaddr_t lh=0) { 
+./nsaddr_t:462:./aomdv/aomdv_rtable.h:141:        nsaddr_t        nexthop;    // nexthop address
+./nsaddr_t:463:./aomdv/aomdv_rtable.h:145:        nsaddr_t        lasthop;    // lasthop address
+./nsaddr_t:464:./aomdv/aomdv_rtable.h:164:        nsaddr_t        pc_addr;	// precursor address
+./nsaddr_t:465:./aomdv/aomdv_rtable.h:182:        void            nb_insert(nsaddr_t id);
+./nsaddr_t:466:./aomdv/aomdv_rtable.h:183:        AOMDV_Neighbor*  nb_lookup(nsaddr_t id);
+./nsaddr_t:467:./aomdv/aomdv_rtable.h:186:        AOMDV_Path*   path_insert(nsaddr_t nexthop, u_int16_t hopcount, double expire_time, nsaddr_t lasthop=0);
+./nsaddr_t:468:./aomdv/aomdv_rtable.h:188:        AOMDV_Path*   path_lookup(nsaddr_t id);  // lookup path by nexthop
+./nsaddr_t:469:./aomdv/aomdv_rtable.h:190:        AOMDV_Path*   disjoint_path_lookup(nsaddr_t nexthop, nsaddr_t lasthop);
+./nsaddr_t:470:./aomdv/aomdv_rtable.h:191:        bool         new_disjoint_path(nsaddr_t nexthop, nsaddr_t lasthop);
+./nsaddr_t:471:./aomdv/aomdv_rtable.h:193:        AOMDV_Path*   path_lookup_lasthop(nsaddr_t id);   // lookup path by lasthop
+./nsaddr_t:472:./aomdv/aomdv_rtable.h:194:        void         path_delete(nsaddr_t id);           // delete path by nexthop
+./nsaddr_t:473:./aomdv/aomdv_rtable.h:204:        void            pc_insert(nsaddr_t id);
+./nsaddr_t:474:./aomdv/aomdv_rtable.h:205:        AOMDV_Precursor* pc_lookup(nsaddr_t id);
+./nsaddr_t:475:./aomdv/aomdv_rtable.h:206:        void 		pc_delete(nsaddr_t id);
+./nsaddr_t:476:./aomdv/aomdv_rtable.h:218:        nsaddr_t        rt_dst;
+./nsaddr_t:477:./aomdv/aomdv_rtable.h:273:        aomdv_rt_entry*       rt_add(nsaddr_t id);
+./nsaddr_t:478:./aomdv/aomdv_rtable.h:274:        void                 rt_delete(nsaddr_t id);
+./nsaddr_t:479:./aomdv/aomdv_rtable.h:275:        aomdv_rt_entry*       rt_lookup(nsaddr_t id);
+./nsaddr_t:480:./aodv/aodv.h:180:        BroadcastID(nsaddr_t i, u_int32_t b) { src = i; id = b;  }
+./nsaddr_t:481:./aodv/aodv.h:183:        nsaddr_t        src;
+./nsaddr_t:482:./aodv/aodv.h:208:        AODV(nsaddr_t id);
+./nsaddr_t:483:./aodv/aodv.h:221:		     	  	u_int16_t metric, nsaddr_t nexthop,
+./nsaddr_t:484:./aodv/aodv.h:227:        void            handle_link_failure(nsaddr_t id);
+./nsaddr_t:485:./aodv/aodv.h:237:        void            nb_insert(nsaddr_t id);
+./nsaddr_t:486:./aodv/aodv.h:238:        AODV_Neighbor*       nb_lookup(nsaddr_t id);
+./nsaddr_t:487:./aodv/aodv.h:239:        void            nb_delete(nsaddr_t id);
+./nsaddr_t:488:./aodv/aodv.h:246:        void            id_insert(nsaddr_t id, u_int32_t bid);
+./nsaddr_t:489:./aodv/aodv.h:247:        bool	        id_lookup(nsaddr_t id, u_int32_t bid);
+./nsaddr_t:490:./aodv/aodv.h:255:        void            sendRequest(nsaddr_t dst);
+./nsaddr_t:491:./aodv/aodv.h:257:        void            sendReply(nsaddr_t ipdst, u_int32_t hop_count,
+./nsaddr_t:492:./aodv/aodv.h:258:                                  nsaddr_t rpdst, u_int32_t rpseq,
+./nsaddr_t:493:./aodv/aodv.h:278:        nsaddr_t        index;                  // IP Address of this node
+./nsaddr_t:494:./aodv/aodv.h:320:        void            log_link_del(nsaddr_t dst);
+./nsaddr_t:495:./aodv/aodv.h:322:        void            log_link_kept(nsaddr_t dst);
+./nsaddr_t:496:./aodv/aodv_logs.cc:43:AODV::log_link_del(nsaddr_t dst)
+./nsaddr_t:497:./aodv/aodv_logs.cc:85:AODV::log_link_kept(nsaddr_t dst)
+./nsaddr_t:498:./aodv/aodv_rqueue.h:69:        Packet*         deque(nsaddr_t dst);
+./nsaddr_t:499:./aodv/aodv_rqueue.h:73:        char            find(nsaddr_t dst);
+./nsaddr_t:500:./aodv/aodv_rqueue.h:78:	void		findPacketWithDst(nsaddr_t dst, Packet*& p, Packet*& prev);
+./nsaddr_t:501:./aodv/aodv_rtable.h:54:        nsaddr_t        nb_addr;
+./nsaddr_t:502:./aodv/aodv_rtable.h:71:        nsaddr_t        pc_addr;	// precursor address
+./nsaddr_t:503:./aodv/aodv_rtable.h:89:        void            nb_insert(nsaddr_t id);
+./nsaddr_t:504:./aodv/aodv_rtable.h:90:        AODV_Neighbor*  nb_lookup(nsaddr_t id);
+./nsaddr_t:505:./aodv/aodv_rtable.h:92:        void            pc_insert(nsaddr_t id);
+./nsaddr_t:506:./aodv/aodv_rtable.h:93:        AODV_Precursor* pc_lookup(nsaddr_t id);
+./nsaddr_t:507:./aodv/aodv_rtable.h:94:        void 		pc_delete(nsaddr_t id);
+./nsaddr_t:508:./aodv/aodv_rtable.h:104:        nsaddr_t        rt_dst;
+./nsaddr_t:509:./aodv/aodv_rtable.h:109:        nsaddr_t        rt_nexthop;    		// next hop IP address
+./nsaddr_t:510:./aodv/aodv_rtable.h:153:        aodv_rt_entry*       rt_add(nsaddr_t id);
+./nsaddr_t:511:./aodv/aodv_rtable.h:154:        void                 rt_delete(nsaddr_t id);
+./nsaddr_t:512:./aodv/aodv_rtable.h:155:        aodv_rt_entry*       rt_lookup(nsaddr_t id);
+./nsaddr_t:513:./aodv/aodv_rqueue.cc:107:aodv_rqueue::deque(nsaddr_t dst) {
+./nsaddr_t:514:./aodv/aodv_rqueue.cc:141:aodv_rqueue::find(nsaddr_t dst) {
+./nsaddr_t:515:./aodv/aodv_rqueue.cc:177:aodv_rqueue::findPacketWithDst(nsaddr_t dst, Packet*& p, Packet*& prev) {
+./nsaddr_t:516:./aodv/aodv_rtable.cc:90:aodv_rt_entry::nb_insert(nsaddr_t id)
+./nsaddr_t:517:./aodv/aodv_rtable.cc:102:aodv_rt_entry::nb_lookup(nsaddr_t id)
+./nsaddr_t:518:./aodv/aodv_rtable.cc:116:aodv_rt_entry::pc_insert(nsaddr_t id)
+./nsaddr_t:519:./aodv/aodv_rtable.cc:128:aodv_rt_entry::pc_lookup(nsaddr_t id)
+./nsaddr_t:520:./aodv/aodv_rtable.cc:141:aodv_rt_entry::pc_delete(nsaddr_t id) {
+./nsaddr_t:521:./aodv/aodv_rtable.cc:177:aodv_rtable::rt_lookup(nsaddr_t id)
+./nsaddr_t:522:./aodv/aodv_rtable.cc:190:aodv_rtable::rt_delete(nsaddr_t id)
+./nsaddr_t:523:./aodv/aodv_rtable.cc:202:aodv_rtable::rt_add(nsaddr_t id)
+./nsaddr_t:524:./aodv/aodv_packet.h:80:        nsaddr_t        rq_dst;         // Destination IP Address
+./nsaddr_t:525:./aodv/aodv_packet.h:82:        nsaddr_t        rq_src;         // Source IP Address
+./nsaddr_t:526:./aodv/aodv_packet.h:100:	     + sizeof(nsaddr_t)		// rq_dst
+./nsaddr_t:527:./aodv/aodv_packet.h:102:	     + sizeof(nsaddr_t)		// rq_src
+./nsaddr_t:528:./aodv/aodv_packet.h:115:        nsaddr_t        rp_dst;                 // Destination IP Address
+./nsaddr_t:529:./aodv/aodv_packet.h:117:        nsaddr_t        rp_src;                 // Source IP Address
+./nsaddr_t:530:./aodv/aodv_packet.h:130:	     + sizeof(nsaddr_t)		// rp_dst
+./nsaddr_t:531:./aodv/aodv_packet.h:132:	     + sizeof(nsaddr_t)		// rp_src
+./nsaddr_t:532:./aodv/aodv_packet.h:147:        nsaddr_t        unreachable_dst[AODV_MAX_ERRORS];   
+./nsaddr_t:533:./aodv/aodv_packet.h:156:	     + length*sizeof(nsaddr_t); // unreachable destinations
+./nsaddr_t:534:./aodv/aodv.cc:69:          //return (new AODV((nsaddr_t) atoi(argv[4])));
+./nsaddr_t:535:./aodv/aodv.cc:70:	  return (new AODV((nsaddr_t) Address::instance().str2addr(argv[4])));
+./nsaddr_t:536:./aodv/aodv.cc:138:AODV::AODV(nsaddr_t id) : Agent(PT_AODV),
+./nsaddr_t:537:./aodv/aodv.cc:221:AODV::id_insert(nsaddr_t id, u_int32_t bid) {
+./nsaddr_t:538:./aodv/aodv.cc:231:AODV::id_lookup(nsaddr_t id, u_int32_t bid) {
+./nsaddr_t:539:./aodv/aodv.cc:299:nsaddr_t broken_nbr = ch->next_hop_;
+./nsaddr_t:540:./aodv/aodv.cc:348:AODV::handle_link_failure(nsaddr_t id) {
+./nsaddr_t:541:./aodv/aodv.cc:404:	       	nsaddr_t nexthop, double expire_time) {
+./nsaddr_t:542:./aodv/aodv.cc:1031:   assert(ih->daddr() == (nsaddr_t) IP_BROADCAST);
+./nsaddr_t:543:./aodv/aodv.cc:1036:if (ih->daddr() == (nsaddr_t) IP_BROADCAST) {
+./nsaddr_t:544:./aodv/aodv.cc:1063:AODV::sendRequest(nsaddr_t dst) {
+./nsaddr_t:545:./aodv/aodv.cc:1186:AODV::sendReply(nsaddr_t ipdst, u_int32_t hop_count, nsaddr_t rpdst,
+./nsaddr_t:546:./aodv/aodv.cc:1326:AODV::nb_insert(nsaddr_t id) {
+./nsaddr_t:547:./aodv/aodv.cc:1339:AODV::nb_lookup(nsaddr_t id) {
+./nsaddr_t:548:./aodv/aodv.cc:1354:AODV::nb_delete(nsaddr_t id) {
+./nsaddr_t:549:./queue/dsr-priqueue.h:99:  Packet* prq_get_nexthop(nsaddr_t id);
+./nsaddr_t:550:./queue/dsr-priqueue.h:110:  nsaddr_t	prq_ipaddr_;	/* IP Address of this machine */
+./nsaddr_t:551:./queue/priqueue.cc:155:PriQueue::filter(nsaddr_t id)
+./nsaddr_t:552:./queue/rtqueue.cc:74:rtqueue::deque(nsaddr_t dst)
+./nsaddr_t:553:./queue/rtqueue.cc:108:rtqueue::find(nsaddr_t dst)
+./nsaddr_t:554:./queue/rtqueue.cc:155:rtqueue::findPacketWithDst(nsaddr_t dst, Packet*& p, Packet*& prev)
+./nsaddr_t:555:./queue/dsr-priqueue.cc:195:CMUPriQueue::prq_get_nexthop(nsaddr_t id)
+./nsaddr_t:556:./queue/rtqueue.h:41:        Packet*         deque(nsaddr_t dst);
+./nsaddr_t:557:./queue/rtqueue.h:45:        char            find(nsaddr_t dst);
+./nsaddr_t:558:./queue/rtqueue.h:50:	void		findPacketWithDst(nsaddr_t dst, Packet*& p, Packet*& prev);
+./nsaddr_t:559:./queue/priqueue.h:70:        Packet* filter(nsaddr_t id);
+./nsaddr_t:560:./satellite/sat-hdlc.cc:169:	nsaddr_t src = (nsaddr_t)Address::instance().get_nodeaddr(ih->saddr());
+./nsaddr_t:561:./satellite/sat-hdlc.cc:170:	nsaddr_t dst = (nsaddr_t)Address::instance().get_nodeaddr(ih->daddr());
+./nsaddr_t:562:./satellite/sat-hdlc.cc:269:	nsaddr_t src = (nsaddr_t)Address::instance().get_nodeaddr(ih->saddr());
+./nsaddr_t:563:./satellite/sat-hdlc.cc:270:	nsaddr_t dst = (nsaddr_t)Address::instance().get_nodeaddr(ih->daddr());
+./nsaddr_t:564:./satellite/sat-hdlc.cc:491:	nsaddr_t dst = ch->next_hop();
+./nsaddr_t:565:./satellite/satlink.cc:247:	nsaddr_t dst = ch->next_hop();
+./nsaddr_t:567:./doc/trace.tex:304:                nsaddr_t src_;
+./nsaddr_t:568:./doc/trace.tex:305:                nsaddr_t dst_;
+./nsaddr_t:569:./doc/nodes.tex:586:                nsaddr_t mask_;
+./nsaddr_t:570:./doc/nodes.tex:627:                void set_hash(nsaddr_t src, nsaddr_t dst, int slot);
+./nsaddr_t:571:./doc/nodes.tex:628:                int hash(nsaddr_t src, nsaddr_t dst) const \{
+./nsaddr_t:572:./doc/nodes.tex:636:                        nsaddr_t src;
+./nsaddr_t:573:./doc/nodes.tex:637:                        nsaddr_t dst;
+./nsaddr_t:574:./doc/nodes.tex:641:                const hashnode* lookup(nsaddr_t src, nsaddr_t dst) const;
+./nsaddr_t:575:./doc/nodes.tex:647:                nsaddr_t src = h->src() >> 8; /*XXX*/
+./nsaddr_t:576:./doc/nodes.tex:648:                nsaddr_t dst = h->dst();
+./nsaddr_t:577:./doc/kfall/trace.tex:299:                nsaddr_t src_;
+./nsaddr_t:578:./doc/kfall/trace.tex:300:                nsaddr_t dst_;
+./nsaddr_t:579:./doc/kfall/classify_route.tex:171:                nsaddr_t mask_;
+./nsaddr_t:580:./doc/kfall/classify_route.tex:213:                void set_hash(nsaddr_t src, nsaddr_t dst, int slot);
+./nsaddr_t:581:./doc/kfall/classify_route.tex:214:                int hash(nsaddr_t src, nsaddr_t dst) const {
+./nsaddr_t:582:./doc/kfall/classify_route.tex:222:                        nsaddr_t src;
+./nsaddr_t:583:./doc/kfall/classify_route.tex:223:                        nsaddr_t dst;
+./nsaddr_t:584:./doc/kfall/classify_route.tex:227:                const hashnode* lookup(nsaddr_t src, nsaddr_t dst) const;
+./nsaddr_t:585:./doc/kfall/classify_route.tex:233:                nsaddr_t src = h->src() >> 8; /*XXX*/
+./nsaddr_t:586:./doc/kfall/classify_route.tex:234:                nsaddr_t dst = h->dst();
+./nsaddr_t:587:./mcast/lms-agent.cc:103:	nsaddr_t upstream_lms_;	// upstream LMS entity
+./nsaddr_t:588:./mcast/lms-agent.cc:410:                     //nsaddr_t adr = spm->spm_path_;
+./nsaddr_t:589:./mcast/lms-agent.cc:505:	//nsaddr_t	src = ih->saddr();
+./nsaddr_t:590:./mcast/lms-receiver.cc:125:	nsaddr_t	lms_src_;	// address of sender
+./nsaddr_t:591:./mcast/lms-receiver.cc:126:	nsaddr_t	lms_group_;	// group address
+./nsaddr_t:592:./mcast/lms-receiver.cc:129:	nsaddr_t	upstream_lms_;	// address of upstream LMS element
+./nsaddr_t:593:./mcast/ctrMcast.h:59:	nsaddr_t	src_;		/* mcast data source */
+./nsaddr_t:594:./mcast/ctrMcast.h:60:	nsaddr_t	group_;          /* mcast data destination group */
+./nsaddr_t:595:./mcast/ctrMcast.h:70:	nsaddr_t& src() { return src_; }
+./nsaddr_t:596:./mcast/ctrMcast.h:71:	nsaddr_t& group() { return group_; }
+./nsaddr_t:597:./mcast/lms.h:92:    nsaddr_t    from_;		// real source of packet for DMCASTs
+./nsaddr_t:598:./mcast/lms.h:93:    nsaddr_t    src_;		// original source of mcast packet
+./nsaddr_t:599:./mcast/lms.h:94:    nsaddr_t    group_;		// mcast group
+./nsaddr_t:600:./mcast/lms.h:95:    nsaddr_t    tp_addr_;	// turning point address
+./nsaddr_t:601:./mcast/lms.h:109:    nsaddr_t&	from ()  { return from_;  }
+./nsaddr_t:602:./mcast/lms.h:110:    nsaddr_t&	src ()   { return src_;   }
+./nsaddr_t:603:./mcast/lms.h:111:    nsaddr_t&   tp_addr ()  { return tp_addr_;  }
+./nsaddr_t:604:./mcast/lms.h:112:    nsaddr_t&  tp_port ()  { return (nsaddr_t&) tp_port_;  }
+./nsaddr_t:605:./mcast/lms.h:113:    nsaddr_t&	group () { return group_; }
+./nsaddr_t:606:./mcast/lms.h:119:    nsaddr_t	tp_addr_;	// turning point address
+./nsaddr_t:607:./mcast/lms.h:120:    nsaddr_t    tp_port_;       // turning point port id
+./nsaddr_t:608:./mcast/lms.h:145:	nsaddr_t	spm_path_;
+./nsaddr_t:609:./pgm/pgm-sender.cc:189:  void trace_event(char *evType, nsaddr_t daddr, double evTime); 
+./nsaddr_t:610:./pgm/pgm-sender.cc:224:  //  nsaddr_t group_; // The multicast group we send to.
+./nsaddr_t:611:./pgm/pgm-sender.cc:335:void PgmSender::trace_event(char *evType, nsaddr_t daddr, double evTime) {
+./nsaddr_t:612:./pgm/pgm-sender.cc:710:        //nsaddr_t        src = ih->saddr();
+./nsaddr_t:613:./pgm/pgm-agent.cc:1025:        //nsaddr_t        src = ih->saddr();
+./nsaddr_t:614:./tools/flowmon.h:61:	nsaddr_t src() const { return (src_); }
+./nsaddr_t:615:./tools/flowmon.h:62:	nsaddr_t dst() const { return (dst_); }
+./nsaddr_t:616:./tools/flowmon.h:76:	nsaddr_t	src_;
+./nsaddr_t:617:./tools/flowmon.h:77:	nsaddr_t	dst_;
+./nsaddr_t:618:./tmix/tmixAgent.h:56:  inline nsaddr_t& port() { return agent->port(); }
+./nsaddr_t:619:./tmix/tmixAgent.h:57:  inline nsaddr_t& addr() { return agent->addr(); }
+./nsaddr_t:620:./imep/imep.h:107:	imepLink(nsaddr_t index) : index_(index), last_echo_(-BEACON_PERIOD) {}
+./nsaddr_t:621:./imep/imep.h:109:	nsaddr_t&	index() { return index_; }
+./nsaddr_t:622:./imep/imep.h:121:	nsaddr_t	index_;
+./nsaddr_t:623:./imep/imep.h:136:	imepAgent(nsaddr_t index);
+./nsaddr_t:624:./imep/imep.h:146:	void imepGetLinkStatus(nsaddr_t index, u_int32_t& status);
+./nsaddr_t:625:./imep/imep.h:147:	void imepSetLinkInStatus(nsaddr_t index);
+./nsaddr_t:626:./imep/imep.h:148:	void imepSetLinkOutStatus(nsaddr_t index);
+./nsaddr_t:627:./imep/imep.h:149:	void imepSetLinkBiStatus(nsaddr_t index);
+./nsaddr_t:628:./imep/imep.h:150:	void imepSetLinkDownStatus(nsaddr_t index);
+./nsaddr_t:629:./imep/imep.h:200:	void sendHello(nsaddr_t index);
+./nsaddr_t:630:./imep/imep.h:201:	void sendAck(nsaddr_t index, u_int32_t seqno);
+./nsaddr_t:631:./imep/imep.h:206:	imepLink* findLink(nsaddr_t index);
+./nsaddr_t:632:./imep/imep.h:211:        void purgeReXmitQ(nsaddr_t index);
+./nsaddr_t:633:./imep/imep.h:217:	void removeObjectResponse(Packet *p, nsaddr_t index);
+./nsaddr_t:634:./imep/imep.h:260:	nsaddr_t	ipaddr;
+./nsaddr_t:635:./imep/dest_queue.cc:70:dstent::dstent(nsaddr_t index)
+./nsaddr_t:636:./imep/dest_queue.cc:155:dstQueue::dstQueue(imepAgent *a, nsaddr_t index) : agent_(a), ipaddr_(index)
+./nsaddr_t:637:./imep/dest_queue.cc:161:dstQueue::addEntry(nsaddr_t dst, double e, u_int32_t s, Packet *p)
+./nsaddr_t:638:./imep/dest_queue.cc:177:dstQueue::findEntry(nsaddr_t dst)
+./nsaddr_t:639:./imep/dest_queue.cc:192:dstQueue::getPacket(nsaddr_t dst, u_int32_t seqno)
+./nsaddr_t:640:./imep/dest_queue.cc:294:dstQueue::deleteDst(nsaddr_t dst)
+./nsaddr_t:641:./imep/imep.cc:69:		return (new imepAgent((nsaddr_t) atoi(argv[4])));
+./nsaddr_t:642:./imep/imep.cc:89:imepAgent::imepAgent(nsaddr_t index) :
+./nsaddr_t:643:./imep/imep.cc:145:imepAgent::findLink(nsaddr_t index)
+./nsaddr_t:644:./imep/imep.cc:191:imepAgent::removeObjectResponse(Packet *p, nsaddr_t index)
+./nsaddr_t:645:./imep/imep.cc:242:imepAgent::purgeReXmitQ(nsaddr_t index)
+./nsaddr_t:646:./imep/imep.cc:641:	if(ip->daddr() != (nsaddr_t) IP_BROADCAST) {
+./nsaddr_t:647:./imep/dest_queue.h:83:	dstent(nsaddr_t index);
+./nsaddr_t:648:./imep/dest_queue.h:97:	nsaddr_t ipaddr() { return ipaddr_; }
+./nsaddr_t:649:./imep/dest_queue.h:111:	nsaddr_t ipaddr_;	// ip address of this destination
+./nsaddr_t:650:./imep/dest_queue.h:122:	dstQueue(imepAgent *a, nsaddr_t index);
+./nsaddr_t:651:./imep/dest_queue.h:124:	void addEntry(nsaddr_t dst, double e, u_int32_t s, Packet *p);
+./nsaddr_t:652:./imep/dest_queue.h:127:	Packet* getPacket(nsaddr_t dst, u_int32_t seqno);
+./nsaddr_t:653:./imep/dest_queue.h:137:        void deleteDst(nsaddr_t dst);
+./nsaddr_t:654:./imep/dest_queue.h:143:	dstent* findEntry(nsaddr_t dst);
+./nsaddr_t:655:./imep/dest_queue.h:147:	nsaddr_t ipaddr_;
+./nsaddr_t:656:./imep/imep_io.cc:81:imepAgent::sendHello(nsaddr_t index)
+./nsaddr_t:657:./imep/imep_io.cc:125:imepAgent::sendAck(nsaddr_t index, u_int32_t seqno)
+./nsaddr_t:658:./imep/imep_api.cc:59:imepAgent::imepGetLinkStatus(nsaddr_t index, u_int32_t &status)
+./nsaddr_t:659:./imep/imep_api.cc:74:imepAgent::imepSetLinkInStatus(nsaddr_t index)
+./nsaddr_t:660:./imep/imep_api.cc:115:imepAgent::imepSetLinkOutStatus(nsaddr_t index)
+./nsaddr_t:661:./imep/imep_api.cc:136:imepAgent::imepSetLinkBiStatus(nsaddr_t index)
+./nsaddr_t:662:./imep/imep_api.cc:143:imepAgent::imepSetLinkDownStatus(nsaddr_t index)
+./nsaddr_t:663:./puma/puma.h:54:		nsaddr_t      source;
+./nsaddr_t:664:./puma/puma.h:66:		bool find(nsaddr_t, u_int32_t);
+./nsaddr_t:665:./puma/puma.h:67:		void add(nsaddr_t, u_int32_t);
+./nsaddr_t:666:./puma/puma.h:75:		nsaddr_t           next_hop;
+./nsaddr_t:667:./puma/puma.h:76:		nsaddr_t           next_hops_next_hop;
+./nsaddr_t:668:./puma/puma.h:91:		void add(nsaddr_t, u_int16_t, u_int32_t, nsaddr_t, bool);
+./nsaddr_t:669:./puma/puma.h:92:		void remove(nsaddr_t);
+./nsaddr_t:670:./puma/puma.h:103:		nsaddr_t          multicast_address;
+./nsaddr_t:671:./puma/puma.h:110:		nsaddr_t          core_id;
+./nsaddr_t:672:./puma/puma.h:124:		multicast_group* find(nsaddr_t);
+./nsaddr_t:673:./puma/puma.h:126:		void             add(nsaddr_t, nsaddr_t);
+./nsaddr_t:674:./puma/puma.h:136:		nsaddr_t  multicast_address;
+./nsaddr_t:675:./puma/puma.h:137:		nsaddr_t  core_id;
+./nsaddr_t:676:./puma/puma.h:138:		nsaddr_t  next_hop;
+./nsaddr_t:677:./puma/puma.h:148:		nsaddr_t heard_from;
+./nsaddr_t:678:./puma/puma.h:167:		nsaddr_t multicast_address;
+./nsaddr_t:679:./puma/puma.h:168:		nsaddr_t next_hop;
+./nsaddr_t:680:./puma/puma.h:192:		nsaddr_t multicast_address;
+./nsaddr_t:681:./puma/puma.h:194:		SendNextMAEvent(nsaddr_t);
+./nsaddr_t:682:./puma/puma.h:196:		nsaddr_t get_multicast_address();
+./nsaddr_t:683:./puma/puma.h:213:		nsaddr_t multicast_address;
+./nsaddr_t:684:./puma/puma.h:215:		SendPendingMAEvent(nsaddr_t);
+./nsaddr_t:685:./puma/puma.h:217:		nsaddr_t get_multicast_address();
+./nsaddr_t:686:./puma/puma.h:266:		nsaddr_t           id;                   // Address of this node
+./nsaddr_t:687:./puma/puma.h:277:        void      handle_join_from_transport(nsaddr_t);
+./nsaddr_t:688:./puma/puma.h:278:        void      handle_leave_from_transport(nsaddr_t);
+./nsaddr_t:689:./puma/puma.h:283:        void      handle_ma(multicast_group*, multicast_announcement, nsaddr_t);
+./nsaddr_t:690:./puma/puma.h:286:        void      send_a_generic_ma(multicast_group*, int, nsaddr_t);
+./nsaddr_t:691:./puma/puma.h:295:			 											nsaddr_t, unsigned int);
+./nsaddr_t:692:./puma/puma.h:297:				 					multicast_announcement ma, nsaddr_t source);
+./nsaddr_t:693:./puma/puma.h:301:        void      record_ack(nsaddr_t);
+./nsaddr_t:694:./puma/puma.h:309:                                  nsaddr_t);
+./nsaddr_t:695:./puma/puma.h:318:        bool      was_ack_received(nsaddr_t);
+./nsaddr_t:696:./puma/puma.h:321:        nsaddr_t  get_next_hop(multicast_group*);
+./nsaddr_t:697:./puma/puma.h:323:		PUMA(nsaddr_t);
+./nsaddr_t:698:./puma/puma.cc:54:MessageCache::find(nsaddr_t source, u_int32_t sequence) {
+./nsaddr_t:699:./puma/puma.cc:62:MessageCache::add(nsaddr_t source, u_int32_t sequence) {
+./nsaddr_t:700:./puma/puma.cc:145:ConnectivityList::add(nsaddr_t next_hop, u_int16_t distance_to_core,
+./nsaddr_t:701:./puma/puma.cc:146:		              u_int32_t sequence, nsaddr_t next_hops_next_hop,
+./nsaddr_t:702:./puma/puma.cc:159:ConnectivityList::remove(nsaddr_t next_hop) {
+./nsaddr_t:703:./puma/puma.cc:201:MulticastGroupList::find(nsaddr_t group) {
+./nsaddr_t:704:./puma/puma.cc:220:MulticastGroupList::add(nsaddr_t multicast_address, nsaddr_t core_id) {
+./nsaddr_t:705:./puma/puma.cc:324:SendNextMAEvent::SendNextMAEvent(nsaddr_t multicast_address) {
+./nsaddr_t:706:./puma/puma.cc:333:nsaddr_t
+./nsaddr_t:707:./puma/puma.cc:363:SendPendingMAEvent::SendPendingMAEvent(nsaddr_t multicast_address) {
+./nsaddr_t:708:./puma/puma.cc:372:nsaddr_t
+./nsaddr_t:709:./puma/puma.cc:456:			return (new PUMA((nsaddr_t) Address::instance().str2addr(argv[4])));
+./nsaddr_t:710:./puma/puma.cc:463:PUMA::PUMA(nsaddr_t new_id) : Agent(PT_PUMA), message_cache() {
+./nsaddr_t:711:./puma/puma.cc:594:PUMA::was_ack_received(nsaddr_t destination) {
+./nsaddr_t:712:./puma/puma.cc:718:PUMA::handle_join_from_transport(nsaddr_t group_address) {
+./nsaddr_t:713:./puma/puma.cc:774:                       nsaddr_t source) {
+./nsaddr_t:714:./puma/puma.cc:784:PUMA::handle_leave_from_transport(nsaddr_t group_address) {
+./nsaddr_t:715:./puma/puma.cc:901:        nsaddr_t temp = group->core_id;
+./nsaddr_t:716:./puma/puma.cc:913:PUMA::send_a_generic_ma(multicast_group* group, int mode, nsaddr_t oldCore) {
+./nsaddr_t:717:./puma/puma.cc:950:                     nsaddr_t source) {
+./nsaddr_t:718:./puma/puma.cc:1018:                       nsaddr_t source) {
+./nsaddr_t:719:./puma/puma.cc:1030:                                          nsaddr_t current_core,
+./nsaddr_t:720:./puma/puma.cc:1105:        nsaddr_t group_address;
+./nsaddr_t:721:./puma/puma.cc:1137:PUMA::record_ack(nsaddr_t source) {
+./nsaddr_t:722:./puma/puma.cc:1148:nsaddr_t
+./nsaddr_t:723:./tora/tora_neighbor.h:57:	TORANeighbor(nsaddr_t id, Agent *a); 
+./nsaddr_t:724:./tora/tora_neighbor.h:63:	nsaddr_t	index;
+./nsaddr_t:725:./tora/tora_dest.cc:53:TORADest::TORADest(nsaddr_t id, Agent *a) :  height(id)
+./nsaddr_t:726:./tora/tora_dest.cc:90:TORADest::nb_add(nsaddr_t id)
+./nsaddr_t:727:./tora/tora_dest.cc:109:TORADest::nb_del(nsaddr_t id)
+./nsaddr_t:728:./tora/tora_dest.cc:160:TORADest::nb_find(nsaddr_t id)
+./nsaddr_t:729:./tora/tora_dest.cc:320:TORADest::update_height(double TAU, nsaddr_t OID, int R, int DELTA, nsaddr_t ID)
+./nsaddr_t:730:./tora/tora.h:77:        toraAgent(nsaddr_t id);
+./nsaddr_t:731:./tora/tora.h:84:	void rtNotifyLinkUP(nsaddr_t index);
+./nsaddr_t:732:./tora/tora.h:85:	void rtNotifyLinkDN(nsaddr_t index);
+./nsaddr_t:733:./tora/tora.h:86:	void rtNotifyLinkStatus(nsaddr_t index, u_int32_t status);
+./nsaddr_t:734:./tora/tora.h:93:        nsaddr_t        index;  // added for line 78 of tora.cc, needed for
+./nsaddr_t:735:./tora/tora.h:96:	TORADest*	dst_find(nsaddr_t id);
+./nsaddr_t:736:./tora/tora.h:97:	TORADest*	dst_add(nsaddr_t id);
+./nsaddr_t:737:./tora/tora.h:101:        void            forward(Packet *p, nsaddr_t nexthop, Time delay = 0.0);
+./nsaddr_t:738:./tora/tora.h:118:	void		sendQRY(nsaddr_t id);
+./nsaddr_t:739:./tora/tora.h:119:	void		sendUPD(nsaddr_t id);
+./nsaddr_t:740:./tora/tora.h:120:	void		sendCLR(nsaddr_t id, double tau, nsaddr_t oid);
+./nsaddr_t:741:./tora/tora.h:159:	void		log_route_loop(nsaddr_t prev, nsaddr_t next);
+./nsaddr_t:742:./tora/tora.h:163:        void            log_lnk_del(nsaddr_t dst);
+./nsaddr_t:743:./tora/tora.h:164:        void            log_lnk_kept(nsaddr_t dst);
+./nsaddr_t:744:./tora/tora.h:166:        void            log_nb_del(nsaddr_t dst, nsaddr_t id);
+./nsaddr_t:745:./tora/tora.cc:78:		return (new toraAgent((nsaddr_t) atoi(argv[4])));
+./nsaddr_t:746:./tora/tora.cc:86:toraAgent::toraAgent(nsaddr_t id) :
+./nsaddr_t:747:./tora/tora.cc:151:toraAgent::dst_find(nsaddr_t id)
+./nsaddr_t:748:./tora/tora.cc:162:toraAgent::dst_add(nsaddr_t id)
+./nsaddr_t:749:./tora/tora.cc:194:toraAgent::forward(Packet *p, nsaddr_t nexthop, Time delay)
+./nsaddr_t:750:./tora/tora.cc:518:						nsaddr_t temp_oid = td->height.oid;
+./nsaddr_t:751:./tora/tora.cc:618:		nsaddr_t temp_oid = td->height.oid;
+./nsaddr_t:752:./tora/tora_neighbor.cc:54:TORANeighbor::TORANeighbor(nsaddr_t id, Agent *a) : height(id)
+./nsaddr_t:753:./tora/tora_packet.h:93:	nsaddr_t	oid;	// id of the router that created the ref level
+./nsaddr_t:754:./tora/tora_packet.h:96:	nsaddr_t	id;	// Unique id of the router
+./nsaddr_t:755:./tora/tora_packet.h:118:        nsaddr_t        th_dst;
+./nsaddr_t:756:./tora/tora_packet.h:131:	nsaddr_t	tq_dst;
+./nsaddr_t:757:./tora/tora_packet.h:137:	nsaddr_t	tu_dst;
+./nsaddr_t:758:./tora/tora_packet.h:140:	nsaddr_t	tu_oid;
+./nsaddr_t:759:./tora/tora_packet.h:143:	nsaddr_t	tu_id;
+./nsaddr_t:760:./tora/tora_packet.h:149:	nsaddr_t	tc_dst;
+./nsaddr_t:761:./tora/tora_io.cc:49:toraAgent::sendQRY(nsaddr_t id)
+./nsaddr_t:762:./tora/tora_io.cc:81:toraAgent::sendUPD(nsaddr_t id)
+./nsaddr_t:763:./tora/tora_io.cc:119:toraAgent::sendCLR(nsaddr_t id, double tau, nsaddr_t oid)
+./nsaddr_t:764:./tora/tora_dest.h:47:	TORADest(nsaddr_t id, Agent *a);
+./nsaddr_t:765:./tora/tora_dest.h:49:	TORANeighbor*	nb_add(nsaddr_t id);
+./nsaddr_t:766:./tora/tora_dest.h:50:	int		nb_del(nsaddr_t id);
+./nsaddr_t:767:./tora/tora_dest.h:51:	TORANeighbor*	nb_find(nsaddr_t id);
+./nsaddr_t:768:./tora/tora_dest.h:55:	void		update_height(double TAU, nsaddr_t OID,
+./nsaddr_t:769:./tora/tora_dest.h:56:					int R, int DELTA, nsaddr_t ID);
+./nsaddr_t:770:./tora/tora_dest.h:75:	nsaddr_t	index;		// IP address of destination
+./nsaddr_t:771:./tora/tora_api.cc:48:toraAgent::rtNotifyLinkUP(nsaddr_t index)
+./nsaddr_t:772:./tora/tora_api.cc:76:toraAgent::rtNotifyLinkDN(nsaddr_t index)
+./nsaddr_t:773:./tora/tora_api.cc:123:toraAgent::rtNotifyLinkStatus(nsaddr_t /* index */, u_int32_t /* status */)
+./nsaddr_t:774:./tora/tora_api.cc:136:	   ip->daddr() == (nsaddr_t) IP_BROADCAST) {
+./nsaddr_t:775:./tora/tora_logs.cc:22:toraAgent::log_route_loop(nsaddr_t prev, nsaddr_t next)
+./nsaddr_t:776:./tora/tora_logs.cc:74:toraAgent::log_lnk_del(nsaddr_t dst)
+./nsaddr_t:777:./tora/tora_logs.cc:95:toraAgent::log_lnk_kept(nsaddr_t dst)
+./nsaddr_t:778:./tora/tora_logs.cc:117:toraAgent::log_nb_del(nsaddr_t dst, nsaddr_t id)
+./nsaddr_t:779:./diffserv/dsPolicy.h:64:  nsaddr_t sourceNode, destNode;	// Source-destination pair
+./nsaddr_t:780:./diffserv/dsPolicy.h:117:  policyTableEntry* getPolicyTableEntry(nsaddr_t source, nsaddr_t dest);
+./nsaddr_t:781:./diffserv/dsPolicy.cc:216:policyTableEntry* PolicyClassifier::getPolicyTableEntry(nsaddr_t source, nsaddr_t dest) {
+./nsaddr_t:782:./dsr/path.h:101:  inline nsaddr_t getNSAddr_t() const {
+./nsaddr_t:783:./dsr/flowstruct.cc:72:int FlowTable::find(nsaddr_t source, nsaddr_t destination, u_int16_t flow) {
+./nsaddr_t:784:./dsr/flowstruct.cc:83:int FlowTable::find(nsaddr_t source, nsaddr_t destination, const Path &route) {
+./nsaddr_t:785:./dsr/flowstruct.cc:105:u_int16_t FlowTable::generateNextFlowId(nsaddr_t , bool allowDefault) {
+./nsaddr_t:786:./dsr/flowstruct.cc:113:int FlowTable::createEntry(nsaddr_t source, nsaddr_t destination, 
+./nsaddr_t:787:./dsr/flowstruct.cc:186:void FlowTable::setNetAddr(nsaddr_t net_id) {
+./nsaddr_t:788:./dsr/flowstruct.cc:190:bool FlowTable::defaultFlow(nsaddr_t source, nsaddr_t destination, 
+./nsaddr_t:789:./dsr/flowstruct.cc:206:bool DRTable::find(nsaddr_t src, nsaddr_t dst, u_int16_t &flow) {
+./nsaddr_t:790:./dsr/flowstruct.cc:226:void DRTable::insert(nsaddr_t src, nsaddr_t dst, u_int16_t flow) {
+./nsaddr_t:791:./dsr/flowstruct.cc:249:void DRTable::flush(nsaddr_t src, nsaddr_t dst) {
+./nsaddr_t:792:./dsr/linkcache.cc:131:	Link(nsaddr_t dst) {
+./nsaddr_t:793:./dsr/linkcache.cc:146:	nsaddr_t   ln_dst;
+./nsaddr_t:794:./dsr/hdr_sr.h:72:	nsaddr_t addr;
+./nsaddr_t:795:./dsr/hdr_sr.h:82:	nsaddr_t tell_addr;	// tell this host
+./nsaddr_t:796:./dsr/hdr_sr.h:83:	nsaddr_t from_addr;	// that from_addr host can no longer
+./nsaddr_t:797:./dsr/hdr_sr.h:84:	nsaddr_t to_addr;	// get packets to to_addr host
+./nsaddr_t:798:./dsr/hdr_sr.h:114:	nsaddr_t  flow_src;
+./nsaddr_t:799:./dsr/hdr_sr.h:115:	nsaddr_t  flow_dst;
+./nsaddr_t:800:./dsr/hdr_sr.h:250:	inline nsaddr_t& get_next_addr() { 
+./nsaddr_t:801:./dsr/hdr_sr.h:260:	inline void append_addr(nsaddr_t a, int type) {
+./nsaddr_t:802:./dsr/dsragent.cc:2266://    nsaddr_t dead_next_hop;
+./nsaddr_t:803:./dsr/dsragent.cc:2607:  assert(srh->addrs()[srh->cur_addr()].addr == (nsaddr_t) net_id.addr);
+./nsaddr_t:804:./dsr/flowstruct.h:92:  nsaddr_t src;
+./nsaddr_t:805:./dsr/flowstruct.h:93:  nsaddr_t dst;
+./nsaddr_t:806:./dsr/flowstruct.h:101:    bool find(nsaddr_t src, nsaddr_t dst, u_int16_t &flow);
+./nsaddr_t:807:./dsr/flowstruct.h:102:    void insert(nsaddr_t src, nsaddr_t dst, u_int16_t flow);
+./nsaddr_t:808:./dsr/flowstruct.h:103:    void flush(nsaddr_t src, nsaddr_t dst);
+./nsaddr_t:809:./dsr/flowstruct.h:114:    nsaddr_t   sourceIP ;	// Source IP Addresss
+./nsaddr_t:810:./dsr/flowstruct.h:115:    nsaddr_t   destinationIP ;	// Destination IP Addresss
+./nsaddr_t:811:./dsr/flowstruct.h:123:    nsaddr_t	nextHop;	// According to the draft, this is a MUST.
+./nsaddr_t:812:./dsr/flowstruct.h:161:    int find(nsaddr_t source, 
+./nsaddr_t:813:./dsr/flowstruct.h:162:	     nsaddr_t destination, 
+./nsaddr_t:814:./dsr/flowstruct.h:168:    int find(nsaddr_t source, 
+./nsaddr_t:815:./dsr/flowstruct.h:169:	     nsaddr_t destination, 
+./nsaddr_t:816:./dsr/flowstruct.h:175:    int createEntry(nsaddr_t source, 
+./nsaddr_t:817:./dsr/flowstruct.h:176:		    nsaddr_t destination, 
+./nsaddr_t:818:./dsr/flowstruct.h:181:    bool defaultFlow(nsaddr_t source, nsaddr_t destination, u_int16_t &flow);
+./nsaddr_t:819:./dsr/flowstruct.h:185:    u_int16_t generateNextFlowId(nsaddr_t destination, 
+./nsaddr_t:820:./dsr/flowstruct.h:195:    void setNetAddr(nsaddr_t net_id);
+./nsaddr_t:821:./dsr/flowstruct.h:204:    nsaddr_t    net_addr;	// for noticeDeadLink()
+./nsaddr_t:822:./tcp/ack-recons.h:63:	AckRecons(nsaddr_t src, nsaddr_t dst) :
+./nsaddr_t:823:./tcp/ack-recons.h:85:	nsaddr_t src_;		/* src addr:port */
+./nsaddr_t:824:./tcp/ack-recons.h:86:	nsaddr_t dst_;		/* dst addr:port */
+./nsaddr_t:825:./tcp/tcp-session.h:109:// 	inline nsaddr_t& addr() {return addr_;}
+./nsaddr_t:826:./tcp/tcp-session.h:110:// 	inline nsaddr_t& dst() {return dst_;}
+./nsaddr_t:827:./config.h:76:typedef int32_t nsaddr_t; 
+./nsaddr_t:828:./dsdv/rtable.cc:43:  nsaddr_t ia = ((const rtable_ent *) a)->dst;
+./nsaddr_t:829:./dsdv/rtable.cc:44:  nsaddr_t ib = ((const rtable_ent *) b)->dst;
+./nsaddr_t:830:./dsdv/rtable.cc:132:RoutingTable::GetEntry(nsaddr_t dest) {
+./nsaddr_t:831:./dsdv/rtable.h:66:  nsaddr_t     dst;     // destination
+./nsaddr_t:832:./dsdv/rtable.h:67:  nsaddr_t     hop;     // next hop
+./nsaddr_t:833:./dsdv/rtable.h:103:    rtable_ent *GetEntry(nsaddr_t dest);
+./nsaddr_t:834:./dsdv/dsdv.cc:621:      nsaddr_t dst;
+./nsaddr_t:835:./diffusion/diff_rate.cc:187:      if (cmh->next_hop_ == (nsaddr_t)MAC_BROADCAST) {
+./nsaddr_t:836:./diffusion/diff_rate.cc:198:      if (cmh->next_hop_ == (nsaddr_t)MAC_BROADCAST) {
+./nsaddr_t:837:./diffusion/diff_rate.cc:237:      if (cmh->next_hop_ == (nsaddr_t)MAC_BROADCAST) {
+./nsaddr_t:838:./diffusion/diff_rate.cc:287:      if (cmh->next_hop_ == (nsaddr_t)MAC_BROADCAST) {
+./nsaddr_t:839:./diffusion/diff_rate.cc:351:  nsaddr_t from_nodeID;
+./nsaddr_t:840:./diffusion/diff_rate.cc:537:  nsaddr_t forwarder_node = forward_agent.addr_;
+./nsaddr_t:841:./diffusion/diff_rate.cc:634:  nsaddr_t forwarder_node;
+./nsaddr_t:842:./diffusion/diff_rate.cc:831:  nsaddr_t next_node;
+./nsaddr_t:843:./diffusion/diff_rate.cc:924:void DiffusionRate::PosReinf(int dtype, nsaddr_t to_node, 
+./nsaddr_t:844:./diffusion/diff_prob.cc:164:  nsaddr_t from_nodeID, forward_nodeID;
+./nsaddr_t:845:./diffusion/diff_prob.cc:224:  nsaddr_t   from_nodeID, forward_nodeID;
+./nsaddr_t:846:./diffusion/diffusion.cc:407:void DiffusionAgent::MACprepare(Packet *pkt, nsaddr_t next_hop, 
+./nsaddr_t:847:./diffusion/diffusion.cc:415:  if (type == (int) NS_AF_ILINK && next_hop == (nsaddr_t) MAC_BROADCAST) {
+./nsaddr_t:848:./diffusion/omni_mcast.h:209:  void MACprepare(Packet *pkt, nsaddr_t next_hop, unsigned int type, 
+./nsaddr_t:849:./diffusion/diffusion.h:194:  void MACprepare(Packet *pkt, nsaddr_t next_hop, int type, 
+./nsaddr_t:850:./diffusion/omni_mcast.cc:148:  nsaddr_t     src_node = (dfh->sender_id).addr_;
+./nsaddr_t:851:./diffusion/omni_mcast.cc:253:  nsaddr_t   from_nodeID;
+./nsaddr_t:852:./diffusion/omni_mcast.cc:366:void OmniMcastAgent::MACprepare(Packet *pkt, nsaddr_t next_hop, 
+./nsaddr_t:853:./diffusion/omni_mcast.cc:374:  if (type == NS_AF_ILINK && next_hop == (nsaddr_t)MAC_BROADCAST) {
+./nsaddr_t:854:./diffusion/flooding.cc:137:  nsaddr_t   from_nodeID;
+./nsaddr_t:855:./diffusion/diff_rate.h:208:  void PosReinf(int dtype, nsaddr_t to_node, ns_addr_t info_sender, 
+./nsaddr_t:856:./diffusion/diff_header.h:106:	nsaddr_t next_nodes[MAX_NEIGHBORS];
+./nsaddr_t:857:./mdart/mdart_queue.cc:129:Packet* MDARTQueue::deque(nsaddr_t dst) {
+./nsaddr_t:858:./mdart/mdart_queue.cc:231:void MDARTQueue::printNumPacket(nsaddr_t dst){
+./nsaddr_t:859:./mdart/mdart_queue.cc:298:	nsaddr_t dest= Rh->dstId_;
+./nsaddr_t:860:./mdart/mdart_queue.cc:344:Packet* MDARTQueue::deque(nsaddr_t dst) {
+./nsaddr_t:861:./mdart/mdart_queue.cc:430:void MDARTQueue::printNumPacket(nsaddr_t dst){
+./nsaddr_t:862:./mdart/mdart_queue.cc:463:void MDARTQueue::find(nsaddr_t dst, Packet*& p, Packet*& prev)
+./nsaddr_t:863:./mdart/mdart_function.h:211:inline const char* bitString(nsaddr_t add) {
+./nsaddr_t:864:./mdart/mdart_function.h:218:inline int DiffBit(nsaddr_t n1, nsaddr_t n2) {
+./nsaddr_t:865:./mdart/mdart_function.h:230:inline nsaddr_t hash(nsaddr_t id) {
+./nsaddr_t:866:./mdart/mdart_function.h:239:	nsaddr_t temp = (nsaddr_t) address_.to_ulong();
+./nsaddr_t:867:./mdart/mdart_function.h:246:/*inline nsaddr_t idToAdd(string id) {
+./nsaddr_t:868:./mdart/mdart_function.h:255:	nsaddr_t addr = (nsaddr_t) addrLong;
+./nsaddr_t:869:./mdart/mdart_ndp.h:103:		void		neighborInsert(nsaddr_t, nsaddr_t, u_int32_t, string, double);
+./nsaddr_t:870:./mdart/mdart_ndp.h:104:		Neighbor*	neighborLookup(nsaddr_t);
+./nsaddr_t:871:./mdart/mdart_ndp.h:105://		void		neighborDelete(nsaddr_t);
+./nsaddr_t:872:./mdart/mdart_dht.h:61:		DHT_Entry(nsaddr_t id, nsaddr_t address) {
+./nsaddr_t:873:./mdart/mdart_dht.h:66:		inline nsaddr_t id() const {
+./nsaddr_t:874:./mdart/mdart_dht.h:69:		inline nsaddr_t address() const {
+./nsaddr_t:875:./mdart/mdart_dht.h:72:		inline void	address(nsaddr_t address) {
+./nsaddr_t:876:./mdart/mdart_dht.h:82:		nsaddr_t		id_;
+./nsaddr_t:877:./mdart/mdart_dht.h:83:		nsaddr_t		address_;
+./nsaddr_t:878:./mdart/mdart_dht.h:121:	void		addEntry(nsaddr_t, nsaddr_t);
+./nsaddr_t:879:./mdart/mdart_dht.h:122:	void		addEntry(nsaddr_t, nsaddr_t, double);
+./nsaddr_t:880:./mdart/mdart_dht.h:125:	nsaddr_t	findAdd(nsaddr_t);
+./nsaddr_t:881:./mdart/mdart_dht.h:126:	nsaddr_t	findId(nsaddr_t);
+./nsaddr_t:882:./mdart/mdart_dht.h:134:	DHT_Entry*	getEntry(nsaddr_t);
+./nsaddr_t:883:./mdart/mdart_dht.h:135:	void		removeEntry(nsaddr_t);
+./nsaddr_t:884:./mdart/mdart_neighbor.h:81:	inline nsaddr_t levelId(u_int32_t levelSibling, nsaddr_t id) const {
+./nsaddr_t:885:./mdart/mdart_neighbor.h:90:	inline nsaddr_t networkId(u_int32_t levelSibling) const {
+./nsaddr_t:886:./mdart/mdart_neighbor.h:91:		nsaddr_t networkId =  INFINITO;
+./nsaddr_t:887:./mdart/mdart_neighbor.h:97:	inline nsaddr_t hopNumber(u_int32_t levelSibling) const {
+./nsaddr_t:888:./mdart/mdart_neighbor.h:133:	void print(nsaddr_t address_) const;
+./nsaddr_t:889:./mdart/mdart_neighbor.h:135:	nsaddr_t			networkId_[ADDR_SIZE];
+./nsaddr_t:890:./mdart/mdart_neighbor.h:159:		Neighbor(nsaddr_t id, nsaddr_t address, u_int32_t helloSeqNum);
+./nsaddr_t:891:./mdart/mdart_neighbor.h:200:		inline nsaddr_t id() const {
+./nsaddr_t:892:./mdart/mdart_neighbor.h:204:		inline nsaddr_t address() const {
+./nsaddr_t:893:./mdart/mdart_neighbor.h:208:		inline void address(nsaddr_t address, u_int32_t helloSeqNum) {
+./nsaddr_t:894:./mdart/mdart_neighbor.h:247:		inline nsaddr_t levelId(u_int32_t levelSibling) const {
+./nsaddr_t:895:./mdart/mdart_neighbor.h:250:		inline nsaddr_t networkId(u_int32_t levelSibling) const {
+./nsaddr_t:896:./mdart/mdart_neighbor.h:281:	nsaddr_t		address_;
+./nsaddr_t:897:./mdart/mdart_neighbor.h:282:	nsaddr_t		id_;
+./nsaddr_t:898:./mdart/mdart_ndp.cc:169:			nsaddr_t id_  = atoi(neighbor_.substr(idLastPos_, idPos_ - idLastPos_).c_str());
+./nsaddr_t:899:./mdart/mdart_ndp.cc:207:Neighbor* NDP::neighborLookup(nsaddr_t id) {
+./nsaddr_t:900:./mdart/mdart_ndp.cc:223:void NDP::neighborInsert(nsaddr_t id, nsaddr_t address, u_int32_t helloSeqNum, string table, double quality) {
+./nsaddr_t:901:./mdart/mdart_ndp.cc:245:void NDP::neighborDelete(nsaddr_t id) {
+./nsaddr_t:902:./mdart/mdart_ndp.cc:344:		nsaddr_t id_  = atoi(neighbor_.substr(idLastPos_, idPos_ - idLastPos_).c_str());
+./nsaddr_t:903:./mdart/mdart_packet.h:140:	nsaddr_t	srcId_;					// Source identifier
+./nsaddr_t:904:./mdart/mdart_packet.h:141:	nsaddr_t	srcAdd_;				// Source dynamic address
+./nsaddr_t:905:./mdart/mdart_packet.h:142:	nsaddr_t	dstAdd_;				// Destination dynamic address
+./nsaddr_t:906:./mdart/mdart_packet.h:147:				+ sizeof(nsaddr_t)		// dst_
+./nsaddr_t:907:./mdart/mdart_packet.h:148:				+ sizeof(nsaddr_t)		// src_
+./nsaddr_t:908:./mdart/mdart_packet.h:149:				+ sizeof(nsaddr_t)		// id_
+./nsaddr_t:909:./mdart/mdart_packet.h:163:	nsaddr_t		srcId_;				// Source identifier
+./nsaddr_t:910:./mdart/mdart_packet.h:164:	nsaddr_t		srcAdd_;			// Source dynamic address
+./nsaddr_t:911:./mdart/mdart_packet.h:165:	nsaddr_t		forId_;				// Forwarder identifier
+./nsaddr_t:912:./mdart/mdart_packet.h:166:	nsaddr_t		forAdd_;			// Forwarder dynamic address
+./nsaddr_t:913:./mdart/mdart_packet.h:167:	nsaddr_t		dstId_;				// Destination identifier
+./nsaddr_t:914:./mdart/mdart_packet.h:168:	nsaddr_t		dstAdd_;			// Destination dynamic address
+./nsaddr_t:915:./mdart/mdart_packet.h:169:	nsaddr_t		reqId_;				// Identifier for which a dynamic address is request
+./nsaddr_t:916:./mdart/mdart_packet.h:175:			+ sizeof(nsaddr_t)		// srcId_
+./nsaddr_t:917:./mdart/mdart_packet.h:176:			+ sizeof(nsaddr_t)		// srcAdd_
+./nsaddr_t:918:./mdart/mdart_packet.h:177:			+ sizeof(nsaddr_t)		// forId_
+./nsaddr_t:919:./mdart/mdart_packet.h:178:			+ sizeof(nsaddr_t)		// forAdd_
+./nsaddr_t:920:./mdart/mdart_packet.h:179:			+ sizeof(nsaddr_t)		// dstId_
+./nsaddr_t:921:./mdart/mdart_packet.h:180:			+ sizeof(nsaddr_t)		// dstAdd_
+./nsaddr_t:922:./mdart/mdart_packet.h:181:			+ sizeof(nsaddr_t)		// reqId_
+./nsaddr_t:923:./mdart/mdart_packet.h:196:	nsaddr_t		srcId_;				// Source identifier
+./nsaddr_t:924:./mdart/mdart_packet.h:197:	nsaddr_t		srcAdd_;				// Source dynamic address
+./nsaddr_t:925:./mdart/mdart_packet.h:198:	nsaddr_t		forId_;				// Forwarder identifier
+./nsaddr_t:926:./mdart/mdart_packet.h:199:	nsaddr_t		forAdd_;				// Forwarder dynamic address
+./nsaddr_t:927:./mdart/mdart_packet.h:200:	nsaddr_t		dstId_;				// Destination identifier
+./nsaddr_t:928:./mdart/mdart_packet.h:201:	nsaddr_t		dstAdd_;				// Destination dynamic address
+./nsaddr_t:929:./mdart/mdart_packet.h:202:	nsaddr_t		reqId_;				// Identifier request
+./nsaddr_t:930:./mdart/mdart_packet.h:203:	nsaddr_t		reqAdd_;				// Dynamic address request
+./nsaddr_t:931:./mdart/mdart_packet.h:209:			+ sizeof(nsaddr_t)		// srcId_
+./nsaddr_t:932:./mdart/mdart_packet.h:210:			+ sizeof(nsaddr_t)		// srcAdd_
+./nsaddr_t:933:./mdart/mdart_packet.h:211:			+ sizeof(nsaddr_t)		// forId_
+./nsaddr_t:934:./mdart/mdart_packet.h:212:			+ sizeof(nsaddr_t)		// forAdd_
+./nsaddr_t:935:./mdart/mdart_packet.h:213:			+ sizeof(nsaddr_t)		// dstId_
+./nsaddr_t:936:./mdart/mdart_packet.h:214:			+ sizeof(nsaddr_t)		// dstAdd_
+./nsaddr_t:937:./mdart/mdart_packet.h:215:			+ sizeof(nsaddr_t)		// reqId_
+./nsaddr_t:938:./mdart/mdart_packet.h:216:			+ sizeof(nsaddr_t)		// reqAdd_
+./nsaddr_t:939:./mdart/mdart_packet.h:231:	nsaddr_t	srcId_;				// Source identifier
+./nsaddr_t:940:./mdart/mdart_packet.h:232:	nsaddr_t	srcAdd_;			// Source dynamic address
+./nsaddr_t:941:./mdart/mdart_packet.h:233:	nsaddr_t	forId_;				// Forwarder identifier
+./nsaddr_t:942:./mdart/mdart_packet.h:234:	nsaddr_t	forAdd_;			// Forwarder dynamic address
+./nsaddr_t:943:./mdart/mdart_packet.h:235:	nsaddr_t	dstId_;				// Destination identifier
+./nsaddr_t:944:./mdart/mdart_packet.h:236:	nsaddr_t	dstAdd_;			// Destination dynamic address
+./nsaddr_t:945:./mdart/mdart_packet.h:242:			+ sizeof(nsaddr_t)		// srcId_
+./nsaddr_t:946:./mdart/mdart_packet.h:243:			+ sizeof(nsaddr_t)		// srcAdd_
+./nsaddr_t:947:./mdart/mdart_packet.h:244:			+ sizeof(nsaddr_t)		// forId_
+./nsaddr_t:948:./mdart/mdart_packet.h:245:			+ sizeof(nsaddr_t)		// forAdd_
+./nsaddr_t:949:./mdart/mdart_packet.h:246:			+ sizeof(nsaddr_t)		// dstId_
+./nsaddr_t:950:./mdart/mdart_packet.h:247:			+ sizeof(nsaddr_t)		// dstAdd_
+./nsaddr_t:951:./mdart/mdart_packet.h:262:	nsaddr_t	srcId_;			// Source identifier
+./nsaddr_t:952:./mdart/mdart_packet.h:263:	nsaddr_t	srcAdd_;		// Source dynamic address
+./nsaddr_t:953:./mdart/mdart_packet.h:264:	nsaddr_t	dstAdd_;		// Destination dynamic address
+./nsaddr_t:954:./mdart/mdart_packet.h:268:				+ sizeof(nsaddr_t)	// dst_
+./nsaddr_t:955:./mdart/mdart_packet.h:269:				+ sizeof(nsaddr_t)	// src_
+./nsaddr_t:956:./mdart/mdart_packet.h:270:				+ sizeof(nsaddr_t);	// id_
+./nsaddr_t:957:./mdart/mdart_packet.h:282:	nsaddr_t	srcId_;					// Source identifier
+./nsaddr_t:958:./mdart/mdart_packet.h:283:	nsaddr_t	srcAdd_;					// Source dynamic address
+./nsaddr_t:959:./mdart/mdart_packet.h:284:	nsaddr_t	forId_;					// Forwarder identifier
+./nsaddr_t:960:./mdart/mdart_packet.h:285:	nsaddr_t	forAdd_;					// Forwarder dynamic address
+./nsaddr_t:961:./mdart/mdart_packet.h:286:	nsaddr_t	dstId_;					// Destination identifier
+./nsaddr_t:962:./mdart/mdart_packet.h:287:	nsaddr_t	dstAdd_;					// Destination dynamic address
+./nsaddr_t:963:./mdart/mdart_packet.h:293:		size_ = sizeof(nsaddr_t)	// srcId_
+./nsaddr_t:964:./mdart/mdart_packet.h:294:			+ sizeof(nsaddr_t)		// srcAdd_
+./nsaddr_t:965:./mdart/mdart_packet.h:295:			+ sizeof(nsaddr_t)		// forId_
+./nsaddr_t:966:./mdart/mdart_packet.h:296:			+ sizeof(nsaddr_t)		// forAdd_
+./nsaddr_t:967:./mdart/mdart_packet.h:297:			+ sizeof(nsaddr_t)		// dstId_
+./nsaddr_t:968:./mdart/mdart_packet.h:298:			+ sizeof(nsaddr_t)		// dstAdd_
+./nsaddr_t:969:./mdart/mdart_packet.h:314:	nsaddr_t	srcId_;					// Source identifier
+./nsaddr_t:970:./mdart/mdart_packet.h:315:	nsaddr_t	srcAdd_;					// Source dynamic address
+./nsaddr_t:971:./mdart/mdart_packet.h:316:	nsaddr_t	forId_;					// Forwarder identifier
+./nsaddr_t:972:./mdart/mdart_packet.h:317:	nsaddr_t	forAdd_;					// Forwarder dynamic address
+./nsaddr_t:973:./mdart/mdart_packet.h:318:	nsaddr_t	dstId_;					// Destination identifier
+./nsaddr_t:974:./mdart/mdart_packet.h:319:	nsaddr_t	dstAdd_;					// Destination dynamic address
+./nsaddr_t:975:./mdart/mdart_packet.h:325:			+ sizeof(nsaddr_t)		// srcId_
+./nsaddr_t:976:./mdart/mdart_packet.h:326:			+ sizeof(nsaddr_t)		// srcAdd_
+./nsaddr_t:977:./mdart/mdart_packet.h:327:			+ sizeof(nsaddr_t)		// forId_
+./nsaddr_t:978:./mdart/mdart_packet.h:328:			+ sizeof(nsaddr_t)		// forAdd_
+./nsaddr_t:979:./mdart/mdart_packet.h:329:			+ sizeof(nsaddr_t)		// dstId_
+./nsaddr_t:980:./mdart/mdart_packet.h:330:			+ sizeof(nsaddr_t)		// dstAdd_
+./nsaddr_t:981:./mdart/mdart_neighbor.cc:80:			nsaddr_t networkId = atoi(entry_.substr(networkIdLastPos_, networkIdPos_ - networkIdLastPos_).c_str());
+./nsaddr_t:982:./mdart/mdart_neighbor.cc:109:void NeighborTable::print(nsaddr_t address_) const {
+./nsaddr_t:983:./mdart/mdart_neighbor.cc:127:Neighbor::Neighbor(nsaddr_t id, nsaddr_t address, u_int32_t helloSeqNum) {
+./nsaddr_t:984:./mdart/mdart_neighbor.cc:149:		nsaddr_t id  = atoi(neighbor_.substr(idLastPos_, idPos_ - idLastPos_).c_str());
+./nsaddr_t:985:./mdart/mdart_adp.cc:104:void ADP::sendDarq(nsaddr_t reqId, int reqpktId) {
+./nsaddr_t:986:./mdart/mdart_adp.cc:108:	nsaddr_t dstAdd_ = hash(reqId);
+./nsaddr_t:987:./mdart/mdart_adp.cc:118:	if (mdart_->routingTable_->DAGetEntry(dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./nsaddr_t:988:./mdart/mdart_adp.cc:124:		while ((mdart_->routingTable_->DAGetEntry(dstAdd_) == (nsaddr_t)IP_BROADCAST) && (i < ADDR_SIZE)) {
+./nsaddr_t:989:./mdart/mdart_adp.cc:126:			dstAdd_ = (nsaddr_t) oldAdd_.to_ulong();
+./nsaddr_t:990:./mdart/mdart_adp.cc:133:		if (mdart_->routingTable_->DAGetEntry(dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./nsaddr_t:991:./mdart/mdart_adp.cc:140:	nsaddr_t nextHop_ = mdart_->routingTable_->DAGetEntry(dstAdd_);
+./nsaddr_t:992:./mdart/mdart_adp.cc:203:	nsaddr_t findAdd_ = findAdd(recvPktRh_->reqId_);
+./nsaddr_t:993:./mdart/mdart_adp.cc:205:	if (findAdd_ != (nsaddr_t) IP_BROADCAST) {
+./nsaddr_t:994:./mdart/mdart_adp.cc:219:	if (mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./nsaddr_t:995:./mdart/mdart_adp.cc:226:		while (((mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == recvPktRh_->forId_) || (mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == (nsaddr_t)IP_BROADCAST)) && (i < ADDR_SIZE)) {
+./nsaddr_t:996:./mdart/mdart_adp.cc:228:			recvPktRh_->dstAdd_ = (nsaddr_t) oldAdd_.to_ulong();
+./nsaddr_t:997:./mdart/mdart_adp.cc:234:		if (mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./nsaddr_t:998:./mdart/mdart_adp.cc:242:	nsaddr_t nextHop_ = mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_);
+./nsaddr_t:999:./mdart/mdart_adp.cc:280:	nsaddr_t nextHop_ = mdart_->routingTable_->getEntry(recvPktRh_->srcAdd_);
+./nsaddr_t:1000:./mdart/mdart_adp.cc:351:	nsaddr_t nextHop_ = mdart_->routingTable_->getEntry(recvPktRh_->dstAdd_);
+./nsaddr_t:1001:./mdart/mdart_adp.cc:352:	if (nextHop_ == (nsaddr_t)IP_BROADCAST) {
+./nsaddr_t:1002:./mdart/mdart_adp.cc:396:	nsaddr_t dstAdd_ = hash(mdart_->id_);
+./nsaddr_t:1003:./mdart/mdart_adp.cc:408:	if (mdart_->routingTable_->DAGetEntry(dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./nsaddr_t:1004:./mdart/mdart_adp.cc:414:		while ((mdart_->routingTable_->DAGetEntry(dstAdd_) == (nsaddr_t)IP_BROADCAST) && (i < ADDR_SIZE)) {
+./nsaddr_t:1005:./mdart/mdart_adp.cc:416:			dstAdd_ = (nsaddr_t) oldAdd_.to_ulong();
+./nsaddr_t:1006:./mdart/mdart_adp.cc:423:		if (mdart_->routingTable_->DAGetEntry(dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./nsaddr_t:1007:./mdart/mdart_adp.cc:431:	nsaddr_t nextHop_ = mdart_->routingTable_->DAGetEntry(dstAdd_);
+./nsaddr_t:1008:./mdart/mdart_adp.cc:500:	if (mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./nsaddr_t:1009:./mdart/mdart_adp.cc:507:		while (((mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == recvPktRh_->forId_) || (mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == (nsaddr_t)IP_BROADCAST)) && (i < ADDR_SIZE)) {
+./nsaddr_t:1010:./mdart/mdart_adp.cc:509:			recvPktRh_->dstAdd_ = (nsaddr_t) oldAdd_.to_ulong();
+./nsaddr_t:1011:./mdart/mdart_adp.cc:515:		if (mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./nsaddr_t:1012:./mdart/mdart_adp.cc:524:	nsaddr_t nextHop_ = mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_);
+./nsaddr_t:1013:./mdart/mdart_adp.cc:622:		nsaddr_t id_  = atoi(entry_.substr(idLastPos_, idPos_ - idLastPos_).c_str());
+./nsaddr_t:1014:./mdart/mdart_adp.cc:625:		nsaddr_t address_  = atoi(entry_.substr(addressLastPos_, addressPos_ - addressLastPos_).c_str());
+./nsaddr_t:1015:./mdart/mdart_adp.cc:648:void ADP::addEntry(nsaddr_t id, nsaddr_t address) {
+./nsaddr_t:1016:./mdart/mdart_adp.cc:662:		nsaddr_t addr_ = findAdd(id);
+./nsaddr_t:1017:./mdart/mdart_adp.cc:669:void ADP::addEntry(nsaddr_t id, nsaddr_t address, double expire) {
+./nsaddr_t:1018:./mdart/mdart_adp.cc:683:		nsaddr_t addr_ = findAdd(id);
+./nsaddr_t:1019:./mdart/mdart_dht.cc:88:void DHT::addEntry(nsaddr_t id, nsaddr_t address) {
+./nsaddr_t:1020:./mdart/mdart_dht.cc:108:void DHT::addEntry(nsaddr_t id, nsaddr_t address, double expire) {
+./nsaddr_t:1021:./mdart/mdart_dht.cc:164:nsaddr_t DHT::findAdd(nsaddr_t id) {
+./nsaddr_t:1022:./mdart/mdart_dht.cc:180:nsaddr_t DHT::findId(nsaddr_t address) {
+./nsaddr_t:1023:./mdart/mdart_dht.cc:243:		nsaddr_t id_  = atoi(entry_.substr(idLastPos_, idPos_ - idLastPos_).c_str());
+./nsaddr_t:1024:./mdart/mdart_dht.cc:246:		nsaddr_t address_  = atoi(entry_.substr(addressLastPos_, addressPos_ - addressLastPos_).c_str());
+./nsaddr_t:1025:./mdart/mdart_dht.cc:280:DHT_Entry* DHT::getEntry(nsaddr_t id) {
+./nsaddr_t:1026:./mdart/mdart_dht.cc:290:void DHT::removeEntry(nsaddr_t id) {
+./nsaddr_t:1027:./mdart/mdart.h:76://typedef std::map<nsaddr_t, nsaddr_t> lookupTable;
+./nsaddr_t:1028:./mdart/mdart.h:107:	MDART(nsaddr_t);
+./nsaddr_t:1029:./mdart/mdart.h:127:	void			lookupTableRmEntry(nsaddr_t);
+./nsaddr_t:1030:./mdart/mdart.h:128:	void			lookupTableAddEntry(nsaddr_t, nsaddr_t);
+./nsaddr_t:1031:./mdart/mdart.h:129:	nsaddr_t		lookupTableLookEntry(nsaddr_t);
+./nsaddr_t:1032:./mdart/mdart.h:130:	nsaddr_t		lookupTableLookUid(nsaddr_t);
+./nsaddr_t:1033:./mdart/mdart.h:142:	void sendDARequest(nsaddr_t dst);
+./nsaddr_t:1034:./mdart/mdart.h:156:	nsaddr_t		address_;
+./nsaddr_t:1035:./mdart/mdart.h:157:	nsaddr_t		oldAddress_;
+./nsaddr_t:1036:./mdart/mdart.h:158:	nsaddr_t		id_;		
+./nsaddr_t:1037:./mdart/mdart_adp.h:73:	void					sendDarq(nsaddr_t, int);
+./nsaddr_t:1038:./mdart/mdart_adp.h:82:	void					addEntry(nsaddr_t id, nsaddr_t address);
+./nsaddr_t:1039:./mdart/mdart_adp.h:83:	void					addEntry(nsaddr_t id, nsaddr_t address, double);
+./nsaddr_t:1040:./mdart/mdart_adp.h:90:	inline nsaddr_t			findAdd(nsaddr_t id) {
+./nsaddr_t:1041:./mdart/mdart_adp.h:96:	inline nsaddr_t			findId(nsaddr_t add) {
+./nsaddr_t:1042:./mdart/mdart_queue.h:97:		Packet*		deque(nsaddr_t dst);
+./nsaddr_t:1043:./mdart/mdart_queue.h:108:		void		printNumPacket(nsaddr_t dst);
+./nsaddr_t:1044:./mdart/mdart_queue.h:118://		void			find(nsaddr_t dst, Packet*& p, Packet*& prev);
+./nsaddr_t:1045:./mdart/mdart.cc:82:			MDART* mdart_ = new MDART((nsaddr_t)Address::instance().str2addr(argv[4]));
+./nsaddr_t:1046:./mdart/mdart.cc:137:MDART::MDART(nsaddr_t id) : Agent(PT_MDART) {
+./nsaddr_t:1047:./mdart/mdart.cc:454:	nsaddr_t dstAdd_ = (nsaddr_t) adp_->findAdd(sendPktIh_->daddr());
+./nsaddr_t:1048:./mdart/mdart.cc:465:	if (dstAdd_ == (nsaddr_t) IP_BROADCAST) {
+./nsaddr_t:1049:./mdart/mdart.cc:535:	nsaddr_t nextHop_ = routingTable_->getEntry(sendPktRh_->dstAdd_);
+./nsaddr_t:1050:./mdart/mdart.cc:620:void MDART::lookupTableRmEntry(nsaddr_t uid_) {
+./nsaddr_t:1051:./mdart/mdart.cc:624:void MDART::lookupTableAddEntry(nsaddr_t uid, nsaddr_t address) {
+./nsaddr_t:1052:./mdart/mdart.cc:631:nsaddr_t MDART::lookupTableLookEntry(nsaddr_t uid_) {
+./nsaddr_t:1053:./mdart/mdart.cc:639:nsaddr_t MDART::lookupTableLookUid(nsaddr_t address_) {
+./nsaddr_t:1054:./mdart/mdart_table.cc:85:void RoutingTable::purge(nsaddr_t id) {
+./nsaddr_t:1055:./mdart/mdart_table.cc:116:		nsaddr_t networkId_ = INFINITO;
+./nsaddr_t:1056:./mdart/mdart_table.cc:256:void RoutingTable::macFailed(nsaddr_t id) {
+./nsaddr_t:1057:./mdart/mdart_table.cc:287:nsaddr_t RoutingTable::levelId(u_int32_t levelSibling) {
+./nsaddr_t:1058:./mdart/mdart_table.cc:288:	nsaddr_t id = mdart_->id_;
+./nsaddr_t:1059:./mdart/mdart_table.cc:304:nsaddr_t RoutingTable::id(u_int32_t levelSibling) {
+./nsaddr_t:1060:./mdart/mdart_table.cc:305://	nsaddr_t id_ = mdart_->id();
+./nsaddr_t:1061:./mdart/mdart_table.cc:306:	nsaddr_t id_ = INFINITO;
+./nsaddr_t:1062:./mdart/mdart_table.cc:309://		nsaddr_t id_ = mdart_->id();
+./nsaddr_t:1063:./mdart/mdart_table.cc:316:nsaddr_t RoutingTable::networkId(u_int32_t levelSibling) {
+./nsaddr_t:1064:./mdart/mdart_table.cc:317:	nsaddr_t networkId_ = INFINITO;
+./nsaddr_t:1065:./mdart/mdart_table.cc:373:void RoutingTable::addEntry(int levelSibling, nsaddr_t nextHop, nsaddr_t id, nsaddr_t networkId, u_int32_t hopNumber, double linkQuality, bitset<ADDR_SIZE> routeLog) {
+./nsaddr_t:1066:./mdart/mdart_table.cc:386:nsaddr_t RoutingTable::getEntry(nsaddr_t dst_) {
+./nsaddr_t:1067:./mdart/mdart_table.cc:391:	nsaddr_t nextHopId_ = IP_BROADCAST;
+./nsaddr_t:1068:./mdart/mdart_table.cc:393:	nsaddr_t nextHopAdd_ = IP_BROADCAST;
+./nsaddr_t:1069:./mdart/mdart_table.cc:449:nsaddr_t RoutingTable::DAGetEntry(nsaddr_t dst_) {
+./nsaddr_t:1070:./mdart/mdart_table.cc:454:	nsaddr_t nextHopId_ = IP_BROADCAST;
+./nsaddr_t:1071:./mdart/mdart_table.cc:456:	nsaddr_t nextHopAdd_ = IP_BROADCAST;
+./nsaddr_t:1072:./mdart/mdart_table.h:63:		RoutingEntry(nsaddr_t nextHopAdd, nsaddr_t nextHopId, nsaddr_t networkId, u_int32_t hopNumber, double etxMetric, bitset<ADDR_SIZE> routeLog) {
+./nsaddr_t:1073:./mdart/mdart_table.h:74:		inline nsaddr_t nextHopId() const {
+./nsaddr_t:1074:./mdart/mdart_table.h:77:		inline nsaddr_t nextHopAdd() const {
+./nsaddr_t:1075:./mdart/mdart_table.h:80:		inline nsaddr_t networkId() const {
+./nsaddr_t:1076:./mdart/mdart_table.h:102:		nsaddr_t			nextHopId_;
+./nsaddr_t:1077:./mdart/mdart_table.h:103:		nsaddr_t			nextHopAdd_;
+./nsaddr_t:1078:./mdart/mdart_table.h:104:		nsaddr_t			networkId_;
+./nsaddr_t:1079:./mdart/mdart_table.h:155:		void				purge(nsaddr_t id);
+./nsaddr_t:1080:./mdart/mdart_table.h:159:		void				macFailed(nsaddr_t nextHop);
+./nsaddr_t:1081:./mdart/mdart_table.h:162:		nsaddr_t			levelId(u_int32_t);
+./nsaddr_t:1082:./mdart/mdart_table.h:163:		nsaddr_t			id(u_int32_t);
+./nsaddr_t:1083:./mdart/mdart_table.h:164:		nsaddr_t			networkId(u_int32_t);
+./nsaddr_t:1084:./mdart/mdart_table.h:171:		void				addEntry(int, nsaddr_t, nsaddr_t, nsaddr_t, u_int32_t, double, bitset<ADDR_SIZE>);
+./nsaddr_t:1085:./mdart/mdart_table.h:172:		nsaddr_t			getEntry(nsaddr_t);
+./nsaddr_t:1086:./mdart/mdart_table.h:173:		nsaddr_t			DAGetEntry(nsaddr_t);
+./nsaddr_t:1087:./mdart/mdart_table.h:174://		void				removeEntry(nsaddr_t);
+./nsaddr_t:1088:./rtproto/rtproto.h:10:        rtAgent(nsaddr_t index, packet_t pt) : Agent(pt), ipaddr_(index) { }
+./nsaddr_t:1089:./rtproto/rtproto.h:15:	virtual void rtNotifyLinkUP(nsaddr_t index) = 0;
+./nsaddr_t:1090:./rtproto/rtproto.h:16:	virtual void rtNotifyLinkDN(nsaddr_t index) = 0;
+./nsaddr_t:1091:./rtproto/rtproto.h:17:	virtual void rtNotifyLinkStatus(nsaddr_t index, u_int32_t status) = 0;
+./nsaddr_t:1092:./rtproto/rtproto.h:26:	nsaddr_t& ipaddr() { return ipaddr_; }
+./nsaddr_t:1093:./rtproto/rtproto.h:29:	nsaddr_t	ipaddr_;	// IP address of this node
+./nsaddr_t:1094:./classifier/classifier-mcast.h:68:		nsaddr_t src;
+./nsaddr_t:1095:./classifier/classifier-mcast.h:69:		nsaddr_t dst;
+./nsaddr_t:1096:./classifier/classifier-mcast.h:73:	int hash(nsaddr_t src, nsaddr_t dst) const {
+./nsaddr_t:1097:./classifier/classifier-mcast.h:82:	void set_hash(hashnode* ht[], nsaddr_t src, nsaddr_t dst,
+./nsaddr_t:1098:./classifier/classifier-mcast.h:86:	hashnode* lookup(nsaddr_t src, nsaddr_t dst,
+./nsaddr_t:1099:./classifier/classifier-mcast.h:88:	hashnode* lookup_star(nsaddr_t dst,
+./nsaddr_t:1100:./classifier/classifier-mcast.h:90:	void change_iface(nsaddr_t src, nsaddr_t dst,
+./nsaddr_t:1101:./classifier/classifier-mcast.h:92:	void change_iface(nsaddr_t dst,
+./nsaddr_t:1102:./classifier/classifier-hash.cc:80:			nsaddr_t src = atoi(argv[3]);
+./nsaddr_t:1103:./classifier/classifier-hash.cc:81:			nsaddr_t dst = atoi(argv[4]);
+./nsaddr_t:1104:./classifier/classifier-hash.cc:91:			nsaddr_t src = atoi(argv[3]);
+./nsaddr_t:1105:./classifier/classifier-hash.cc:92:			nsaddr_t dst = atoi(argv[4]);
+./nsaddr_t:1106:./classifier/classifier-hash.cc:105:                        nsaddr_t src = 0;  // only use fid
+./nsaddr_t:1107:./classifier/classifier-hash.cc:106:                        nsaddr_t dst = 0;  // to classify flows
+./nsaddr_t:1108:./classifier/classifier-hash.cc:128:			nsaddr_t src = atoi(argv[2]);
+./nsaddr_t:1109:./classifier/classifier-hash.cc:129:			nsaddr_t dst = atoi(argv[3]);
+./nsaddr_t:1110:./classifier/classifier-hash.cc:193:	nsaddr_t d = atoi(dst);
+./nsaddr_t:1111:./classifier/classifier-hash.cc:208:			//nsaddr_t dst = atoi(argv[2]);
+./nsaddr_t:1112:./classifier/classifier-mcast.cc:88:MCastClassifier::lookup(nsaddr_t src, nsaddr_t dst, int iface) const
+./nsaddr_t:1113:./classifier/classifier-mcast.cc:103:MCastClassifier::lookup_star(nsaddr_t dst, int iface) const
+./nsaddr_t:1114:./classifier/classifier-mcast.cc:120:	nsaddr_t src = ih->saddr();
+./nsaddr_t:1115:./classifier/classifier-mcast.cc:121:	nsaddr_t dst = ih->daddr();
+./nsaddr_t:1116:./classifier/classifier-mcast.cc:166:void MCastClassifier::set_hash(hashnode* ht[], nsaddr_t src, nsaddr_t dst,
+./nsaddr_t:1117:./classifier/classifier-mcast.cc:188:			nsaddr_t src = strtol(argv[2], (char**)0, 0);
+./nsaddr_t:1118:./classifier/classifier-mcast.cc:189:			nsaddr_t dst = strtol(argv[3], (char**)0, 0);
+./nsaddr_t:1119:./classifier/classifier-mcast.cc:205:			nsaddr_t src = strtol(argv[2], (char**)0, 0);
+./nsaddr_t:1120:./classifier/classifier-mcast.cc:206:			nsaddr_t dst = strtol(argv[3], (char**)0, 0);
+./nsaddr_t:1121:./classifier/classifier-mcast.cc:221:			nsaddr_t src = strtol(argv[2], (char**)0, 0);
+./nsaddr_t:1122:./classifier/classifier-mcast.cc:222:			nsaddr_t dst = strtol(argv[3], (char**)0, 0);
+./nsaddr_t:1123:./classifier/classifier-mcast.cc:238:			nsaddr_t src = strtol(argv[2], (char**)0, 0);
+./nsaddr_t:1124:./classifier/classifier-mcast.cc:239:			nsaddr_t dst = strtol(argv[3], (char**)0, 0);
+./nsaddr_t:1125:./classifier/classifier-mcast.cc:259:void MCastClassifier::change_iface(nsaddr_t src, nsaddr_t dst, int oldiface, int newiface)
+./nsaddr_t:1126:./classifier/classifier-mcast.cc:266:void MCastClassifier::change_iface(nsaddr_t dst, int oldiface, int newiface)
+./nsaddr_t:1127:./classifier/classifier-bst.cc:114:	nsaddr_t src = ih->saddr(); /*XXX*/
+./nsaddr_t:1128:./classifier/classifier-bst.cc:115:	nsaddr_t dst = ih->daddr();
+./nsaddr_t:1129:./classifier/classifier-bst.cc:159:	nsaddr_t dst = ih->daddr();
+./nsaddr_t:1130:./classifier/classifier-bst.cc:168:	nsaddr_t src = ih->saddr(); /*XXX*/
+./nsaddr_t:1131:./classifier/classifier-hash.h:67:	int do_set_hash(nsaddr_t src, nsaddr_t dst, int fid, int slot) {
+./nsaddr_t:1132:./classifier/classifier-hash.h:77:			nsaddr_t dst;
+./nsaddr_t:1133:./classifier/classifier-hash.h:80:			nsaddr_t src, dst;
+./nsaddr_t:1134:./classifier/classifier-hash.h:83:			nsaddr_t src, dst;
+./nsaddr_t:1135:./classifier/classifier-hash.h:88:	long lookup(nsaddr_t src, nsaddr_t dst, int fid) {
+./nsaddr_t:1136:./classifier/classifier-hash.h:103:	virtual const char* hashkey(nsaddr_t, nsaddr_t, int)=0; 
+./nsaddr_t:1137:./classifier/classifier-hash.h:105:	int set_hash(nsaddr_t src, nsaddr_t dst, int fid, long slot) {
+./nsaddr_t:1138:./classifier/classifier-hash.h:116:	long get_hash(nsaddr_t src, nsaddr_t dst, int fid) {
+./nsaddr_t:1139:./classifier/classifier-hash.h:138:	const char* hashkey(nsaddr_t src, nsaddr_t dst, int fid) {
+./nsaddr_t:1140:./classifier/classifier-hash.h:153:	const char*  hashkey(nsaddr_t src, nsaddr_t dst, int) {
+./nsaddr_t:1141:./classifier/classifier-hash.h:165:	const char* hashkey(nsaddr_t, nsaddr_t, int fid) {
+./nsaddr_t:1142:./classifier/classifier-hash.h:178:	const char* hashkey(nsaddr_t, nsaddr_t dst, int) {
+./satellite/sat-hdlc.cc:169:	nsaddr_t src = (nsaddr_t)Address::instance().get_nodeaddr(ih->saddr());
+./satellite/sat-hdlc.cc:170:	nsaddr_t dst = (nsaddr_t)Address::instance().get_nodeaddr(ih->daddr());
+./satellite/sat-hdlc.cc:269:	nsaddr_t src = (nsaddr_t)Address::instance().get_nodeaddr(ih->saddr());
+./satellite/sat-hdlc.cc:270:	nsaddr_t dst = (nsaddr_t)Address::instance().get_nodeaddr(ih->daddr());
+./satellite/sat-hdlc.cc:491:	nsaddr_t dst = ch->next_hop();
+./satellite/satlink.cc:247:	nsaddr_t dst = ch->next_hop();
+バイナリファイル ./nstk に一致しました
+./doc/trace.tex:304:                nsaddr_t src_;
+./doc/trace.tex:305:                nsaddr_t dst_;
+./doc/nodes.tex:586:                nsaddr_t mask_;
+./doc/nodes.tex:627:                void set_hash(nsaddr_t src, nsaddr_t dst, int slot);
+./doc/nodes.tex:628:                int hash(nsaddr_t src, nsaddr_t dst) const \{
+./doc/nodes.tex:636:                        nsaddr_t src;
+./doc/nodes.tex:637:                        nsaddr_t dst;
+./doc/nodes.tex:641:                const hashnode* lookup(nsaddr_t src, nsaddr_t dst) const;
+./doc/nodes.tex:647:                nsaddr_t src = h->src() >> 8; /*XXX*/
+./doc/nodes.tex:648:                nsaddr_t dst = h->dst();
+./doc/kfall/trace.tex:299:                nsaddr_t src_;
+./doc/kfall/trace.tex:300:                nsaddr_t dst_;
+./doc/kfall/classify_route.tex:171:                nsaddr_t mask_;
+./doc/kfall/classify_route.tex:213:                void set_hash(nsaddr_t src, nsaddr_t dst, int slot);
+./doc/kfall/classify_route.tex:214:                int hash(nsaddr_t src, nsaddr_t dst) const {
+./doc/kfall/classify_route.tex:222:                        nsaddr_t src;
+./doc/kfall/classify_route.tex:223:                        nsaddr_t dst;
+./doc/kfall/classify_route.tex:227:                const hashnode* lookup(nsaddr_t src, nsaddr_t dst) const;
+./doc/kfall/classify_route.tex:233:                nsaddr_t src = h->src() >> 8; /*XXX*/
+./doc/kfall/classify_route.tex:234:                nsaddr_t dst = h->dst();
+./mcast/lms-agent.cc:103:	nsaddr_t upstream_lms_;	// upstream LMS entity
+./mcast/lms-agent.cc:410:                     //nsaddr_t adr = spm->spm_path_;
+./mcast/lms-agent.cc:505:	//nsaddr_t	src = ih->saddr();
+./mcast/lms-receiver.cc:125:	nsaddr_t	lms_src_;	// address of sender
+./mcast/lms-receiver.cc:126:	nsaddr_t	lms_group_;	// group address
+./mcast/lms-receiver.cc:129:	nsaddr_t	upstream_lms_;	// address of upstream LMS element
+./mcast/ctrMcast.h:59:	nsaddr_t	src_;		/* mcast data source */
+./mcast/ctrMcast.h:60:	nsaddr_t	group_;          /* mcast data destination group */
+./mcast/ctrMcast.h:70:	nsaddr_t& src() { return src_; }
+./mcast/ctrMcast.h:71:	nsaddr_t& group() { return group_; }
+./mcast/lms.h:92:    nsaddr_t    from_;		// real source of packet for DMCASTs
+./mcast/lms.h:93:    nsaddr_t    src_;		// original source of mcast packet
+./mcast/lms.h:94:    nsaddr_t    group_;		// mcast group
+./mcast/lms.h:95:    nsaddr_t    tp_addr_;	// turning point address
+./mcast/lms.h:109:    nsaddr_t&	from ()  { return from_;  }
+./mcast/lms.h:110:    nsaddr_t&	src ()   { return src_;   }
+./mcast/lms.h:111:    nsaddr_t&   tp_addr ()  { return tp_addr_;  }
+./mcast/lms.h:112:    nsaddr_t&  tp_port ()  { return (nsaddr_t&) tp_port_;  }
+./mcast/lms.h:113:    nsaddr_t&	group () { return group_; }
+./mcast/lms.h:119:    nsaddr_t	tp_addr_;	// turning point address
+./mcast/lms.h:120:    nsaddr_t    tp_port_;       // turning point port id
+./mcast/lms.h:145:	nsaddr_t	spm_path_;
+./pgm/pgm-sender.cc:189:  void trace_event(char *evType, nsaddr_t daddr, double evTime); 
+./pgm/pgm-sender.cc:224:  //  nsaddr_t group_; // The multicast group we send to.
+./pgm/pgm-sender.cc:335:void PgmSender::trace_event(char *evType, nsaddr_t daddr, double evTime) {
+./pgm/pgm-sender.cc:710:        //nsaddr_t        src = ih->saddr();
+./pgm/pgm-agent.cc:1025:        //nsaddr_t        src = ih->saddr();
+./tools/flowmon.h:61:	nsaddr_t src() const { return (src_); }
+./tools/flowmon.h:62:	nsaddr_t dst() const { return (dst_); }
+./tools/flowmon.h:76:	nsaddr_t	src_;
+./tools/flowmon.h:77:	nsaddr_t	dst_;
+./tmix/tmixAgent.h:56:  inline nsaddr_t& port() { return agent->port(); }
+./tmix/tmixAgent.h:57:  inline nsaddr_t& addr() { return agent->addr(); }
+./imep/imep.h:107:	imepLink(nsaddr_t index) : index_(index), last_echo_(-BEACON_PERIOD) {}
+./imep/imep.h:109:	nsaddr_t&	index() { return index_; }
+./imep/imep.h:121:	nsaddr_t	index_;
+./imep/imep.h:136:	imepAgent(nsaddr_t index);
+./imep/imep.h:146:	void imepGetLinkStatus(nsaddr_t index, u_int32_t& status);
+./imep/imep.h:147:	void imepSetLinkInStatus(nsaddr_t index);
+./imep/imep.h:148:	void imepSetLinkOutStatus(nsaddr_t index);
+./imep/imep.h:149:	void imepSetLinkBiStatus(nsaddr_t index);
+./imep/imep.h:150:	void imepSetLinkDownStatus(nsaddr_t index);
+./imep/imep.h:200:	void sendHello(nsaddr_t index);
+./imep/imep.h:201:	void sendAck(nsaddr_t index, u_int32_t seqno);
+./imep/imep.h:206:	imepLink* findLink(nsaddr_t index);
+./imep/imep.h:211:        void purgeReXmitQ(nsaddr_t index);
+./imep/imep.h:217:	void removeObjectResponse(Packet *p, nsaddr_t index);
+./imep/imep.h:260:	nsaddr_t	ipaddr;
+./imep/dest_queue.cc:70:dstent::dstent(nsaddr_t index)
+./imep/dest_queue.cc:155:dstQueue::dstQueue(imepAgent *a, nsaddr_t index) : agent_(a), ipaddr_(index)
+./imep/dest_queue.cc:161:dstQueue::addEntry(nsaddr_t dst, double e, u_int32_t s, Packet *p)
+./imep/dest_queue.cc:177:dstQueue::findEntry(nsaddr_t dst)
+./imep/dest_queue.cc:192:dstQueue::getPacket(nsaddr_t dst, u_int32_t seqno)
+./imep/dest_queue.cc:294:dstQueue::deleteDst(nsaddr_t dst)
+./imep/imep.cc:69:		return (new imepAgent((nsaddr_t) atoi(argv[4])));
+./imep/imep.cc:89:imepAgent::imepAgent(nsaddr_t index) :
+./imep/imep.cc:145:imepAgent::findLink(nsaddr_t index)
+./imep/imep.cc:191:imepAgent::removeObjectResponse(Packet *p, nsaddr_t index)
+./imep/imep.cc:242:imepAgent::purgeReXmitQ(nsaddr_t index)
+./imep/imep.cc:641:	if(ip->daddr() != (nsaddr_t) IP_BROADCAST) {
+./imep/dest_queue.h:83:	dstent(nsaddr_t index);
+./imep/dest_queue.h:97:	nsaddr_t ipaddr() { return ipaddr_; }
+./imep/dest_queue.h:111:	nsaddr_t ipaddr_;	// ip address of this destination
+./imep/dest_queue.h:122:	dstQueue(imepAgent *a, nsaddr_t index);
+./imep/dest_queue.h:124:	void addEntry(nsaddr_t dst, double e, u_int32_t s, Packet *p);
+./imep/dest_queue.h:127:	Packet* getPacket(nsaddr_t dst, u_int32_t seqno);
+./imep/dest_queue.h:137:        void deleteDst(nsaddr_t dst);
+./imep/dest_queue.h:143:	dstent* findEntry(nsaddr_t dst);
+./imep/dest_queue.h:147:	nsaddr_t ipaddr_;
+./imep/imep_io.cc:81:imepAgent::sendHello(nsaddr_t index)
+./imep/imep_io.cc:125:imepAgent::sendAck(nsaddr_t index, u_int32_t seqno)
+./imep/imep_api.cc:59:imepAgent::imepGetLinkStatus(nsaddr_t index, u_int32_t &status)
+./imep/imep_api.cc:74:imepAgent::imepSetLinkInStatus(nsaddr_t index)
+./imep/imep_api.cc:115:imepAgent::imepSetLinkOutStatus(nsaddr_t index)
+./imep/imep_api.cc:136:imepAgent::imepSetLinkBiStatus(nsaddr_t index)
+./imep/imep_api.cc:143:imepAgent::imepSetLinkDownStatus(nsaddr_t index)
+./puma/puma.h:54:		nsaddr_t      source;
+./puma/puma.h:66:		bool find(nsaddr_t, u_int32_t);
+./puma/puma.h:67:		void add(nsaddr_t, u_int32_t);
+./puma/puma.h:75:		nsaddr_t           next_hop;
+./puma/puma.h:76:		nsaddr_t           next_hops_next_hop;
+./puma/puma.h:91:		void add(nsaddr_t, u_int16_t, u_int32_t, nsaddr_t, bool);
+./puma/puma.h:92:		void remove(nsaddr_t);
+./puma/puma.h:103:		nsaddr_t          multicast_address;
+./puma/puma.h:110:		nsaddr_t          core_id;
+./puma/puma.h:124:		multicast_group* find(nsaddr_t);
+./puma/puma.h:126:		void             add(nsaddr_t, nsaddr_t);
+./puma/puma.h:136:		nsaddr_t  multicast_address;
+./puma/puma.h:137:		nsaddr_t  core_id;
+./puma/puma.h:138:		nsaddr_t  next_hop;
+./puma/puma.h:148:		nsaddr_t heard_from;
+./puma/puma.h:167:		nsaddr_t multicast_address;
+./puma/puma.h:168:		nsaddr_t next_hop;
+./puma/puma.h:192:		nsaddr_t multicast_address;
+./puma/puma.h:194:		SendNextMAEvent(nsaddr_t);
+./puma/puma.h:196:		nsaddr_t get_multicast_address();
+./puma/puma.h:213:		nsaddr_t multicast_address;
+./puma/puma.h:215:		SendPendingMAEvent(nsaddr_t);
+./puma/puma.h:217:		nsaddr_t get_multicast_address();
+./puma/puma.h:266:		nsaddr_t           id;                   // Address of this node
+./puma/puma.h:277:        void      handle_join_from_transport(nsaddr_t);
+./puma/puma.h:278:        void      handle_leave_from_transport(nsaddr_t);
+./puma/puma.h:283:        void      handle_ma(multicast_group*, multicast_announcement, nsaddr_t);
+./puma/puma.h:286:        void      send_a_generic_ma(multicast_group*, int, nsaddr_t);
+./puma/puma.h:295:			 											nsaddr_t, unsigned int);
+./puma/puma.h:297:				 					multicast_announcement ma, nsaddr_t source);
+./puma/puma.h:301:        void      record_ack(nsaddr_t);
+./puma/puma.h:309:                                  nsaddr_t);
+./puma/puma.h:318:        bool      was_ack_received(nsaddr_t);
+./puma/puma.h:321:        nsaddr_t  get_next_hop(multicast_group*);
+./puma/puma.h:323:		PUMA(nsaddr_t);
+./puma/puma.cc:54:MessageCache::find(nsaddr_t source, u_int32_t sequence) {
+./puma/puma.cc:62:MessageCache::add(nsaddr_t source, u_int32_t sequence) {
+./puma/puma.cc:145:ConnectivityList::add(nsaddr_t next_hop, u_int16_t distance_to_core,
+./puma/puma.cc:146:		              u_int32_t sequence, nsaddr_t next_hops_next_hop,
+./puma/puma.cc:159:ConnectivityList::remove(nsaddr_t next_hop) {
+./puma/puma.cc:201:MulticastGroupList::find(nsaddr_t group) {
+./puma/puma.cc:220:MulticastGroupList::add(nsaddr_t multicast_address, nsaddr_t core_id) {
+./puma/puma.cc:324:SendNextMAEvent::SendNextMAEvent(nsaddr_t multicast_address) {
+./puma/puma.cc:333:nsaddr_t
+./puma/puma.cc:363:SendPendingMAEvent::SendPendingMAEvent(nsaddr_t multicast_address) {
+./puma/puma.cc:372:nsaddr_t
+./puma/puma.cc:456:			return (new PUMA((nsaddr_t) Address::instance().str2addr(argv[4])));
+./puma/puma.cc:463:PUMA::PUMA(nsaddr_t new_id) : Agent(PT_PUMA), message_cache() {
+./puma/puma.cc:594:PUMA::was_ack_received(nsaddr_t destination) {
+./puma/puma.cc:718:PUMA::handle_join_from_transport(nsaddr_t group_address) {
+./puma/puma.cc:774:                       nsaddr_t source) {
+./puma/puma.cc:784:PUMA::handle_leave_from_transport(nsaddr_t group_address) {
+./puma/puma.cc:901:        nsaddr_t temp = group->core_id;
+./puma/puma.cc:913:PUMA::send_a_generic_ma(multicast_group* group, int mode, nsaddr_t oldCore) {
+./puma/puma.cc:950:                     nsaddr_t source) {
+./puma/puma.cc:1018:                       nsaddr_t source) {
+./puma/puma.cc:1030:                                          nsaddr_t current_core,
+./puma/puma.cc:1105:        nsaddr_t group_address;
+./puma/puma.cc:1137:PUMA::record_ack(nsaddr_t source) {
+./puma/puma.cc:1148:nsaddr_t
+./tora/tora_neighbor.h:57:	TORANeighbor(nsaddr_t id, Agent *a); 
+./tora/tora_neighbor.h:63:	nsaddr_t	index;
+./tora/tora_dest.cc:53:TORADest::TORADest(nsaddr_t id, Agent *a) :  height(id)
+./tora/tora_dest.cc:90:TORADest::nb_add(nsaddr_t id)
+./tora/tora_dest.cc:109:TORADest::nb_del(nsaddr_t id)
+./tora/tora_dest.cc:160:TORADest::nb_find(nsaddr_t id)
+./tora/tora_dest.cc:320:TORADest::update_height(double TAU, nsaddr_t OID, int R, int DELTA, nsaddr_t ID)
+./tora/tora.h:77:        toraAgent(nsaddr_t id);
+./tora/tora.h:84:	void rtNotifyLinkUP(nsaddr_t index);
+./tora/tora.h:85:	void rtNotifyLinkDN(nsaddr_t index);
+./tora/tora.h:86:	void rtNotifyLinkStatus(nsaddr_t index, u_int32_t status);
+./tora/tora.h:93:        nsaddr_t        index;  // added for line 78 of tora.cc, needed for
+./tora/tora.h:96:	TORADest*	dst_find(nsaddr_t id);
+./tora/tora.h:97:	TORADest*	dst_add(nsaddr_t id);
+./tora/tora.h:101:        void            forward(Packet *p, nsaddr_t nexthop, Time delay = 0.0);
+./tora/tora.h:118:	void		sendQRY(nsaddr_t id);
+./tora/tora.h:119:	void		sendUPD(nsaddr_t id);
+./tora/tora.h:120:	void		sendCLR(nsaddr_t id, double tau, nsaddr_t oid);
+./tora/tora.h:159:	void		log_route_loop(nsaddr_t prev, nsaddr_t next);
+./tora/tora.h:163:        void            log_lnk_del(nsaddr_t dst);
+./tora/tora.h:164:        void            log_lnk_kept(nsaddr_t dst);
+./tora/tora.h:166:        void            log_nb_del(nsaddr_t dst, nsaddr_t id);
+./tora/tora.cc:78:		return (new toraAgent((nsaddr_t) atoi(argv[4])));
+./tora/tora.cc:86:toraAgent::toraAgent(nsaddr_t id) :
+./tora/tora.cc:151:toraAgent::dst_find(nsaddr_t id)
+./tora/tora.cc:162:toraAgent::dst_add(nsaddr_t id)
+./tora/tora.cc:194:toraAgent::forward(Packet *p, nsaddr_t nexthop, Time delay)
+./tora/tora.cc:518:						nsaddr_t temp_oid = td->height.oid;
+./tora/tora.cc:618:		nsaddr_t temp_oid = td->height.oid;
+./tora/tora_neighbor.cc:54:TORANeighbor::TORANeighbor(nsaddr_t id, Agent *a) : height(id)
+./tora/tora_packet.h:93:	nsaddr_t	oid;	// id of the router that created the ref level
+./tora/tora_packet.h:96:	nsaddr_t	id;	// Unique id of the router
+./tora/tora_packet.h:118:        nsaddr_t        th_dst;
+./tora/tora_packet.h:131:	nsaddr_t	tq_dst;
+./tora/tora_packet.h:137:	nsaddr_t	tu_dst;
+./tora/tora_packet.h:140:	nsaddr_t	tu_oid;
+./tora/tora_packet.h:143:	nsaddr_t	tu_id;
+./tora/tora_packet.h:149:	nsaddr_t	tc_dst;
+./tora/tora_io.cc:49:toraAgent::sendQRY(nsaddr_t id)
+./tora/tora_io.cc:81:toraAgent::sendUPD(nsaddr_t id)
+./tora/tora_io.cc:119:toraAgent::sendCLR(nsaddr_t id, double tau, nsaddr_t oid)
+./tora/tora_dest.h:47:	TORADest(nsaddr_t id, Agent *a);
+./tora/tora_dest.h:49:	TORANeighbor*	nb_add(nsaddr_t id);
+./tora/tora_dest.h:50:	int		nb_del(nsaddr_t id);
+./tora/tora_dest.h:51:	TORANeighbor*	nb_find(nsaddr_t id);
+./tora/tora_dest.h:55:	void		update_height(double TAU, nsaddr_t OID,
+./tora/tora_dest.h:56:					int R, int DELTA, nsaddr_t ID);
+./tora/tora_dest.h:75:	nsaddr_t	index;		// IP address of destination
+./tora/tora_api.cc:48:toraAgent::rtNotifyLinkUP(nsaddr_t index)
+./tora/tora_api.cc:76:toraAgent::rtNotifyLinkDN(nsaddr_t index)
+./tora/tora_api.cc:123:toraAgent::rtNotifyLinkStatus(nsaddr_t /* index */, u_int32_t /* status */)
+./tora/tora_api.cc:136:	   ip->daddr() == (nsaddr_t) IP_BROADCAST) {
+./tora/tora_logs.cc:22:toraAgent::log_route_loop(nsaddr_t prev, nsaddr_t next)
+./tora/tora_logs.cc:74:toraAgent::log_lnk_del(nsaddr_t dst)
+./tora/tora_logs.cc:95:toraAgent::log_lnk_kept(nsaddr_t dst)
+./tora/tora_logs.cc:117:toraAgent::log_nb_del(nsaddr_t dst, nsaddr_t id)
+./diffserv/dsPolicy.h:64:  nsaddr_t sourceNode, destNode;	// Source-destination pair
+./diffserv/dsPolicy.h:117:  policyTableEntry* getPolicyTableEntry(nsaddr_t source, nsaddr_t dest);
+./diffserv/dsPolicy.cc:216:policyTableEntry* PolicyClassifier::getPolicyTableEntry(nsaddr_t source, nsaddr_t dest) {
+./dsr/path.h:101:  inline nsaddr_t getNSAddr_t() const {
+./dsr/flowstruct.cc:72:int FlowTable::find(nsaddr_t source, nsaddr_t destination, u_int16_t flow) {
+./dsr/flowstruct.cc:83:int FlowTable::find(nsaddr_t source, nsaddr_t destination, const Path &route) {
+./dsr/flowstruct.cc:105:u_int16_t FlowTable::generateNextFlowId(nsaddr_t , bool allowDefault) {
+./dsr/flowstruct.cc:113:int FlowTable::createEntry(nsaddr_t source, nsaddr_t destination, 
+./dsr/flowstruct.cc:186:void FlowTable::setNetAddr(nsaddr_t net_id) {
+./dsr/flowstruct.cc:190:bool FlowTable::defaultFlow(nsaddr_t source, nsaddr_t destination, 
+./dsr/flowstruct.cc:206:bool DRTable::find(nsaddr_t src, nsaddr_t dst, u_int16_t &flow) {
+./dsr/flowstruct.cc:226:void DRTable::insert(nsaddr_t src, nsaddr_t dst, u_int16_t flow) {
+./dsr/flowstruct.cc:249:void DRTable::flush(nsaddr_t src, nsaddr_t dst) {
+./dsr/linkcache.cc:131:	Link(nsaddr_t dst) {
+./dsr/linkcache.cc:146:	nsaddr_t   ln_dst;
+./dsr/hdr_sr.h:72:	nsaddr_t addr;
+./dsr/hdr_sr.h:82:	nsaddr_t tell_addr;	// tell this host
+./dsr/hdr_sr.h:83:	nsaddr_t from_addr;	// that from_addr host can no longer
+./dsr/hdr_sr.h:84:	nsaddr_t to_addr;	// get packets to to_addr host
+./dsr/hdr_sr.h:114:	nsaddr_t  flow_src;
+./dsr/hdr_sr.h:115:	nsaddr_t  flow_dst;
+./dsr/hdr_sr.h:250:	inline nsaddr_t& get_next_addr() { 
+./dsr/hdr_sr.h:260:	inline void append_addr(nsaddr_t a, int type) {
+./dsr/dsragent.cc:2266://    nsaddr_t dead_next_hop;
+./dsr/dsragent.cc:2607:  assert(srh->addrs()[srh->cur_addr()].addr == (nsaddr_t) net_id.addr);
+./dsr/flowstruct.h:92:  nsaddr_t src;
+./dsr/flowstruct.h:93:  nsaddr_t dst;
+./dsr/flowstruct.h:101:    bool find(nsaddr_t src, nsaddr_t dst, u_int16_t &flow);
+./dsr/flowstruct.h:102:    void insert(nsaddr_t src, nsaddr_t dst, u_int16_t flow);
+./dsr/flowstruct.h:103:    void flush(nsaddr_t src, nsaddr_t dst);
+./dsr/flowstruct.h:114:    nsaddr_t   sourceIP ;	// Source IP Addresss
+./dsr/flowstruct.h:115:    nsaddr_t   destinationIP ;	// Destination IP Addresss
+./dsr/flowstruct.h:123:    nsaddr_t	nextHop;	// According to the draft, this is a MUST.
+./dsr/flowstruct.h:161:    int find(nsaddr_t source, 
+./dsr/flowstruct.h:162:	     nsaddr_t destination, 
+./dsr/flowstruct.h:168:    int find(nsaddr_t source, 
+./dsr/flowstruct.h:169:	     nsaddr_t destination, 
+./dsr/flowstruct.h:175:    int createEntry(nsaddr_t source, 
+./dsr/flowstruct.h:176:		    nsaddr_t destination, 
+./dsr/flowstruct.h:181:    bool defaultFlow(nsaddr_t source, nsaddr_t destination, u_int16_t &flow);
+./dsr/flowstruct.h:185:    u_int16_t generateNextFlowId(nsaddr_t destination, 
+./dsr/flowstruct.h:195:    void setNetAddr(nsaddr_t net_id);
+./dsr/flowstruct.h:204:    nsaddr_t    net_addr;	// for noticeDeadLink()
+./tcp/ack-recons.h:63:	AckRecons(nsaddr_t src, nsaddr_t dst) :
+./tcp/ack-recons.h:85:	nsaddr_t src_;		/* src addr:port */
+./tcp/ack-recons.h:86:	nsaddr_t dst_;		/* dst addr:port */
+./tcp/tcp-session.h:109:// 	inline nsaddr_t& addr() {return addr_;}
+./tcp/tcp-session.h:110:// 	inline nsaddr_t& dst() {return dst_;}
+./config.h:76:typedef int32_t nsaddr_t; 
+./dsdv/rtable.cc:43:  nsaddr_t ia = ((const rtable_ent *) a)->dst;
+./dsdv/rtable.cc:44:  nsaddr_t ib = ((const rtable_ent *) b)->dst;
+./dsdv/rtable.cc:132:RoutingTable::GetEntry(nsaddr_t dest) {
+./dsdv/rtable.h:66:  nsaddr_t     dst;     // destination
+./dsdv/rtable.h:67:  nsaddr_t     hop;     // next hop
+./dsdv/rtable.h:103:    rtable_ent *GetEntry(nsaddr_t dest);
+./dsdv/dsdv.cc:621:      nsaddr_t dst;
+./diffusion/diff_rate.cc:187:      if (cmh->next_hop_ == (nsaddr_t)MAC_BROADCAST) {
+./diffusion/diff_rate.cc:198:      if (cmh->next_hop_ == (nsaddr_t)MAC_BROADCAST) {
+./diffusion/diff_rate.cc:237:      if (cmh->next_hop_ == (nsaddr_t)MAC_BROADCAST) {
+./diffusion/diff_rate.cc:287:      if (cmh->next_hop_ == (nsaddr_t)MAC_BROADCAST) {
+./diffusion/diff_rate.cc:351:  nsaddr_t from_nodeID;
+./diffusion/diff_rate.cc:537:  nsaddr_t forwarder_node = forward_agent.addr_;
+./diffusion/diff_rate.cc:634:  nsaddr_t forwarder_node;
+./diffusion/diff_rate.cc:831:  nsaddr_t next_node;
+./diffusion/diff_rate.cc:924:void DiffusionRate::PosReinf(int dtype, nsaddr_t to_node, 
+./diffusion/diff_prob.cc:164:  nsaddr_t from_nodeID, forward_nodeID;
+./diffusion/diff_prob.cc:224:  nsaddr_t   from_nodeID, forward_nodeID;
+./diffusion/diffusion.cc:407:void DiffusionAgent::MACprepare(Packet *pkt, nsaddr_t next_hop, 
+./diffusion/diffusion.cc:415:  if (type == (int) NS_AF_ILINK && next_hop == (nsaddr_t) MAC_BROADCAST) {
+./diffusion/omni_mcast.h:209:  void MACprepare(Packet *pkt, nsaddr_t next_hop, unsigned int type, 
+./diffusion/diffusion.h:194:  void MACprepare(Packet *pkt, nsaddr_t next_hop, int type, 
+./diffusion/omni_mcast.cc:148:  nsaddr_t     src_node = (dfh->sender_id).addr_;
+./diffusion/omni_mcast.cc:253:  nsaddr_t   from_nodeID;
+./diffusion/omni_mcast.cc:366:void OmniMcastAgent::MACprepare(Packet *pkt, nsaddr_t next_hop, 
+./diffusion/omni_mcast.cc:374:  if (type == NS_AF_ILINK && next_hop == (nsaddr_t)MAC_BROADCAST) {
+./diffusion/flooding.cc:137:  nsaddr_t   from_nodeID;
+./diffusion/diff_rate.h:208:  void PosReinf(int dtype, nsaddr_t to_node, ns_addr_t info_sender, 
+./diffusion/diff_header.h:106:	nsaddr_t next_nodes[MAX_NEIGHBORS];
+./mdart/mdart_queue.cc:129:Packet* MDARTQueue::deque(nsaddr_t dst) {
+./mdart/mdart_queue.cc:231:void MDARTQueue::printNumPacket(nsaddr_t dst){
+./mdart/mdart_queue.cc:298:	nsaddr_t dest= Rh->dstId_;
+./mdart/mdart_queue.cc:344:Packet* MDARTQueue::deque(nsaddr_t dst) {
+./mdart/mdart_queue.cc:430:void MDARTQueue::printNumPacket(nsaddr_t dst){
+./mdart/mdart_queue.cc:463:void MDARTQueue::find(nsaddr_t dst, Packet*& p, Packet*& prev)
+./mdart/mdart_function.h:211:inline const char* bitString(nsaddr_t add) {
+./mdart/mdart_function.h:218:inline int DiffBit(nsaddr_t n1, nsaddr_t n2) {
+./mdart/mdart_function.h:230:inline nsaddr_t hash(nsaddr_t id) {
+./mdart/mdart_function.h:239:	nsaddr_t temp = (nsaddr_t) address_.to_ulong();
+./mdart/mdart_function.h:246:/*inline nsaddr_t idToAdd(string id) {
+./mdart/mdart_function.h:255:	nsaddr_t addr = (nsaddr_t) addrLong;
+./mdart/mdart_ndp.h:103:		void		neighborInsert(nsaddr_t, nsaddr_t, u_int32_t, string, double);
+./mdart/mdart_ndp.h:104:		Neighbor*	neighborLookup(nsaddr_t);
+./mdart/mdart_ndp.h:105://		void		neighborDelete(nsaddr_t);
+./mdart/mdart_dht.h:61:		DHT_Entry(nsaddr_t id, nsaddr_t address) {
+./mdart/mdart_dht.h:66:		inline nsaddr_t id() const {
+./mdart/mdart_dht.h:69:		inline nsaddr_t address() const {
+./mdart/mdart_dht.h:72:		inline void	address(nsaddr_t address) {
+./mdart/mdart_dht.h:82:		nsaddr_t		id_;
+./mdart/mdart_dht.h:83:		nsaddr_t		address_;
+./mdart/mdart_dht.h:121:	void		addEntry(nsaddr_t, nsaddr_t);
+./mdart/mdart_dht.h:122:	void		addEntry(nsaddr_t, nsaddr_t, double);
+./mdart/mdart_dht.h:125:	nsaddr_t	findAdd(nsaddr_t);
+./mdart/mdart_dht.h:126:	nsaddr_t	findId(nsaddr_t);
+./mdart/mdart_dht.h:134:	DHT_Entry*	getEntry(nsaddr_t);
+./mdart/mdart_dht.h:135:	void		removeEntry(nsaddr_t);
+./mdart/mdart_neighbor.h:81:	inline nsaddr_t levelId(u_int32_t levelSibling, nsaddr_t id) const {
+./mdart/mdart_neighbor.h:90:	inline nsaddr_t networkId(u_int32_t levelSibling) const {
+./mdart/mdart_neighbor.h:91:		nsaddr_t networkId =  INFINITO;
+./mdart/mdart_neighbor.h:97:	inline nsaddr_t hopNumber(u_int32_t levelSibling) const {
+./mdart/mdart_neighbor.h:133:	void print(nsaddr_t address_) const;
+./mdart/mdart_neighbor.h:135:	nsaddr_t			networkId_[ADDR_SIZE];
+./mdart/mdart_neighbor.h:159:		Neighbor(nsaddr_t id, nsaddr_t address, u_int32_t helloSeqNum);
+./mdart/mdart_neighbor.h:200:		inline nsaddr_t id() const {
+./mdart/mdart_neighbor.h:204:		inline nsaddr_t address() const {
+./mdart/mdart_neighbor.h:208:		inline void address(nsaddr_t address, u_int32_t helloSeqNum) {
+./mdart/mdart_neighbor.h:247:		inline nsaddr_t levelId(u_int32_t levelSibling) const {
+./mdart/mdart_neighbor.h:250:		inline nsaddr_t networkId(u_int32_t levelSibling) const {
+./mdart/mdart_neighbor.h:281:	nsaddr_t		address_;
+./mdart/mdart_neighbor.h:282:	nsaddr_t		id_;
+./mdart/mdart_ndp.cc:169:			nsaddr_t id_  = atoi(neighbor_.substr(idLastPos_, idPos_ - idLastPos_).c_str());
+./mdart/mdart_ndp.cc:207:Neighbor* NDP::neighborLookup(nsaddr_t id) {
+./mdart/mdart_ndp.cc:223:void NDP::neighborInsert(nsaddr_t id, nsaddr_t address, u_int32_t helloSeqNum, string table, double quality) {
+./mdart/mdart_ndp.cc:245:void NDP::neighborDelete(nsaddr_t id) {
+./mdart/mdart_ndp.cc:344:		nsaddr_t id_  = atoi(neighbor_.substr(idLastPos_, idPos_ - idLastPos_).c_str());
+./mdart/mdart_packet.h:140:	nsaddr_t	srcId_;					// Source identifier
+./mdart/mdart_packet.h:141:	nsaddr_t	srcAdd_;				// Source dynamic address
+./mdart/mdart_packet.h:142:	nsaddr_t	dstAdd_;				// Destination dynamic address
+./mdart/mdart_packet.h:147:				+ sizeof(nsaddr_t)		// dst_
+./mdart/mdart_packet.h:148:				+ sizeof(nsaddr_t)		// src_
+./mdart/mdart_packet.h:149:				+ sizeof(nsaddr_t)		// id_
+./mdart/mdart_packet.h:163:	nsaddr_t		srcId_;				// Source identifier
+./mdart/mdart_packet.h:164:	nsaddr_t		srcAdd_;			// Source dynamic address
+./mdart/mdart_packet.h:165:	nsaddr_t		forId_;				// Forwarder identifier
+./mdart/mdart_packet.h:166:	nsaddr_t		forAdd_;			// Forwarder dynamic address
+./mdart/mdart_packet.h:167:	nsaddr_t		dstId_;				// Destination identifier
+./mdart/mdart_packet.h:168:	nsaddr_t		dstAdd_;			// Destination dynamic address
+./mdart/mdart_packet.h:169:	nsaddr_t		reqId_;				// Identifier for which a dynamic address is request
+./mdart/mdart_packet.h:175:			+ sizeof(nsaddr_t)		// srcId_
+./mdart/mdart_packet.h:176:			+ sizeof(nsaddr_t)		// srcAdd_
+./mdart/mdart_packet.h:177:			+ sizeof(nsaddr_t)		// forId_
+./mdart/mdart_packet.h:178:			+ sizeof(nsaddr_t)		// forAdd_
+./mdart/mdart_packet.h:179:			+ sizeof(nsaddr_t)		// dstId_
+./mdart/mdart_packet.h:180:			+ sizeof(nsaddr_t)		// dstAdd_
+./mdart/mdart_packet.h:181:			+ sizeof(nsaddr_t)		// reqId_
+./mdart/mdart_packet.h:196:	nsaddr_t		srcId_;				// Source identifier
+./mdart/mdart_packet.h:197:	nsaddr_t		srcAdd_;				// Source dynamic address
+./mdart/mdart_packet.h:198:	nsaddr_t		forId_;				// Forwarder identifier
+./mdart/mdart_packet.h:199:	nsaddr_t		forAdd_;				// Forwarder dynamic address
+./mdart/mdart_packet.h:200:	nsaddr_t		dstId_;				// Destination identifier
+./mdart/mdart_packet.h:201:	nsaddr_t		dstAdd_;				// Destination dynamic address
+./mdart/mdart_packet.h:202:	nsaddr_t		reqId_;				// Identifier request
+./mdart/mdart_packet.h:203:	nsaddr_t		reqAdd_;				// Dynamic address request
+./mdart/mdart_packet.h:209:			+ sizeof(nsaddr_t)		// srcId_
+./mdart/mdart_packet.h:210:			+ sizeof(nsaddr_t)		// srcAdd_
+./mdart/mdart_packet.h:211:			+ sizeof(nsaddr_t)		// forId_
+./mdart/mdart_packet.h:212:			+ sizeof(nsaddr_t)		// forAdd_
+./mdart/mdart_packet.h:213:			+ sizeof(nsaddr_t)		// dstId_
+./mdart/mdart_packet.h:214:			+ sizeof(nsaddr_t)		// dstAdd_
+./mdart/mdart_packet.h:215:			+ sizeof(nsaddr_t)		// reqId_
+./mdart/mdart_packet.h:216:			+ sizeof(nsaddr_t)		// reqAdd_
+./mdart/mdart_packet.h:231:	nsaddr_t	srcId_;				// Source identifier
+./mdart/mdart_packet.h:232:	nsaddr_t	srcAdd_;			// Source dynamic address
+./mdart/mdart_packet.h:233:	nsaddr_t	forId_;				// Forwarder identifier
+./mdart/mdart_packet.h:234:	nsaddr_t	forAdd_;			// Forwarder dynamic address
+./mdart/mdart_packet.h:235:	nsaddr_t	dstId_;				// Destination identifier
+./mdart/mdart_packet.h:236:	nsaddr_t	dstAdd_;			// Destination dynamic address
+./mdart/mdart_packet.h:242:			+ sizeof(nsaddr_t)		// srcId_
+./mdart/mdart_packet.h:243:			+ sizeof(nsaddr_t)		// srcAdd_
+./mdart/mdart_packet.h:244:			+ sizeof(nsaddr_t)		// forId_
+./mdart/mdart_packet.h:245:			+ sizeof(nsaddr_t)		// forAdd_
+./mdart/mdart_packet.h:246:			+ sizeof(nsaddr_t)		// dstId_
+./mdart/mdart_packet.h:247:			+ sizeof(nsaddr_t)		// dstAdd_
+./mdart/mdart_packet.h:262:	nsaddr_t	srcId_;			// Source identifier
+./mdart/mdart_packet.h:263:	nsaddr_t	srcAdd_;		// Source dynamic address
+./mdart/mdart_packet.h:264:	nsaddr_t	dstAdd_;		// Destination dynamic address
+./mdart/mdart_packet.h:268:				+ sizeof(nsaddr_t)	// dst_
+./mdart/mdart_packet.h:269:				+ sizeof(nsaddr_t)	// src_
+./mdart/mdart_packet.h:270:				+ sizeof(nsaddr_t);	// id_
+./mdart/mdart_packet.h:282:	nsaddr_t	srcId_;					// Source identifier
+./mdart/mdart_packet.h:283:	nsaddr_t	srcAdd_;					// Source dynamic address
+./mdart/mdart_packet.h:284:	nsaddr_t	forId_;					// Forwarder identifier
+./mdart/mdart_packet.h:285:	nsaddr_t	forAdd_;					// Forwarder dynamic address
+./mdart/mdart_packet.h:286:	nsaddr_t	dstId_;					// Destination identifier
+./mdart/mdart_packet.h:287:	nsaddr_t	dstAdd_;					// Destination dynamic address
+./mdart/mdart_packet.h:293:		size_ = sizeof(nsaddr_t)	// srcId_
+./mdart/mdart_packet.h:294:			+ sizeof(nsaddr_t)		// srcAdd_
+./mdart/mdart_packet.h:295:			+ sizeof(nsaddr_t)		// forId_
+./mdart/mdart_packet.h:296:			+ sizeof(nsaddr_t)		// forAdd_
+./mdart/mdart_packet.h:297:			+ sizeof(nsaddr_t)		// dstId_
+./mdart/mdart_packet.h:298:			+ sizeof(nsaddr_t)		// dstAdd_
+./mdart/mdart_packet.h:314:	nsaddr_t	srcId_;					// Source identifier
+./mdart/mdart_packet.h:315:	nsaddr_t	srcAdd_;					// Source dynamic address
+./mdart/mdart_packet.h:316:	nsaddr_t	forId_;					// Forwarder identifier
+./mdart/mdart_packet.h:317:	nsaddr_t	forAdd_;					// Forwarder dynamic address
+./mdart/mdart_packet.h:318:	nsaddr_t	dstId_;					// Destination identifier
+./mdart/mdart_packet.h:319:	nsaddr_t	dstAdd_;					// Destination dynamic address
+./mdart/mdart_packet.h:325:			+ sizeof(nsaddr_t)		// srcId_
+./mdart/mdart_packet.h:326:			+ sizeof(nsaddr_t)		// srcAdd_
+./mdart/mdart_packet.h:327:			+ sizeof(nsaddr_t)		// forId_
+./mdart/mdart_packet.h:328:			+ sizeof(nsaddr_t)		// forAdd_
+./mdart/mdart_packet.h:329:			+ sizeof(nsaddr_t)		// dstId_
+./mdart/mdart_packet.h:330:			+ sizeof(nsaddr_t)		// dstAdd_
+./mdart/mdart_neighbor.cc:80:			nsaddr_t networkId = atoi(entry_.substr(networkIdLastPos_, networkIdPos_ - networkIdLastPos_).c_str());
+./mdart/mdart_neighbor.cc:109:void NeighborTable::print(nsaddr_t address_) const {
+./mdart/mdart_neighbor.cc:127:Neighbor::Neighbor(nsaddr_t id, nsaddr_t address, u_int32_t helloSeqNum) {
+./mdart/mdart_neighbor.cc:149:		nsaddr_t id  = atoi(neighbor_.substr(idLastPos_, idPos_ - idLastPos_).c_str());
+./mdart/mdart_adp.cc:104:void ADP::sendDarq(nsaddr_t reqId, int reqpktId) {
+./mdart/mdart_adp.cc:108:	nsaddr_t dstAdd_ = hash(reqId);
+./mdart/mdart_adp.cc:118:	if (mdart_->routingTable_->DAGetEntry(dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./mdart/mdart_adp.cc:124:		while ((mdart_->routingTable_->DAGetEntry(dstAdd_) == (nsaddr_t)IP_BROADCAST) && (i < ADDR_SIZE)) {
+./mdart/mdart_adp.cc:126:			dstAdd_ = (nsaddr_t) oldAdd_.to_ulong();
+./mdart/mdart_adp.cc:133:		if (mdart_->routingTable_->DAGetEntry(dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./mdart/mdart_adp.cc:140:	nsaddr_t nextHop_ = mdart_->routingTable_->DAGetEntry(dstAdd_);
+./mdart/mdart_adp.cc:203:	nsaddr_t findAdd_ = findAdd(recvPktRh_->reqId_);
+./mdart/mdart_adp.cc:205:	if (findAdd_ != (nsaddr_t) IP_BROADCAST) {
+./mdart/mdart_adp.cc:219:	if (mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./mdart/mdart_adp.cc:226:		while (((mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == recvPktRh_->forId_) || (mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == (nsaddr_t)IP_BROADCAST)) && (i < ADDR_SIZE)) {
+./mdart/mdart_adp.cc:228:			recvPktRh_->dstAdd_ = (nsaddr_t) oldAdd_.to_ulong();
+./mdart/mdart_adp.cc:234:		if (mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./mdart/mdart_adp.cc:242:	nsaddr_t nextHop_ = mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_);
+./mdart/mdart_adp.cc:280:	nsaddr_t nextHop_ = mdart_->routingTable_->getEntry(recvPktRh_->srcAdd_);
+./mdart/mdart_adp.cc:351:	nsaddr_t nextHop_ = mdart_->routingTable_->getEntry(recvPktRh_->dstAdd_);
+./mdart/mdart_adp.cc:352:	if (nextHop_ == (nsaddr_t)IP_BROADCAST) {
+./mdart/mdart_adp.cc:396:	nsaddr_t dstAdd_ = hash(mdart_->id_);
+./mdart/mdart_adp.cc:408:	if (mdart_->routingTable_->DAGetEntry(dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./mdart/mdart_adp.cc:414:		while ((mdart_->routingTable_->DAGetEntry(dstAdd_) == (nsaddr_t)IP_BROADCAST) && (i < ADDR_SIZE)) {
+./mdart/mdart_adp.cc:416:			dstAdd_ = (nsaddr_t) oldAdd_.to_ulong();
+./mdart/mdart_adp.cc:423:		if (mdart_->routingTable_->DAGetEntry(dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./mdart/mdart_adp.cc:431:	nsaddr_t nextHop_ = mdart_->routingTable_->DAGetEntry(dstAdd_);
+./mdart/mdart_adp.cc:500:	if (mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./mdart/mdart_adp.cc:507:		while (((mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == recvPktRh_->forId_) || (mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == (nsaddr_t)IP_BROADCAST)) && (i < ADDR_SIZE)) {
+./mdart/mdart_adp.cc:509:			recvPktRh_->dstAdd_ = (nsaddr_t) oldAdd_.to_ulong();
+./mdart/mdart_adp.cc:515:		if (mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_) == (nsaddr_t)IP_BROADCAST) {
+./mdart/mdart_adp.cc:524:	nsaddr_t nextHop_ = mdart_->routingTable_->DAGetEntry(recvPktRh_->dstAdd_);
+./mdart/mdart_adp.cc:622:		nsaddr_t id_  = atoi(entry_.substr(idLastPos_, idPos_ - idLastPos_).c_str());
+./mdart/mdart_adp.cc:625:		nsaddr_t address_  = atoi(entry_.substr(addressLastPos_, addressPos_ - addressLastPos_).c_str());
+./mdart/mdart_adp.cc:648:void ADP::addEntry(nsaddr_t id, nsaddr_t address) {
+./mdart/mdart_adp.cc:662:		nsaddr_t addr_ = findAdd(id);
+./mdart/mdart_adp.cc:669:void ADP::addEntry(nsaddr_t id, nsaddr_t address, double expire) {
+./mdart/mdart_adp.cc:683:		nsaddr_t addr_ = findAdd(id);
+./mdart/mdart_dht.cc:88:void DHT::addEntry(nsaddr_t id, nsaddr_t address) {
+./mdart/mdart_dht.cc:108:void DHT::addEntry(nsaddr_t id, nsaddr_t address, double expire) {
+./mdart/mdart_dht.cc:164:nsaddr_t DHT::findAdd(nsaddr_t id) {
+./mdart/mdart_dht.cc:180:nsaddr_t DHT::findId(nsaddr_t address) {
+./mdart/mdart_dht.cc:243:		nsaddr_t id_  = atoi(entry_.substr(idLastPos_, idPos_ - idLastPos_).c_str());
+./mdart/mdart_dht.cc:246:		nsaddr_t address_  = atoi(entry_.substr(addressLastPos_, addressPos_ - addressLastPos_).c_str());
+./mdart/mdart_dht.cc:280:DHT_Entry* DHT::getEntry(nsaddr_t id) {
+./mdart/mdart_dht.cc:290:void DHT::removeEntry(nsaddr_t id) {
+./mdart/mdart.h:76://typedef std::map<nsaddr_t, nsaddr_t> lookupTable;
+./mdart/mdart.h:107:	MDART(nsaddr_t);
+./mdart/mdart.h:127:	void			lookupTableRmEntry(nsaddr_t);
+./mdart/mdart.h:128:	void			lookupTableAddEntry(nsaddr_t, nsaddr_t);
+./mdart/mdart.h:129:	nsaddr_t		lookupTableLookEntry(nsaddr_t);
+./mdart/mdart.h:130:	nsaddr_t		lookupTableLookUid(nsaddr_t);
+./mdart/mdart.h:142:	void sendDARequest(nsaddr_t dst);
+./mdart/mdart.h:156:	nsaddr_t		address_;
+./mdart/mdart.h:157:	nsaddr_t		oldAddress_;
+./mdart/mdart.h:158:	nsaddr_t		id_;		
+./mdart/mdart_adp.h:73:	void					sendDarq(nsaddr_t, int);
+./mdart/mdart_adp.h:82:	void					addEntry(nsaddr_t id, nsaddr_t address);
+./mdart/mdart_adp.h:83:	void					addEntry(nsaddr_t id, nsaddr_t address, double);
+./mdart/mdart_adp.h:90:	inline nsaddr_t			findAdd(nsaddr_t id) {
+./mdart/mdart_adp.h:96:	inline nsaddr_t			findId(nsaddr_t add) {
+./mdart/mdart_queue.h:97:		Packet*		deque(nsaddr_t dst);
+./mdart/mdart_queue.h:108:		void		printNumPacket(nsaddr_t dst);
+./mdart/mdart_queue.h:118://		void			find(nsaddr_t dst, Packet*& p, Packet*& prev);
+./mdart/mdart.cc:82:			MDART* mdart_ = new MDART((nsaddr_t)Address::instance().str2addr(argv[4]));
+./mdart/mdart.cc:137:MDART::MDART(nsaddr_t id) : Agent(PT_MDART) {
+./mdart/mdart.cc:454:	nsaddr_t dstAdd_ = (nsaddr_t) adp_->findAdd(sendPktIh_->daddr());
+./mdart/mdart.cc:465:	if (dstAdd_ == (nsaddr_t) IP_BROADCAST) {
+./mdart/mdart.cc:535:	nsaddr_t nextHop_ = routingTable_->getEntry(sendPktRh_->dstAdd_);
+./mdart/mdart.cc:620:void MDART::lookupTableRmEntry(nsaddr_t uid_) {
+./mdart/mdart.cc:624:void MDART::lookupTableAddEntry(nsaddr_t uid, nsaddr_t address) {
+./mdart/mdart.cc:631:nsaddr_t MDART::lookupTableLookEntry(nsaddr_t uid_) {
+./mdart/mdart.cc:639:nsaddr_t MDART::lookupTableLookUid(nsaddr_t address_) {
+./mdart/mdart_table.cc:85:void RoutingTable::purge(nsaddr_t id) {
+./mdart/mdart_table.cc:116:		nsaddr_t networkId_ = INFINITO;
+./mdart/mdart_table.cc:256:void RoutingTable::macFailed(nsaddr_t id) {
+./mdart/mdart_table.cc:287:nsaddr_t RoutingTable::levelId(u_int32_t levelSibling) {
+./mdart/mdart_table.cc:288:	nsaddr_t id = mdart_->id_;
+./mdart/mdart_table.cc:304:nsaddr_t RoutingTable::id(u_int32_t levelSibling) {
+./mdart/mdart_table.cc:305://	nsaddr_t id_ = mdart_->id();
+./mdart/mdart_table.cc:306:	nsaddr_t id_ = INFINITO;
+./mdart/mdart_table.cc:309://		nsaddr_t id_ = mdart_->id();
+./mdart/mdart_table.cc:316:nsaddr_t RoutingTable::networkId(u_int32_t levelSibling) {
+./mdart/mdart_table.cc:317:	nsaddr_t networkId_ = INFINITO;
+./mdart/mdart_table.cc:373:void RoutingTable::addEntry(int levelSibling, nsaddr_t nextHop, nsaddr_t id, nsaddr_t networkId, u_int32_t hopNumber, double linkQuality, bitset<ADDR_SIZE> routeLog) {
+./mdart/mdart_table.cc:386:nsaddr_t RoutingTable::getEntry(nsaddr_t dst_) {
+./mdart/mdart_table.cc:391:	nsaddr_t nextHopId_ = IP_BROADCAST;
+./mdart/mdart_table.cc:393:	nsaddr_t nextHopAdd_ = IP_BROADCAST;
+./mdart/mdart_table.cc:449:nsaddr_t RoutingTable::DAGetEntry(nsaddr_t dst_) {
+./mdart/mdart_table.cc:454:	nsaddr_t nextHopId_ = IP_BROADCAST;
+./mdart/mdart_table.cc:456:	nsaddr_t nextHopAdd_ = IP_BROADCAST;
+./mdart/mdart_table.h:63:		RoutingEntry(nsaddr_t nextHopAdd, nsaddr_t nextHopId, nsaddr_t networkId, u_int32_t hopNumber, double etxMetric, bitset<ADDR_SIZE> routeLog) {
+./mdart/mdart_table.h:74:		inline nsaddr_t nextHopId() const {
+./mdart/mdart_table.h:77:		inline nsaddr_t nextHopAdd() const {
+./mdart/mdart_table.h:80:		inline nsaddr_t networkId() const {
+./mdart/mdart_table.h:102:		nsaddr_t			nextHopId_;
+./mdart/mdart_table.h:103:		nsaddr_t			nextHopAdd_;
+./mdart/mdart_table.h:104:		nsaddr_t			networkId_;
+./mdart/mdart_table.h:155:		void				purge(nsaddr_t id);
+./mdart/mdart_table.h:159:		void				macFailed(nsaddr_t nextHop);
+./mdart/mdart_table.h:162:		nsaddr_t			levelId(u_int32_t);
+./mdart/mdart_table.h:163:		nsaddr_t			id(u_int32_t);
+./mdart/mdart_table.h:164:		nsaddr_t			networkId(u_int32_t);
+./mdart/mdart_table.h:171:		void				addEntry(int, nsaddr_t, nsaddr_t, nsaddr_t, u_int32_t, double, bitset<ADDR_SIZE>);
+./mdart/mdart_table.h:172:		nsaddr_t			getEntry(nsaddr_t);
+./mdart/mdart_table.h:173:		nsaddr_t			DAGetEntry(nsaddr_t);
+./mdart/mdart_table.h:174://		void				removeEntry(nsaddr_t);
+./rtproto/rtproto.h:10:        rtAgent(nsaddr_t index, packet_t pt) : Agent(pt), ipaddr_(index) { }
+./rtproto/rtproto.h:15:	virtual void rtNotifyLinkUP(nsaddr_t index) = 0;
+./rtproto/rtproto.h:16:	virtual void rtNotifyLinkDN(nsaddr_t index) = 0;
+./rtproto/rtproto.h:17:	virtual void rtNotifyLinkStatus(nsaddr_t index, u_int32_t status) = 0;
+./rtproto/rtproto.h:26:	nsaddr_t& ipaddr() { return ipaddr_; }
+./rtproto/rtproto.h:29:	nsaddr_t	ipaddr_;	// IP address of this node
+./classifier/classifier-mcast.h:68:		nsaddr_t src;
+./classifier/classifier-mcast.h:69:		nsaddr_t dst;
+./classifier/classifier-mcast.h:73:	int hash(nsaddr_t src, nsaddr_t dst) const {
+./classifier/classifier-mcast.h:82:	void set_hash(hashnode* ht[], nsaddr_t src, nsaddr_t dst,
+./classifier/classifier-mcast.h:86:	hashnode* lookup(nsaddr_t src, nsaddr_t dst,
+./classifier/classifier-mcast.h:88:	hashnode* lookup_star(nsaddr_t dst,
+./classifier/classifier-mcast.h:90:	void change_iface(nsaddr_t src, nsaddr_t dst,
+./classifier/classifier-mcast.h:92:	void change_iface(nsaddr_t dst,
+./classifier/classifier-hash.cc:80:			nsaddr_t src = atoi(argv[3]);
+./classifier/classifier-hash.cc:81:			nsaddr_t dst = atoi(argv[4]);
+./classifier/classifier-hash.cc:91:			nsaddr_t src = atoi(argv[3]);
+./classifier/classifier-hash.cc:92:			nsaddr_t dst = atoi(argv[4]);
+./classifier/classifier-hash.cc:105:                        nsaddr_t src = 0;  // only use fid
+./classifier/classifier-hash.cc:106:                        nsaddr_t dst = 0;  // to classify flows
+./classifier/classifier-hash.cc:128:			nsaddr_t src = atoi(argv[2]);
+./classifier/classifier-hash.cc:129:			nsaddr_t dst = atoi(argv[3]);
+./classifier/classifier-hash.cc:193:	nsaddr_t d = atoi(dst);
+./classifier/classifier-hash.cc:208:			//nsaddr_t dst = atoi(argv[2]);
+./classifier/classifier-mcast.cc:88:MCastClassifier::lookup(nsaddr_t src, nsaddr_t dst, int iface) const
+./classifier/classifier-mcast.cc:103:MCastClassifier::lookup_star(nsaddr_t dst, int iface) const
+./classifier/classifier-mcast.cc:120:	nsaddr_t src = ih->saddr();
+./classifier/classifier-mcast.cc:121:	nsaddr_t dst = ih->daddr();
+./classifier/classifier-mcast.cc:166:void MCastClassifier::set_hash(hashnode* ht[], nsaddr_t src, nsaddr_t dst,
+./classifier/classifier-mcast.cc:188:			nsaddr_t src = strtol(argv[2], (char**)0, 0);
+./classifier/classifier-mcast.cc:189:			nsaddr_t dst = strtol(argv[3], (char**)0, 0);
+./classifier/classifier-mcast.cc:205:			nsaddr_t src = strtol(argv[2], (char**)0, 0);
+./classifier/classifier-mcast.cc:206:			nsaddr_t dst = strtol(argv[3], (char**)0, 0);
+./classifier/classifier-mcast.cc:221:			nsaddr_t src = strtol(argv[2], (char**)0, 0);
+./classifier/classifier-mcast.cc:222:			nsaddr_t dst = strtol(argv[3], (char**)0, 0);
+./classifier/classifier-mcast.cc:238:			nsaddr_t src = strtol(argv[2], (char**)0, 0);
+./classifier/classifier-mcast.cc:239:			nsaddr_t dst = strtol(argv[3], (char**)0, 0);
+./classifier/classifier-mcast.cc:259:void MCastClassifier::change_iface(nsaddr_t src, nsaddr_t dst, int oldiface, int newiface)
+./classifier/classifier-mcast.cc:266:void MCastClassifier::change_iface(nsaddr_t dst, int oldiface, int newiface)
+./classifier/classifier-bst.cc:114:	nsaddr_t src = ih->saddr(); /*XXX*/
+./classifier/classifier-bst.cc:115:	nsaddr_t dst = ih->daddr();
+./classifier/classifier-bst.cc:159:	nsaddr_t dst = ih->daddr();
+./classifier/classifier-bst.cc:168:	nsaddr_t src = ih->saddr(); /*XXX*/
+./classifier/classifier-hash.h:67:	int do_set_hash(nsaddr_t src, nsaddr_t dst, int fid, int slot) {
+./classifier/classifier-hash.h:77:			nsaddr_t dst;
+./classifier/classifier-hash.h:80:			nsaddr_t src, dst;
+./classifier/classifier-hash.h:83:			nsaddr_t src, dst;
+./classifier/classifier-hash.h:88:	long lookup(nsaddr_t src, nsaddr_t dst, int fid) {
+./classifier/classifier-hash.h:103:	virtual const char* hashkey(nsaddr_t, nsaddr_t, int)=0; 
+./classifier/classifier-hash.h:105:	int set_hash(nsaddr_t src, nsaddr_t dst, int fid, long slot) {
+./classifier/classifier-hash.h:116:	long get_hash(nsaddr_t src, nsaddr_t dst, int fid) {
+./classifier/classifier-hash.h:138:	const char* hashkey(nsaddr_t src, nsaddr_t dst, int fid) {
+./classifier/classifier-hash.h:153:	const char*  hashkey(nsaddr_t src, nsaddr_t dst, int) {
+./classifier/classifier-hash.h:165:	const char* hashkey(nsaddr_t, nsaddr_t, int fid) {
+./classifier/classifier-hash.h:178:	const char* hashkey(nsaddr_t, nsaddr_t dst, int) {
